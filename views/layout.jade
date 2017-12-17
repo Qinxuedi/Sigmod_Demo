@@ -1,0 +1,62 @@
+doctype html
+html(lang='en')
+  head
+    meta(charset='utf-8')
+    meta(http-equiv='X-UA-Compatible', content='IE=Edge,chrome=1')
+    //meta(name='viewport', content='width=device-width, initial-scale=1')
+    // The above 2 meta tags *must* come first in the head; any other head content must come *after* these tags
+    meta(name='renderer', content='webkit')
+    title= title
+    // 最新版本的 Bootstrap 核心 CSS 文件
+    link(rel='stylesheet', href='https://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css', integrity='sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u', crossorigin='anonymous')
+    //<!-- IE10 viewport hack for Surface/desktop Windows 8 bug 
+    link(rel='stylesheet', href='/stylesheets/ie10-viewport-bug-workaround.css')
+    // My style
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    //<!-- Just for debugging purposes. Don't actually copy these 2 lines! 
+    //<!--[if lt IE 9]><script src="../../assets/js/ie8-responsive-file-warning.js"></script><![endif]
+    script(src='./stylesheets/ie-emulation-modes-warning.js')
+  body
+
+    block content
+
+    // jQuery (necessary for Bootstrap's JavaScript plugins)
+    script(src='https://cdn.bootcss.com/jquery/1.12.4/jquery.min.js')
+    // 最新的 Bootstrap 核心 JavaScript 文件
+    script(src='https://cdn.bootcss.com/bootstrap/3.3.7/js/bootstrap.min.js', integrity='sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa', crossorigin='anonymous')
+    //IE10 viewport hack for Surface/desktop Windows 8 bug
+    script(src='./stylesheets/ie10-viewport-bug-workaround.js')
+
+    script(src='https://cdn.bootcss.com/echarts/3.8.5/echarts-en.common.min.js')
+    //listening event (button, click)
+    script(src='./javascripts/listeningEvent.js')
+
+    script(type='text/javascript').
+
+        // 基于准备好的dom，初始化echarts实例
+        var myChart = echarts.init(document.getElementById('main'));
+        // 指定图表的配置项和数据
+        var option = {
+            title: {
+                text: 'ECharts 入门示例'
+            },
+            tooltip: {},
+            legend: {
+                data: ['销量']
+            },
+            xAxis: {
+                data: ["衬衫", "羊毛衫", "雪纺衫", "裤子", "高跟鞋", "袜子"]
+            },
+            yAxis: {},
+            series: [{
+                name: '销量',
+                type: 'bar',
+                data: [5, 20, 36, 10, 10, 20]
+            }]
+        };
+        // 使用刚指定的配置项和数据显示图表。
+        myChart.setOption(option);
+
+
+
+

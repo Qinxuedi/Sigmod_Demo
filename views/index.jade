@@ -1,0 +1,173 @@
+extends layout
+//- var data = 'FlyDelay2015'
+
+block content
+  //For var
+  - var numberOfDataset = 10
+  - var selectedData = 'FlyDelay2015'
+  - var columnName = ['date','carrier','dep_delay','arr_delay','passenger']
+  mixin columnItem(columnName)
+    li.list-group-item
+      a.filterColumns
+        span.glyphicon.glyphicon-filter.text-dark(aria-hidden='true')
+      |     #{columnName}
+
+  //For modal
+  #dataModal.modal.fade.bs-example-modal-lg(tabindex='-1', role='dialog', aria-labelledby='myModalLabel', aria-hidden='true')
+    .modal-dialog.modal-lg
+      .modal-content
+        .modal-header
+          button.close(type='button', data-dismiss='modal', aria-label='Close')
+            span(aria-hidden='true') ×
+          h4.modal-title Check the Field Type
+        .modal-body
+          table#table(data-toggle='table')
+
+        .modal-footer
+          button.btn.btn-success(id = 'btn_changeFieldType' type='button', data-dismiss='modal') OK
+  //For modal
+  #uploadModal.modal.fade.bs-example-modal-lg(tabindex='-1', role='dialog', aria-labelledby='myModalLabel', aria-hidden='true')
+    .modal-dialog.modal-lg
+      .modal-content
+        .modal-header
+          button.close(type='button', data-dismiss='modal', aria-label='Close')
+            span(aria-hidden='true') ×
+          h4.modal-title Check the Field Type
+        .modal-body
+
+        .modal-footer
+          //button.btn.btn-success(id = 'btn_changeFieldType' type='button', data-dismiss='modal') OK
+
+  //For html
+  nav.navbar.navbar-inverse.navbar-fixed-top
+    .container-fluid
+      .navbar-header
+        a.navbar-brand(href='#')
+          b DeepEye
+      #navbar.navbar-collapse.collapse
+        .row
+          .col-md-4.col-md-offset-1.col-sm-4.col-sm-offset-1
+            //<p> （段落）元素还被设置了等于 1/2 行高（即 10px）的底部外边距（margin）。
+            p
+              .input-group
+                input.form-control(type='text', placeholder='e.g., Show me line charts about Fly Delay')
+                span.input-group-btn
+                  button.btn.btn-default(type='button')
+                    span.glyphicon.glyphicon-search(aria-hidden='true')
+                    |  Search
+                  //1. Check if load data
+                    2. Click and do function
+          .col-md-3.col-md-offset-2.col-sm-3.col-sm-offset-2
+            ul.nav.navbar-nav
+              li
+                a(href='#')
+                  span.glyphicon.glyphicon-bookmark(aria-hidden='true')
+                  |   Bookmarks
+              li
+                a(href='#')
+                  span.glyphicon.glyphicon-heart(aria-hidden='true')
+                  |   Help
+
+
+  .container-fluid
+    .row
+      .col-sm-2.col-md-2.sidebar
+        .panel.panel-default
+          .panel-heading
+            h3.panel-title
+              span.glyphicon.glyphicon-object-align-bottom(aria-hidden='true')
+              case numberOfDataset
+                default
+                  |   Dataset (#{numberOfDataset})
+
+
+          .panel-body
+            p Data:
+              button.btn.btn-lg.btn-link(id="dataBtn")
+                span.label.label-default
+                  span.glyphicon.glyphicon-stats
+                  |     #{selectedData}
+            button.btn.btn-default.btn-block(type='button', id="uploadBtn" aria-label='Left Align')
+              span.glyphicon.glyphicon.glyphicon-upload
+              |   Upload
+            button.btn.btn-default.btn-block(type='button', id="drawBtn" aria-label='Left Align')
+              span.glyphicon.glyphicon.glyphicon-play-circle
+              |   Draw
+          |Columns:
+          ul.list-group
+            each val in columnName
+              +columnItem(val)
+
+
+
+
+
+
+        .panel.panel-default
+          .panel-heading
+            h3.panel-title
+              span.glyphicon.glyphicon-filter(aria-hidden='true')
+              |   Filter
+          .panel-body
+            | Filter
+            #filterBuilder
+
+
+        .panel.panel-default
+          .panel-heading
+            h3.panel-title
+              span.glyphicon.glyphicon-filter(aria-hidden='true')
+              |   DeepEye Visualization Language
+          ul.list-group
+            li.list-group-item
+              |   charts
+            li.list-group-item
+              |   x-axis
+            li.list-group-item
+              |   y-axis
+            li.list-group-item
+              |   charts
+            li.list-group-item
+              |   charts
+
+        .alert.alert-warning.alert-dismissible(role='alert')
+          button.close(type='button', data-dismiss='alert', aria-label='Close')
+            span(aria-hidden='true') ×
+          |  Strongly Recommend use
+          strong  Chrome or Safari
+
+
+      .col-sm-5.col-sm-offset-2.col-md-5.col-md-offset-2.main
+        .input-group
+          input.form-control.input-lg(type='text')
+          span.input-group-addon.btn.btn-primary 搜索
+        // 为ECharts准备一个具备大小（宽高）的Dom
+        #main(style='width: 600px;height:400px;')
+
+
+      .col-sm-5.col-md-5.main
+        h1.page-header Dashboard
+        .row.placeholders
+          .col-xs-6.col-sm-3.placeholder
+            img.img-responsive(src='data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==', width='200', height='200', alt='Generic placeholder thumbnail')
+            h4 Label
+            span.text-muted Something else
+          .col-xs-6.col-sm-3.placeholder
+            img.img-responsive(src='data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==', width='200', height='200', alt='Generic placeholder thumbnail')
+            h4 Label
+            span.text-muted Something else
+          .col-xs-6.col-sm-3.placeholder
+            img.img-responsive(src='data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==', width='200', height='200', alt='Generic placeholder thumbnail')
+            h4 Label
+            span.text-muted Something else
+          .col-xs-6.col-sm-3.placeholder
+            img.img-responsive(src='data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==', width='200', height='200', alt='Generic placeholder thumbnail')
+            h4 Label
+            span.text-muted Something else
+
+
+
+
+
+
+
