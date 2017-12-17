@@ -3,7 +3,6 @@ extends layout
 
 block content
   //For var
-  - var numberOfDataset = 10
   - var selectedData = 'FlyDelay2015'
   - var columnName = ['date','carrier','dep_delay','arr_delay','passenger']
   mixin columnItem(columnName)
@@ -76,9 +75,7 @@ block content
           .panel-heading
             h3.panel-title
               span.glyphicon.glyphicon-object-align-bottom(aria-hidden='true')
-              case numberOfDataset
-                default
-                  |   Dataset (#{numberOfDataset})
+            |   Dataset
 
 
           .panel-body
