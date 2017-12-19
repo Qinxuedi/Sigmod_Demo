@@ -2,17 +2,54 @@ extends layout
 //- var data = 'FlyDelay2015'
 
 block content
-  //For var
-  - var selectedData = 'FlyDelay2015'
-  - var columnName = ['date','carrier','dep_delay','arr_delay','passenger']
-  mixin columnItem(columnName)
-    li.list-group-item
-      a.filterColumns
-        span.glyphicon.glyphicon-filter.text-dark(aria-hidden='true')
-      |     #{columnName}
 
   //For modal
+    //查看选中表格详情(某页面的时候使用)
   #dataModal.modal.fade.bs-example-modal-lg(tabindex='-1', role='dialog', aria-labelledby='myModalLabel', aria-hidden='true')
+    .modal-dialog.modal-lg
+      .modal-content
+        .modal-header
+          button.close(type='button', data-dismiss='modal', aria-label='Close')
+            span(aria-hidden='true') ×
+          h4.modal-title Your Select Dataset
+        .modal-body
+          p 查看选中表格详情(某页面的时候使用)
+          table#showDataDetails(data-toggle='table')
+        .modal-footer
+          button.btn.btn-success( type='button', data-dismiss='modal') OK
+
+  //上传数据文件的模态框
+  #uploadModal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myModalLabel', aria-hidden='true')
+    .modal-dialog
+      .modal-content
+        .modal-header
+          button.close(type='button', data-dismiss='modal', aria-label='Close')
+            span(aria-hidden='true') ×
+          h4.modal-title Upload a CSV file from your computer
+        .modal-body
+          ul.nav.nav-tabs
+            li.nav-item.active
+              a.nav-link.active(href='#uploadFromCloud', data-toggle='tab')
+                span.glyphicon.glyphicon-cloud
+                |   From Cloud Server
+            li.nav-item
+              a.nav-link(href='#uploadFromComputer', data-toggle='tab')
+                span.glyphicon.glyphicon-folder-open
+                |     From Your Computer
+            li.nav-item
+          .tab-content
+            #uploadFromCloud.tab-pane.active.fade-in
+              //开始展示已上传的表格列表
+              table#table_id1.table.table-bordered.table-hover(data-toggle='table')
+              //加载动画
+              //img(id="load" class="center-block" src='./images/load.gif', alt='Loading ...', style='width:24px;height:24px;')
+
+            #uploadFromComputer.tab-pane.fade
+              //上传文件模块
+              input#input-id.file-loading(name='kartik_input', type='file', multiple class='file-loading')
+
+  //上传数据文件时候用于验证列的属性的模态框
+  #modalTable.modal.fade.bs-example-modal-lg(tabindex='-1', role='dialog', aria-labelledby='myModalLabel', aria-hidden='true')
     .modal-dialog.modal-lg
       .modal-content
         .modal-header
@@ -21,21 +58,82 @@ block content
           h4.modal-title Check the Field Type
         .modal-body
           table#table(data-toggle='table')
-
         .modal-footer
           button.btn.btn-success(id = 'btn_changeFieldType' type='button', data-dismiss='modal') OK
-  //For modal
-  #uploadModal.modal.fade.bs-example-modal-lg(tabindex='-1', role='dialog', aria-labelledby='myModalLabel', aria-hidden='true')
+
+   //构建DeepEye Visualization Language的模态框
+  #visQueryModal.modal.fade.bs-example-modal-lg(tabindex='-1', role='dialog', aria-labelledby='myModalLabel', aria-hidden='true')
     .modal-dialog.modal-lg
       .modal-content
         .modal-header
           button.close(type='button', data-dismiss='modal', aria-label='Close')
             span(aria-hidden='true') ×
-          h4.modal-title Check the Field Type
+          h4.modal-title Query by DeepEye visualization language:
         .modal-body
+          table.table.table-striped
+            thead
+              tr
+                th Visualize
+                th Select X-axis
+                th Select Y-axis
+                th From
+                th Group/Bin by
+                th Aggregate
+                th Order by
+            tbody#queryTableBody
+              tr
+                td
+                  select.visualize.form-control
+                    option bar
+                    option line
+                    option pie
+                    option scatter
+                td
+                  select.selectX.form-control
+                    option date
+                    option carrier
+                    option dep_delay
+                    option arr_delay
+                td
+                  select.selectY.form-control
+                    option passenger
+                    option carrier
+                    option dep_delay
+                    option arr_delay
+                td
+                  select.from.form-control
+                    option #{selectedData}
+                td
+                  select.group_bin.form-control
+                    option Group by
+                    option Bin by
+                  select.byWhat.form-control
+                    option date
+                    option carrier
+                    option dep_delay
+                    option arr_delay
+                td
+                  select.agg.form-control
+                    option Sum(&nbsp;)
+                    option Avg(&nbsp;)
+                    option Count(&nbsp;)
+                td
+                  select.order.form-control
+                    option date
+                    option carrier
+                    option dep_delay
+                    option arr_delay
+          #addQueryDiv
+            button.btn.btn-info(type='button', id="addVisQuery" aria-label='Left Align')
+              span.glyphicon.glyphicon.glyphicon-plus
+            button.btn.btn-warning(type='button', id="subVisQuery" aria-label='Left Align')
+              span.glyphicon.glyphicon.glyphicon-minus
 
+          br
+          ul#BuildedQueryItem.list-group
+            //code here
         .modal-footer
-          //button.btn.btn-success(id = 'btn_changeFieldType' type='button', data-dismiss='modal') OK
+          button.btn.btn-success(id = 'visQueryStartBtn' type='button', data-dismiss='modal') Query Now
 
   //For html
   nav.navbar.navbar-inverse.navbar-fixed-top
@@ -61,7 +159,7 @@ block content
               li
                 a(href='#')
                   span.glyphicon.glyphicon-bookmark(aria-hidden='true')
-                  |   Bookmarks
+                  |   Collections (0)
               li
                 a(href='#')
                   span.glyphicon.glyphicon-heart(aria-hidden='true')
@@ -75,27 +173,25 @@ block content
           .panel-heading
             h3.panel-title
               span.glyphicon.glyphicon-object-align-bottom(aria-hidden='true')
-            |   Dataset
+              |   Dataset
 
 
-          .panel-body
+          .panel-body(style="max-height:30em;overflow-y: scroll;")
             p Data:
               button.btn.btn-lg.btn-link(id="dataBtn")
-                span.label.label-default
-                  span.glyphicon.glyphicon-stats
-                  |     #{selectedData}
+                span.label.label-default#selectedTableName  #{selectedData}
             button.btn.btn-default.btn-block(type='button', id="uploadBtn" aria-label='Left Align')
               span.glyphicon.glyphicon.glyphicon-upload
               |   Upload
-            button.btn.btn-default.btn-block(type='button', id="drawBtn" aria-label='Left Align')
-              span.glyphicon.glyphicon.glyphicon-play-circle
-              |   Draw
-          |Columns:
-          ul.list-group
-            each val in columnName
-              +columnItem(val)
-
-
+            //TODO 没变化一次数据表就自动画图
+            //button.btn.btn-default.btn-block(type='button', id="drawBtn" aria-label='Left Align')
+            //  span.glyphicon.glyphicon.glyphicon-play-circle
+            //  |   Draw
+            br
+            |Columns:
+            ul.list-group
+              each val in columnName
+                +columnItem(val)
 
 
 
@@ -106,26 +202,25 @@ block content
               span.glyphicon.glyphicon-filter(aria-hidden='true')
               |   Filter
           .panel-body
-            | Filter
             #filterBuilder
 
 
+
+        //VISUALIZE SELECT FROM TRANSFORM ORDER BY
+        //TYPE (∈ {bar, pie, line, scatter})
+        //X′, Y ′ (X′ ∈ {X,BIN(X)}, Y ′ ∈ {Y,AGG(Y )}) D
+        //X (using an operator ∈ {BIN, GROUP})
+        //X′,Y′
         .panel.panel-default
           .panel-heading
             h3.panel-title
-              span.glyphicon.glyphicon-filter(aria-hidden='true')
+              span.glyphicon.glyphicon-pencil(aria-hidden='true')
               |   DeepEye Visualization Language
-          ul.list-group
-            li.list-group-item
-              |   charts
-            li.list-group-item
-              |   x-axis
-            li.list-group-item
-              |   y-axis
-            li.list-group-item
-              |   charts
-            li.list-group-item
-              |   charts
+          .panel-body
+              button.btn.btn-default.btn-block(type='button', id="visQueryBuilder" aria-label='Left Align')
+                span.glyphicon.glyphicon.glyphicon-plus
+                |   Query Builder
+
 
         .alert.alert-warning.alert-dismissible(role='alert')
           button.close(type='button', data-dismiss='alert', aria-label='Close')
@@ -135,32 +230,12 @@ block content
 
 
       .col-sm-5.col-sm-offset-2.col-md-5.col-md-offset-2.main
-        .input-group
-          input.form-control.input-lg(type='text')
-          span.input-group-addon.btn.btn-primary 搜索
-        // 为ECharts准备一个具备大小（宽高）的Dom
-        #main(style='width: 600px;height:400px;')
-
+        h2.page-header DeepEye Recommendations:
+        #chartsDiv
 
       .col-sm-5.col-md-5.main
-        h1.page-header Dashboard
-        .row.placeholders
-          .col-xs-6.col-sm-3.placeholder
-            img.img-responsive(src='data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==', width='200', height='200', alt='Generic placeholder thumbnail')
-            h4 Label
-            span.text-muted Something else
-          .col-xs-6.col-sm-3.placeholder
-            img.img-responsive(src='data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==', width='200', height='200', alt='Generic placeholder thumbnail')
-            h4 Label
-            span.text-muted Something else
-          .col-xs-6.col-sm-3.placeholder
-            img.img-responsive(src='data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==', width='200', height='200', alt='Generic placeholder thumbnail')
-            h4 Label
-            span.text-muted Something else
-          .col-xs-6.col-sm-3.placeholder
-            img.img-responsive(src='data:image/gif;base64,R0lGODlhAQABAIAAAHd3dwAAACH5BAAAAAAALAAAAAABAAEAAAICRAEAOw==', width='200', height='200', alt='Generic placeholder thumbnail')
-            h4 Label
-            span.text-muted Something else
+        h2.page-header FatedSearch:
+        #facetedDiv
 
 
 
