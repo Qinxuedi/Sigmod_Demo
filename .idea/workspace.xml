@@ -217,9 +217,9 @@
         <option value="$PROJECT_DIR$/routes/facetedSearch.js" />
         <option value="$PROJECT_DIR$/public/javascripts/filterBuilder.js" />
         <option value="$PROJECT_DIR$/public/javascripts/datasetBuilder.js" />
-        <option value="$PROJECT_DIR$/public/pace/pace.css" />
         <option value="$PROJECT_DIR$/public/pace/pace.min.js" />
         <option value="$PROJECT_DIR$/views/layout.jade" />
+        <option value="$PROJECT_DIR$/public/pace/pace.css" />
       </list>
     </option>
   </component>
@@ -578,12 +578,12 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1513387676879</updated>
-      <workItem from="1513387749607" duration="86484000" />
+      <workItem from="1513387749607" duration="86678000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="86484000" />
+    <option name="totallyTimeSpent" value="86678000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
@@ -1028,14 +1028,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/pace/pace.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="1965">
-          <caret line="131" column="0" lean-forward="false" selection-start-line="131" selection-start-column="0" selection-end-line="131" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/pace/pace.min.js">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="30">
@@ -1062,6 +1054,14 @@
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="164">
           <caret line="216" column="20" lean-forward="false" selection-start-line="216" selection-start-column="13" selection-end-line="216" selection-end-column="20" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/pace/pace.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="506">
+          <caret line="77" column="0" lean-forward="false" selection-start-line="77" selection-start-column="0" selection-end-line="77" selection-end-column="0" />
           <folding />
         </state>
       </provider>
