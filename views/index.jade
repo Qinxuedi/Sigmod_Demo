@@ -11,10 +11,10 @@ block content
         .modal-header
           button.close(type='button', data-dismiss='modal', aria-label='Close')
             span(aria-hidden='true') ×
-          h4.modal-title Your Select Dataset
+          h3.modal-title Your Select Dataset
         .modal-body
-          p 查看选中表格详情(某页面的时候使用)
-          table#showDataDetails(data-toggle='table')
+          h3(style="margin-left:auto;margin-right:auto;")#tableName_showDataDetails
+          table#table_showDataDetails(data-toggle='table')
         .modal-footer
           button.btn.btn-success( type='button', data-dismiss='modal') OK
 
@@ -60,6 +60,31 @@ block content
           table#table(data-toggle='table')
         .modal-footer
           button.btn.btn-success(id = 'btn_changeFieldType' type='button', data-dismiss='modal') OK
+
+  #showMoreDiv.modal.fade.bs-example-modal-lg(tabindex='-1', role='dialog', aria-labelledby='myModalLabel', aria-hidden='true')
+    .modal-dialog.modal-lg
+      .modal-content
+        .modal-header
+          button.close(type='button', data-dismiss='modal', aria-label='Close')
+            span(aria-hidden='true') Visualization
+          h4.modal-title Visualization Result
+        #showMoreVis.modal-body
+
+        .modal-footer
+          button.btn.btn-success(id = 'btn_showMore' type='button', data-dismiss='modal') OK
+
+  #CheckKeywordQueryDiv.modal.fade.bs-example-modal-lg(tabindex='-1', role='dialog', aria-labelledby='myModalLabel', aria-hidden='true')
+    .modal-dialog
+      .modal-content
+        .modal-header
+          button.close.btn_checkQueryNo(type='button', data-dismiss='modal', aria-label='Close')
+            span(aria-hidden='true') Resolve Ambiguity
+          h4.modal-title Please check and refine your query (By Keywords)
+        #CheckKeywordQuery.modal-body
+
+        .modal-footer
+          button.btn.btn-info.btn_checkQueryNo(type='button', data-dismiss='modal') Cancel
+          button.btn.btn-success(id = 'btn_checkOk' type='button', data-dismiss='modal') Submit
 
    //构建DeepEye Visualization Language的模态框
   #visQueryModal.modal.fade.bs-example-modal-lg(tabindex='-1', role='dialog', aria-labelledby='myModalLabel', aria-hidden='true')
@@ -147,9 +172,9 @@ block content
             //<p> （段落）元素还被设置了等于 1/2 行高（即 10px）的底部外边距（margin）。
             p
               .input-group
-                input.form-control(type='text', placeholder='e.g., Show me line charts about Fly Delay')
+                input.form-control(id = 'KeywordQuery' type='text', placeholder='e.g., Show me line charts about electricity')
                 span.input-group-btn
-                  button.btn.btn-default(type='button')
+                  button.btn.btn-default(type='button' id = 'NL2Vis')
                     span.glyphicon.glyphicon-search(aria-hidden='true')
                     |  Search
                   //1. Check if load data
@@ -179,7 +204,8 @@ block content
           .panel-body(style="max-height:30em;overflow-y: scroll;")
             p Data:
               button.btn.btn-lg.btn-link(id="dataBtn")
-                span.label.label-default#selectedTableName  #{selectedData}
+                span.label.label-default#selectedTableName
+                  |electricity
             button.btn.btn-default.btn-block(type='button', id="uploadBtn" aria-label='Left Align')
               span.glyphicon.glyphicon.glyphicon-upload
               |   Upload
@@ -189,7 +215,7 @@ block content
             //  |   Draw
             br
             |Columns:
-            ul.list-group
+            ul.list-group#columns
               each val in columnName
                 +columnItem(val)
 
@@ -230,12 +256,13 @@ block content
 
 
       .col-sm-5.col-sm-offset-2.col-md-5.col-md-offset-2.main
-        h2.page-header DeepEye Recommendations:
-        #chartsDiv
+        h3#chartAreaTitle
+        #chartsContainer.facetedSearchContainer.row(style="max-height:100vh;overflow-y: scroll;")
+        #chartsContainerPage.row
 
       .col-sm-5.col-md-5.main
-        h2.page-header FatedSearch:
-        #facetedDiv
+        h2.page-header FacetedSearch:
+        #facetedSearchContainer.facetedSearchContainer(style="max-height:100vh;overflow-y: scroll;")
 
 
 

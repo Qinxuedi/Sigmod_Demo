@@ -1,8 +1,10 @@
 /**
  * Created by luoyuyu on 2017/12/17.
  */
+
 $(".filterColumns").click(function () {
-    // alert($(this).parent().text());//查看被选中进行过滤的列名
+    console.log("filterColumns");
+    alert($(this).parent().text());//查看被选中进行过滤的列名
     filterBuilder($(this).parent().text(),'filterBuilder');
 });
 

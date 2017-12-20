@@ -23,13 +23,12 @@ html(lang='en')
   body
     //For var
     - var selectedData = 'FlyDelay2015'
-    - var columnName = ['date','carrier','dep_delay','arr_delay','passenger']
-    - var cloudData = ['FlyDelay2011','FlyDelay2012','FlyDelay2013','FlyDelay2014','FlyDelay2015','FlyDelay2016','FlyDelay2017']
+    - var columnName = ['city','date','electricity(kWh)']
     mixin columnItem(columnName)
       li.list-group-item
         a.filterColumns
           span.glyphicon.glyphicon-filter.text-dark(aria-hidden='true')
-        |     #{columnName}
+        |#{columnName}
 
 
     block content
@@ -60,51 +59,68 @@ html(lang='en')
     script(src='./javascripts/visQueryBuilder.js')
     //script into dataset builder -- js
     script(src='./javascripts/datasetBuilder.js')
-
-
+    //script draw charts -- js
+    script(src='./drawCharts/chartOption.js')
+    script(src='./drawCharts/createChart.js')
+    //script deepeye recommendation
+    script(src='./javascripts/recommendation.js')
+    //script keyword to visualization
+    script(src='./javascripts/Keyword2Vis.js')
 
     script(type='text/javascript').
-        function genereateDiv(fatherId, id,index) {
-            let html = `<div id="${id+index}" style="width: 600px;height:400px;"></div>`
-            $('#'+fatherId).append(html);
-        }
-        function draw(id,index) {
-            let mainID = id + index;
-            let myChart = echarts.init(document.getElementById(mainID));
-            // 指定图表的配置项和数据
-            let option = {
-                title: {
-                    text: 'ECharts 入门示例'
-                },
-                tooltip: {},
-                legend: {
-                    data: ['销量']
-                },
-                xAxis: {
-                    data: ["衬衫", "羊毛衫", "雪纺衫", "裤子", "高跟鞋", "袜子"]
-                },
-                yAxis: {},
-                series: [{
-                    name: '销量',
-                    type: 'bar',
-                    data: [5, 20, 36, 10, 10, 20]
-                }]
-            };
-            // 使用刚指定的配置项和数据显示图表。
-            myChart.setOption(option);
-        }
-
+        //TODO 初始化数据表和可视化
         $(function () {
-            for (let i = 0; i < 10; i++) {
-                genereateDiv('chartsDiv', 'main', i);
-                draw('main', i);
-                genereateDiv('facetedDiv', 'mind', i);
-                draw('mind', i);
-            }
+            //TODO init data & visualization
+            initialVisualization();
         });
-        $(window).resize(function () {
-            myChart.resize();
-        });
+
+
+//        function genereateDiv(fatherId, id,index) {
+//            let chartW = ($('#'+fatherId).width());
+//            let chartH = ($('#'+fatherId).width())*0.75;
+//            let html = '<div class="panel panel-default">'+
+//                        '<div class="panel-body">'+
+//                        '<div id= "'+ id+index + '" style= "width:' + chartW +'px; height:' + chartH +'px;" ></div>'+
+//                        '</div></div>'
+//            $('#'+fatherId).append(html);
+//        }
+//        function draw(id,index) {
+//            let mainID = id + index;
+//            let myChart = echarts.init(document.getElementById(mainID));
+//            // 指定图表的配置项和数据
+//            let option = {
+//                title: {
+//                    text: 'ECharts 入门示例'
+//                },
+//                tooltip: {},
+//                legend: {
+//                    data: ['销量']
+//                },
+//                xAxis: {
+//                    data: ["衬衫", "羊毛衫", "雪纺衫", "裤子", "高跟鞋", "袜子"]
+//                },
+//                yAxis: {},
+//                series: [{
+//                    name: '销量',
+//                    type: 'bar',
+//                    data: [5, 20, 36, 10, 10, 20]
+//                }]
+//            };
+//            // 使用刚指定的配置项和数据显示图表。
+//            myChart.setOption(option);
+//        }
+//
+//        $(function () {
+//            for (let i = 0; i < 10; i++) {
+//                //genereateDiv('chartsContainer', 'main', i);
+//                //draw('main', i);
+//                genereateDiv('facetedDiv', 'mind', i);
+//                draw('mind', i);
+//            }
+//        });
+//        $(window).resize(function () {
+//            myChart.resize();
+//        });
 
 
 

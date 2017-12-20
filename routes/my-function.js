@@ -7,6 +7,32 @@ var fs = require('fs');
 var csv = require('fast-csv');
 var path = require('path');
 
+module.exports.getTableColumnNames = function (tableID) {
+    return new Promise((resolve, reject) => {
+        "use strict";
+        let columnName = [];
+        tablePool.getConnection(function (err,connection) {
+            if (err) reject(err);
+            else {
+                connection.query('DESCRIBE '+"`"+tableID+"`",function (err,result) {
+                    if (err) reject(err);
+                    else {
+                        console.log("1.describe table");
+                        //code here
+                        for (let i = 0; i < result.length; i++){
+                            columnName.push(result[i].Field);
+                        }
+                        console.log("columnName:",columnName);
+                        resolve(columnName);
+                    }
+                    connection.release();
+                })
+            }
+        })
+    })
+};
+
+
 module.exports.getUserUploadedTables = function () {
     return new Promise((resolve, reject) => {
         pool.getConnection(function (err,connection) {
@@ -24,61 +50,35 @@ module.exports.getUserUploadedTables = function () {
     })
 };
 
-// module.exports.getTableByID = function (userID,tableID) {
-//     return new Promise((resolve, reject) => {
-//         tablePool.getConnection(function (err,connection) {
-//             if (err) reject(err);
-//             else {
-//                 connection.query("select * from "+"`"+userID+"@"+tableID+"`",function (err,result) {
-//                     if (err) reject(err);
-//                     else {
-//                         resolve(result);
-//                     }
-//                     connection.release();
-//                 })
-//             }
-//         })
-//     })
-// };
-
-// module.exports.deleteTableByID = function (userID,tableID) {
-//     return new Promise((resolve, reject) => {
-//         tablePool.getConnection(function (err,connection) {
-//             if (err) reject(err);
-//             else {
-//                 connection.query("DROP TABLE "+"`"+userID+"@"+tableID+"`",function (err,result) {
-//                     if (err) reject(err);
-//                     else {
-//                         resolve(result);
-//                     }
-//                     connection.release();
-//                 })
-//             }
-//         })
-//     })
-// };
-
-module.exports.deleteTableByID = function (userID,tableID) {
+module.exports.getTableByIDServerSidePagination = async function (tableID, limit, offset) {
+    let rows = [];
+    await new Promise((resolve, reject) => {
+        tablePool.getConnection(function (err,connection) {
+            if (err) reject(err);
+            else {
+                connection.query("select * from "+"`"+tableID+"` limit "+offset+","+limit,function (err,result) {
+                    if (err) reject(err);
+                    else {
+                        // console.log(result)
+                        rows = result;
+                        resolve(result);
+                    }
+                    connection.release();
+                })
+            }
+        })
+    });
     return new Promise((resolve, reject) => {
         tablePool.getConnection(function (err,connection) {
             if (err) reject(err);
             else {
-                connection.query("DROP TABLE "+"`"+userID+"@"+tableID+"`",function (err,result) {
+                connection.query("select count(*) from "+"`"+tableID+"`",function (err,result) {
                     if (err) reject(err);
                     else {
-                        pool.getConnection(function (err,connection) {
-                            if (err) reject(err);
-                            else {
-                                let id = userID+"@"+tableID;
-                                connection.query("DELETE FROM tableInfo WHERE id = ?",[id],function (err,result) {
-                                    if (err) reject(err);
-                                    else {
-                                        resolve(result);
-                                    }
-                                    connection.release();
-                                })
-                            }
-                        })
+                        let data = [];
+                        data['rows'] = rows;
+                        data['total'] = result[0]['count(*)'];
+                        resolve(data);
                     }
                     connection.release();
                 })
@@ -86,8 +86,6 @@ module.exports.deleteTableByID = function (userID,tableID) {
         })
     })
 };
-//DELETE FROM `DeepEye`.`tableInfo` WHERE `tableID`='airline';
-
 
 //module.exports.importFiles = function (userID,tableID, callback) {
 module.exports.importFiles = function (userID,tableID,colName,colType,callback) {
@@ -182,6 +180,8 @@ module.exports.importFiles = function (userID,tableID,colName,colType,callback) 
         }
     });
 };
+
+
 // function checkExistedTable(userID,tableID) {
 //     let sql = "SELECT COUNT(*) AS num FROM tableInfo WHERE userID = ? AND tableID = ?";
 //         pool.getConnection(function(err, connection){
