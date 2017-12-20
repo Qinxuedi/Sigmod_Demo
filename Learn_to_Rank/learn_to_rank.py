@@ -62,7 +62,7 @@ for i in range(instance.view_num):
         elif view.table.describe==old_view.table.describe and view.fx.name==old_view.fx.name and view.fy.min*old_view.fy.min>=0:
             order2+=1
         elif view.z_id==old_view.z_id and view.table.describe[-7:]=='BY ZERO' and old_view.table.describe[-7:]=='BY ZERO':
-            order2+=2
+            order2+=1
         else:
             order1+=1
             order2=1

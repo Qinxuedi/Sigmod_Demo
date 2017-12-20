@@ -256,13 +256,20 @@ block content
 
 
       .col-sm-5.col-sm-offset-2.col-md-5.col-md-offset-2.main
-        h3#chartAreaTitle
-        #chartsContainer.facetedSearchContainer.row(style="max-height:100vh;overflow-y: scroll;")
-        #chartsContainerPage.row
+        .panel.panel-default
+          .panel-heading
+            h3.panel-title#chartAreaTitle
+          .panel-body
+            #chartsContainer.facetedSearchContainer(style="max-height:100vh;overflow-y: scroll;")
+            #chartsContainerPage
+
+
 
       .col-sm-5.col-md-5.main
-        h2.page-header FacetedSearch:
-        #facetedSearchContainer.facetedSearchContainer(style="max-height:100vh;overflow-y: scroll;")
+        .panel.panel-default
+          .panel-body
+            #facetedSearchContainer.facetedSearchContainer(style="max-height:100vh;overflow-y: scroll;")
+
 
 
 

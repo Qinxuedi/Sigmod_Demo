@@ -6,6 +6,9 @@ class Navigation(object):
         self.instance=instance
         self.describe = describe
         self.x_name, self.y_name,self.z_name,self.filter_id,self.filter_value = x_name, y_name,'',filter_id,filter_value
+        # if len(self.describe)>=3 and self.describe[0:3]=='BIN':
+        #     t=self.x_name.find('/')
+        #     self.x_name=self.x_name[0:t]
         self.x_id=self.instance.ids[self.x_name]
         if self.y_name>=5 and (self.y_name[0:4]=='AVG(' or self.y_name[0:4]=='SUM(' or self.y_name[0:4]=='CNT('):
             self.y_id=self.instance.ids[self.y_name[4:-1]]

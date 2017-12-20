@@ -23,6 +23,8 @@ $(".facetedSearchContainer").click(function (event) {
         }
         if (event.currentTarget.id == "chartsContainer"){
             index = event.target.dataset.echartsbtn.substr(4,tag.length);
+            console.log("event.target.dataset.echartsbtn = ",event.target.dataset.echartsbtn);
+            console.log("index = ",index);
              describe = data_response_to_draw[index].describe;
              x_name = data_response_to_draw[index].x_name;
              y_name = data_response_to_draw[index].y_name;
@@ -190,8 +192,9 @@ function createChartsInFacetedDiv(value, index) {
 }
 
 function createFacetedChartDiv (changeTag, Echart) {
-    let chartW = (document.getElementById('chartsContainer').clientWidth/3) * 0.84 ;
-    let chartH = (document.getElementById('chartsContainer').clientWidth/3) * 0.84 * 0.70 ;
+
+    let chartW = ($('#myTabContent').width())*0.90 ;
+    let chartH = ($('#myTabContent').width())*0.75 ;
     let chartHtml= `<div id=${Echart}  style="width: `+chartW+`px;height:`+chartH+`px;"></div>`;
     chartHtml += `<button class="btn btn-warning btnSearch" style="float:right" data-echartsbtn=${Echart}>Faceted Search</button> `;
     // chartHtml += `<button class="btn btn-info btnZoom" style="float:right" data-echartsbtn=${Echart}>Zoom</button> `;

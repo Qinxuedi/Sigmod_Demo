@@ -5,7 +5,8 @@ from table import Table
 from view import Chart
 from features import Type
 
-#read data from database
+#read data from database => get argument from cmd
+
 instance=Instance(sys.argv[1])
 instance.addTable(Table(instance,False,'',''))
 conn=MySQLdb.connect(host='localhost',port=3306,user='root',passwd='Db10204!!',db='dataVisDB',charset='utf8')
@@ -19,6 +20,23 @@ instance.tuple_num=instance.tables[0].tuple_num=cur.execute(sys.argv[2])
 instance.tables[0].D=map(list,cur.fetchall())
 cur.close()
 conn.close()
+
+#read data from database => get table_name
+# table_name='electricity'
+# instance=Instance(table_name)
+# instance.addTable(Table(instance,False,'',''))
+# conn=MySQLdb.connect(host='localhost',port=3306,user='root',passwd='19951011',db='dataVisDB',charset='utf8')
+# cur=conn.cursor()
+# instance.column_num=instance.tables[0].column_num=cur.execute('describe '+table_name)
+# desc=cur.fetchall()
+# for i in range(instance.column_num):
+#     instance.tables[0].names.append(desc[i][0])
+#     instance.tables[0].types.append(Type.getType(desc[i][1].lower()))
+# instance.tables[0].origins=[i for i in range(instance.tables[0].column_num)]
+# instance.tuple_num=instance.tables[0].tuple_num=cur.execute('select * from '+table_name+' where cityName="ShangHai"')
+# instance.tables[0].D=map(list,cur.fetchall())
+# cur.close()
+# conn.close()
 
 #get all views and their score
 instance.addTables(instance.tables[0].dealWithTable())
@@ -60,7 +78,7 @@ for i in range(instance.view_num):
             order2+=1
         elif view.fx.origin==old_view.fx.origin and view.fy.origin==old_view.fy.origin and view.z_id==old_view.z_id and view.score==old_view.score:
             order2+=1
-        elif view.table.describe==old_view.table.describe and view.fx.name==old_view.fx.name and view.fy.min*old_view.fy.min>=0:
+        elif view.table.describe==old_view.table.describe and view.fx.name==old_view.fx.name and view.fy.minmin*old_view.fy.minmin>=0:
             order2+=1
         elif view.z_id==old_view.z_id and view.table.describe[-7:]=='BY ZERO' and old_view.table.describe[-7:]=='BY ZERO':
             order2+=1
@@ -69,16 +87,11 @@ for i in range(instance.view_num):
             order2=1
     data='{"order1":'+str(order1)+',"order2":'+str(order2)+',"describe":"'+view.table.describe+'","x_name":"'+view.fx.name+'","y_name":"'+view.fy.name+'","chart":"'+Chart.chart[view.chart]+'","classify":'+classify+',"x_data":'+x_data+',"y_data":'+y_data+'}'
     #s='insert into `'+new_table_name.decode('utf-8')+'` values('+order+','+data+')'
-    #cur.execute(s) 
+    #cur.execute(s)
     print data
     old_view=view
 
-'''for i in range(instance.table_num):
-    if instance.tables[i].describe2:
-        print instance.tables[i].classes
-        print instance.tables[i].names
-        print instance.tables[i].D
-        print'''
+
 
 
 

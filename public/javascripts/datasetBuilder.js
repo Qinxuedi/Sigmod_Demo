@@ -32,7 +32,7 @@ function addSuccessfulInfo(id) {
         setTimeout(function () {
             $("#alert").remove();
             $('#uploadModal').modal('hide')
-        }, 1500);
+        }, 500);
     }
     if(id === 1){
         $("#input-id").after(
@@ -263,12 +263,10 @@ function getColumnName(tableID) {
             $("#columns").empty();
             let html = '';
             for (let i = 0; i < data.length; i++){
-                html += `<li class="list-group-item">
-                            <a class="filterColumns">
-                            <span aria-hidden="true" class="glyphicon glyphicon-filter text-dark"></span>
-                            </a>
-                            ${data[i]}
-                         </li>`;
+                html += '<li class="list-group-item">'+
+                            '<a class="filterColumns">'+
+                            '<span aria-hidden="true" class="glyphicon glyphicon-filter text-dark"></span>'+
+                            '</a>'+data[i]+'</li>';
             }
             $("#columns").append(html);
         },
@@ -434,7 +432,7 @@ function initialVisualization() {
     }
     let pageNum = Math.ceil(data_response_to_draw.length / pageSize);
     //TODO 更新chartAreaTitle
-    document.getElementById("chartAreaTitle").innerHTML  = 'DeepEye recommendation: ' + ` <small>${data_response_to_draw.length} visualizations</small>` + `<hr>`;
+    document.getElementById("chartAreaTitle").innerHTML  = '<h4>DeepEye recommendation: ' + ` <small>${data_response_to_draw.length} visualizations</small></h4>`;
     $('#chartsContainerPage').html(
         `<nav aria-label="...">
                               <ul class="pagination">

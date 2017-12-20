@@ -35,7 +35,7 @@ class View(object):
         log_data1=log_data2=[]
         if self.fx.type!=Type.temporal and self.fx.min>0:
             log_data1=map(math.log,data1)
-        if self.fy.min>0:
+        if self.fy.minmin>0:
             log_data2=map(math.log,data2)
         # linear
         result = abs(corrcoef(data1, data2)[0][1])

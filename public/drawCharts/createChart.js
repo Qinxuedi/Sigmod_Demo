@@ -31,8 +31,8 @@ var createNewDiv = function (Echart,show_option) { // i 表示现在是第几个
         chartHtml += `</select>
             <button class="btn btn-info btnShowMore" style="float:left" data-showmore=${show_option[0].order1}>Show</button>`
     }
-    chartHtml += '<button class="btn btn-warning btnSearch" style="float:right" data-echartsbtn=${Echart}>Faceted Search</button>' +
-        '</div></div>'
+    chartHtml += `<button class="btn btn-warning btnSearch" style="float:right" data-echartsbtn=${Echart}>Faceted Search</button>
+                    </div></div>`;
     //chartHtml += `<button class="btn btn-info btnZoom" style="float:right" data-echartsbtn=${Echart}>Zoom</button> `;
     let html = document.createElement('div');
     html.innerHTML = chartHtml;

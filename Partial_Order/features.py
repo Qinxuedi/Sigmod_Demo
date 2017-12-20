@@ -23,7 +23,7 @@ class Features(object):
         self.name=name
         self.type=type
         self.origin=origin
-        self.min=self.max=self.distinct=self.ratio=self.bin_num=0
+        self.min=self.minmin=self.max=self.distinct=self.ratio=self.bin_num=0
         self.interval=''
         self.distinct_values=[]
         self.interval_bins=[]

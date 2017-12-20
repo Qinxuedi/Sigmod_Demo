@@ -103,7 +103,6 @@ class Table(object):
         f.interval_bins=bins
         f.bin_num=len(bins)
         f.interval=interval
-        f.interval='TIME'
 
 
     def generateViews(self):

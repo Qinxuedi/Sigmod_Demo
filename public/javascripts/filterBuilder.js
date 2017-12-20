@@ -1,12 +1,18 @@
 /**
  * Created by luoyuyu on 2017/12/17.
  */
-
-$(".filterColumns").click(function () {
-    console.log("filterColumns");
-    alert($(this).parent().text());//查看被选中进行过滤的列名
+//columns
+//https://segmentfault.com/q/1010000000486619
+//事件委托机制。 监听用户选择去过滤的列名
+$("#columns").on('click','.filterColumns',function(){
+    console.log($(this).parent().text());
     filterBuilder($(this).parent().text(),'filterBuilder');
 });
+// $(".filterColumns").click(function () {
+//     console.log("filterColumns");
+//     // alert($(this).parent().text());//查看被选中进行过滤的列名
+//     filterBuilder($(this).parent().text(),'filterBuilder');
+// });
 
 function allCheck(checkboxClassName, boolean) {
     "use strict";

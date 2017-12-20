@@ -26,7 +26,7 @@ function DeepEyeRecommend() {
             // console.log("PartialOrder接受后台的data类型:",typeof (data));
             if (data[0] === "{}") {
                 //TODO 更新chartAreaTitle
-                document.getElementById("chartAreaTitle").innerHTML = 'DeepEye recommendation: ' + `<small>${data.length - 1} visualizations</small>` + `<hr>`;
+                document.getElementById("chartAreaTitle").innerHTML = '<h4>DeepEye recommendation: ' + `<small>${data.length - 1} visualizations</small></h4>`;
             }
             else {
                 //TODO sum or avg, filter some related charts
@@ -115,11 +115,11 @@ function DeepEyeRecommend() {
                 console.log("data_response_to_draw ==> ",data_response_to_draw);
                 if ((data.length == 1 && data[0] === undefined) || data.length == 0){
                     //TODO 更新chartAreaTitle
-                    document.getElementById("chartAreaTitle").innerHTML  = 'DeepEye recommendation:  ' + `<small> 0 visualizations</small>` + `<hr>`;
+                    document.getElementById("chartAreaTitle").innerHTML  = '<h4>DeepEye recommendation:  ' + `<small> 0 visualizations</small></h4>`;
                 }else {
                     let pageNum = Math.ceil(data.length / pageSize);
                     //TODO 更新chartAreaTitle
-                    document.getElementById("chartAreaTitle").innerHTML  = 'DeepEye recommendation: ' + ` <small>${data.length} visualizations</small>` + `<hr>`;
+                    document.getElementById("chartAreaTitle").innerHTML  = '<h4>DeepEye recommendation: ' + ` <small>${data.length} visualizations</small></h4>`;
                     $('#chartsContainerPage').html(
                         `<nav aria-label="...">
                               <ul class="pagination">
