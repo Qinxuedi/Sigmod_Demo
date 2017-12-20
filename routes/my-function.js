@@ -7,6 +7,90 @@ var fs = require('fs');
 var csv = require('fast-csv');
 var path = require('path');
 
+module.exports.getColumnValues = async function (tableID, columnID) {
+    let data = {};
+    let columnType = '';
+    try {
+        await new Promise((resolve, reject) => {
+            pool.getConnection(function (err,connection) {
+                if (err) reject(err);
+                else {
+                    connection.query('DESCRIBE '+"`"+tableID+"`",function (err,result) {
+                        if (err) reject(err);
+                        else {
+                            //code here
+                            for (let i = 0; i < result.length; i++){
+                                if (columnID == result[i].Field)
+                                {
+                                    columnType = result[i].Type;
+                                }
+                            }
+                            if (columnType.toLowerCase().indexOf('varchar') != -1)
+                            {
+                                data['type'] = 'category';
+                            }
+                            if (columnType.toLowerCase().indexOf('int') != -1 ||
+                                columnType.toLowerCase().indexOf('float') != -1 ||
+                                columnType.toLowerCase().indexOf('double') != -1)
+                            {
+                                data['type'] = 'numerical';
+                            }
+                            if (columnType.toLowerCase().indexOf('date') != -1 || columnType.toLowerCase().indexOf('year') != -1)
+                            {
+                                data['type'] = 'date';
+                            }
+                            resolve(columnType);
+                        }
+                        connection.release();
+                    })
+                }
+            })
+
+        })
+    }catch (err){
+        console.log(err);
+    }
+    return new Promise((resolve, reject) => {
+        if (data['type'] == 'numerical'){
+            tablePool.getConnection(function (err,connection) {
+                if (err) reject(err);
+                else {//SELECT MIN(id), MAX(id) FROM tabla
+                    connection.query("select min( `"+columnID+"` ), max( `"+columnID+"` ) from "+"`"+tableID+"`",function (err,result) {
+                        if (err) reject(err);
+                        else {
+                            data['value'] = [];
+                            for (var key in result[0]) {
+                                // console.log(key); // key1 and etc...
+                                // console.log(result[0][key]); // val1 and etc...
+                                data['value'].push(result[0][key])
+                            }
+                            resolve(data);
+                        }
+                        connection.release();
+                    })
+                }
+            })
+        }else {
+            tablePool.getConnection(function (err,connection) {
+                if (err) reject(err);
+                else {
+                    connection.query("select distinct( `"+columnID+"` ) from "+"`"+tableID+"`",function (err,result) {
+                        if (err) reject(err);
+                        else {
+                            data['value'] = [];
+                            for (let i = 0; i < result.length; i++){
+                                data['value'].push(result[i][columnID]);
+                            }
+                            resolve(data);
+                        }
+                        connection.release();
+                    })
+                }
+            })
+        }
+    })
+};
+
 module.exports.getTableColumnNames = function (tableID) {
     return new Promise((resolve, reject) => {
         "use strict";

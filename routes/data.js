@@ -92,7 +92,7 @@ router.get('/req_allTable', function(req, res, next){
 
 router.get('/getColumnName', function (req, res, next) {
     let tableID = req.query.tableName;
-    console.log("收到前端请求表格所有列!",tableID)
+    console.log("收到前端请求表格所有列!",tableID);
     myFunction.getTableColumnNames(tableID).then((data) => res.send(data)).catch((err) => console.log(err)); //返回给前端浏览器的信息
 });
 
@@ -104,6 +104,12 @@ router.get('/req_TableDataServerSidePaging',function (req,res,next) {
     myFunction.getTableByIDServerSidePagination(tableID,limit,offset)
         .then((data) => res.send({"total":data.total,"rows":data.rows}))
         .catch((err) => console.log(err)); //返回给前端浏览器的信息)
+});
+
+router.get('/getColumnValues', function(req, res, next) {
+    const {tableID, columnName} = req.query;
+    console.log(tableID, columnName)
+    myFunction.getColumnValues(tableID, columnName).then((data) => res.send(data)).catch((err) => console.log(err)); //返回给前端浏览器的信息
 });
 
 module.exports = router;

@@ -7,6 +7,11 @@ $(".facetedSearchContainer").click(function (event) {
     console.log(event);
     if(event.target.className.match(/btnSearch/)){//FOR Faceted Search
         let tag = event.target.dataset.echartsbtn; //main0
+        //0. 如果之前由元素highlight，清除掉
+        $(".panel .panel-primary").removeClass("panel-primary");
+        //1. 给选中进行faceted search的元素添加一个highlight
+        $("#"+tag).parent().parent().addClass("panel-primary");
+
         let index = 0;
         console.log("index = ",index);
         // console.log(data_response_to_draw[index]);
@@ -15,7 +20,7 @@ $(".facetedSearchContainer").click(function (event) {
         let y_name = '';
         let chart = '';
         if (event.currentTarget.id == "facetedSearchContainer"){
-            index = event.target.dataset.echartsbtn.substr(7,tag.length);
+             index = event.target.dataset.echartsbtn.substr(7,tag.length);
              describe = data_facetedSearch[index].describe;
              x_name = data_facetedSearch[index].x_name;
              y_name = data_facetedSearch[index].y_name;
