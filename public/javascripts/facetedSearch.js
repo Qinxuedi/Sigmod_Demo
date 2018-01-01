@@ -2,6 +2,8 @@
  * Created by luoyuyu on 2017/12/6.
  */
 var data_facetedSearch = [];
+var maintainSearchData = {};
+var facetedSearchCOUNT = 1;
 
 $(".facetedSearchContainer").click(function (event) {
     event = event || window.event; //For IE
@@ -71,6 +73,31 @@ $(".facetedSearchContainer").click(function (event) {
             },
             dataType: 'json',
             success: function(data){
+                //更新导航条
+                //#1. 从recommendation panel中开始faceted search的，需要重置导航条，并且新加一个.active导航标签
+                if (event.currentTarget.id == "chartsContainer"){
+                    //需要重置 selected faceted search的数据和routes
+                    //delete last time faceted search data.
+                    maintainSearchData = {};
+                    facetedSearchCOUNT = 1;
+
+                    let routeHtml = '<b>Routes: &nbsp;</b><li class="active" id = "route_1">#1</li>';
+                    $("#searchRoutes").empty();
+                    $("#searchRoutes").append(routeHtml);
+                }
+                //#2. 从faceted panel中开始faceted search的，需要改变前一个导航标签的class，并且新加一个.active导航标签
+                if (event.currentTarget.id == "facetedSearchContainer"){
+                    maintainSearchData[facetedSearchCOUNT] = data_facetedSearch; //记录上一次faceted search的结果
+                    facetedSearchCOUNT++;
+                    //更新上一级导航卡状态;
+                    $("#route_"+(facetedSearchCOUNT-1)).remove();
+                    let routeHtml = `<li id = 'route_${facetedSearchCOUNT-1}'><a href="javascript:returnDataFromRoutes(${facetedSearchCOUNT-1})">#${facetedSearchCOUNT-1}</a></li>
+                                 <li id = 'route_${facetedSearchCOUNT}' class="active">#${facetedSearchCOUNT}</li>`;
+                    $("#searchRoutes").append(routeHtml);
+                }
+
+
+
                 //delete last times div
                 deleteExistFacetedDiv();
 
@@ -85,6 +112,7 @@ $(".facetedSearchContainer").click(function (event) {
                         'changeGB': 0
                     };
                     createFacetedDiv(cnt);
+                    $("#facetedHeader").text('Faceted Search: 0 Visualizations'); // set zero
                 }
 
                 // console.log("data0 = ",data);
@@ -112,7 +140,9 @@ $(".facetedSearchContainer").click(function (event) {
                     }
                 }
 
-                console.log("data2 = ",data_facetedSearch);
+
+                // console.log("data2 = ",data_facetedSearch);
+                document.getElementById("facetedHeader").innerHTML  =  ` <h4>Faceted Search: ${data_facetedSearch.length} visualizations</h4>`;
                 let cnt = {
                     'changeType': 0,
                     'changeX':0,
@@ -135,27 +165,6 @@ $(".facetedSearchContainer").click(function (event) {
                 }
                 //TODO Create Div and then draw
                 createFacetedDiv(cnt);
-
-                //for different aggfunc
-                // for (let i = 0; i < data_for_show_more.length; i++){
-                //     if (describe == data_for_show_more[i].describe && x_name == data_for_show_more[i].x_name && y_name != data_for_show_more[i].y_name && chart == data_for_show_more[i].chart){
-                //         let ty_name1 = y_name.substr(4, y_name.length - 1);
-                //         let ty_name2 = data_for_show_more[i].y_name.substr(4, data_for_show_more[i].y_name.length - 1);
-                //         let fun1 = y_name.substr(0, 3);
-                //         let fun2 = data_for_show_more[i].y_name.substr(0,3);
-                //         if (ty_name1 == ty_name2 && fun1 != fun2){
-                //             let inputData = data_for_show_more[i];
-                //             inputData['index'] = data_facetedSearch.length;
-                //             inputData['changeTag'] = 'changeAgg';
-                //             data_facetedSearch.push(inputData);
-                //         }
-                //     }
-                // }
-
-                document.getElementById("facetedHeader").innerHTML  =  ` <h4>Faceted Search: ${data_facetedSearch.length} visualizations</h4>`;
-                // console.log("data_facetedSearch = ",data_facetedSearch);
-
-
                 for (let i = 0; i < data_facetedSearch.length; i++){
                     createChartsInFacetedDiv(data_facetedSearch[i], i);
                 }
@@ -168,6 +177,48 @@ $(".facetedSearchContainer").click(function (event) {
     }
 });
 
+//click routes tags, and return data.
+function returnDataFromRoutes(selectedIndex) {
+    "use strict";
+    //更新导航卡的状态, selectedIndex-->active; currentIndex
+    for (let i = selectedIndex; i <= facetedSearchCOUNT; i++){
+        $("#route_"+i).remove();
+    }
+    $("#searchRoutes").append(`<li id = "route_${selectedIndex}" class="active">#${selectedIndex}</li>`);
+    facetedSearchCOUNT = selectedIndex;
+
+    //delete last times div
+    deleteExistFacetedDiv();
+
+    console.log("routes index = ",selectedIndex);
+    document.getElementById("facetedHeader").innerHTML  =  `<h4>Faceted Search: ${maintainSearchData[selectedIndex].length} visualizations</h4>`;
+    let cnt = {
+        'changeType': 0,
+        'changeX':0,
+        'changeY':0,
+        'changeGB': 0
+    };
+    for (let i = 0; i < maintainSearchData[selectedIndex].length; i++){
+        if (maintainSearchData[selectedIndex][i].changeTag == 'changeX'){
+            cnt.changeX ++;
+        }
+        if (maintainSearchData[selectedIndex][i].changeTag == 'changeY'){
+            cnt.changeY ++;
+        }
+        if (maintainSearchData[selectedIndex][i].changeTag == 'changeType'){
+            cnt.changeType ++;
+        }
+        if (maintainSearchData[selectedIndex][i].changeTag == 'changeBin'){
+            cnt.changeGB ++;
+        }
+    }
+    //TODO Create Div and then draw
+    createFacetedDiv(cnt);
+    for (let i = 0; i < maintainSearchData[selectedIndex].length; i++){
+        createChartsInFacetedDiv(maintainSearchData[selectedIndex][i], i);
+    }
+}
+
 //create div container faceted panel.
 function createFacetedDiv(cnt) {
     "use strict";
@@ -177,6 +228,7 @@ function createFacetedDiv(cnt) {
                           <li><a href="#yAxis" data-toggle="tab">By yAxis (${cnt.changeY})</a></li>
                           <li><a href="#ifBin" data-toggle="tab">By Group/Bin (${cnt.changeGB})</a></li>
                         </ul>`;
+    $("#facetedPanelHeading").empty();
     $("#facetedPanelHeading").append(headingHtml);
 
     let chartHtml = `<div class="removeFacetedDiv">

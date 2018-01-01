@@ -304,6 +304,13 @@ window.operateEvents = {
         //TODO 更换新的数据表，执行后台可视化推荐算法
         //同时删除上一个数据表画的图和分页组件
         $("#chartsContainerPage").html();
+
+        //需要重置 selected faceted search的数据和routes
+        //delete last time faceted search data.
+        maintainSearchData = {};
+        facetedSearchCOUNT = 1;
+        $("#searchRoutes").empty();
+
         DeepEyeRecommend();
     }
 };

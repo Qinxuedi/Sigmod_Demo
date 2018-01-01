@@ -253,9 +253,12 @@ block content
 
         //area for faceted navigation
         .panel.panel-default
-          .panel-heading#facetedPanelHeading
+          .panel-heading
+            ol.breadcrumb#searchRoutes(style="margin-bottom:-10px; margin-top:-10px; margin-left:-15px; !important;")
+              //route list here
             h4#facetedHeader
               |Faceted Search: 0 Visualizations
+            #facetedPanelHeading
           .panel-body.facetedSearchContainer#facetedSearchContainer(style="max-height:70vh;overflow-y: scroll;")
 
 
