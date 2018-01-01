@@ -87,7 +87,10 @@ $(".facetedSearchContainer").click(function (event) {
                 }
                 //#2. 从faceted panel中开始faceted search的，需要改变前一个导航标签的class，并且新加一个.active导航标签
                 if (event.currentTarget.id == "facetedSearchContainer"){
-                    maintainSearchData[facetedSearchCOUNT] = data_facetedSearch; //记录上一次faceted search的结果
+                    //如果当前ID下没有Value，则记录上一次faceted search的结果
+                    if (maintainSearchData[facetedSearchCOUNT] == undefined){
+                        maintainSearchData[facetedSearchCOUNT] = data_facetedSearch;
+                    }
                     facetedSearchCOUNT++;
                     //更新上一级导航卡状态;
                     $("#route_"+(facetedSearchCOUNT-1)).remove();
@@ -183,8 +186,10 @@ function returnDataFromRoutes(selectedIndex) {
     //更新导航卡的状态, selectedIndex-->active; currentIndex
     for (let i = selectedIndex; i <= facetedSearchCOUNT; i++){
         $("#route_"+i).remove();
+        if (i != selectedIndex) maintainSearchData[i] = undefined;
     }
     $("#searchRoutes").append(`<li id = "route_${selectedIndex}" class="active">#${selectedIndex}</li>`);
+    data_facetedSearch = maintainSearchData[selectedIndex]; //更新"上一次"data
     facetedSearchCOUNT = selectedIndex;
 
     //delete last times div
