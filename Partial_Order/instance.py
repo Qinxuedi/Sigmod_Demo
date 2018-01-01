@@ -25,6 +25,7 @@ class Instance(object):
             for view in table.views:
                 if view.M>max_M[view.chart]:
                     max_M[view.chart]=view.M
+        #normalization
         for table in self.tables:
             for view in table.views:
                 if max_M[view.chart]==0:

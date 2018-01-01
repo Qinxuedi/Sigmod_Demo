@@ -90,10 +90,10 @@ router.get('/req_allTable', function(req, res, next){
     myFunction.getUserUploadedTables().then((data) => res.send(data)).catch((err) => console.log(err)); //返回给前端浏览器的信息
 });
 
-router.get('/getColumnName', function (req, res, next) {
+router.get('/getColumnNameType', function (req, res, next) {
     let tableID = req.query.tableName;
     console.log("收到前端请求表格所有列!",tableID);
-    myFunction.getTableColumnNames(tableID).then((data) => res.send(data)).catch((err) => console.log(err)); //返回给前端浏览器的信息
+    myFunction.getTableColumnNameType(tableID).then((data) => res.send(data)).catch((err) => console.log(err)); //返回给前端浏览器的信息
 });
 
 router.get('/req_TableDataServerSidePaging',function (req,res,next) {

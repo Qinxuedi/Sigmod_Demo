@@ -25,13 +25,13 @@ html(lang='en')
     link(rel="stylesheet" href='/pace/pace.css')
   body
     //For var
-    - var selectedData = 'FlyDelay2015'
+    - var selectedData = 'electricity'
     - var columnName = ['city','date','electricity(kWh)']
     mixin columnItem(columnName)
       li.list-group-item
-        a.filterColumns
+        a.filterColumns(href="#")
           span.glyphicon.glyphicon-filter.text-dark(aria-hidden='true')
-        |#{columnName}
+          |#{columnName}
 
 
     block content
@@ -70,7 +70,7 @@ html(lang='en')
     //script keyword to visualization
     script(src='./javascripts/Keyword2Vis.js')
     //script for faceted search
-    script(src='./javascripts/FacetedSearch.js')
+    script(src='./javascripts/facetedSearch.js')
     //for pace
     script(src='./pace/pace.min.js')
     script(type='text/javascript').
@@ -81,13 +81,11 @@ html(lang='en')
         });
 
 
-//        function genereateDiv(fatherId, id,index) {
-//            let chartW = ($('#'+fatherId).width());
-//            let chartH = ($('#'+fatherId).width())*0.75;
-//            let html = '<div class="panel panel-default">'+
-//                        '<div class="panel-body">'+
-//                        '<div id= "'+ id+index + '" style= "width:' + chartW +'px; height:' + chartH +'px;" ></div>'+
-//                        '</div></div>'
+//        function generateDiv(fatherId, id,index) {
+//            //let chartW = ($('#'+fatherId).width())*0.45;
+//            //let chartH = ($('#'+fatherId).width())*0.45*0.80;
+//            let html = '<div id= "'+ id+index + '" style= "width:15em; height:15em;" class="position: relative; float:left; display:inline;"></div>';
+//            html += '<div id= "'+ id+index + '" style= "width:15em; height:15em;" class="position: relative; float:left; display:inline;"></div>';
 //            $('#'+fatherId).append(html);
 //        }
 //        function draw(id,index) {
@@ -118,9 +116,9 @@ html(lang='en')
 //
 //        $(function () {
 //            for (let i = 0; i < 10; i++) {
-//                //genereateDiv('chartsContainer', 'main', i);
+//                //generateDiv('chartsContainer', 'main', i);
 //                //draw('main', i);
-//                genereateDiv('facetedDiv', 'mind', i);
+//                generateDiv('selectedChartsContainer', 'mind', i);
 //                draw('mind', i);
 //            }
 //        });

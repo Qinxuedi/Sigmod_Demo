@@ -2,6 +2,7 @@
  * Created by luoyuyu on 2017/12/6.
  */
 var data_facetedSearch = [];
+
 $(".facetedSearchContainer").click(function (event) {
     event = event || window.event; //For IE
     console.log(event);
@@ -19,13 +20,34 @@ $(".facetedSearchContainer").click(function (event) {
         let x_name = '';
         let y_name = '';
         let chart = '';
+
+        // maintain the selected vis here
+        let myChart = echarts.init(document.getElementById(event.target.dataset.echartsbtn)); //init echarts
+        let picInfo = myChart.getDataURL(); //get based64
+        if (picInfo){
+            //change number of select charts
+            let NumOfSelChart = Number($("#selectedNumber").text()) + 1;
+            $("#selectedNumber").text(NumOfSelChart);
+            let html = `<div class="col-sm-12 col-md-6 removeSelectedVis">
+                              <div class="thumbnail">
+                                  <img src='${picInfo}' alt="Selected Pic"/>
+                              </div>
+                            </div>`;
+            $("#selectedChartsContainer").append(html);
+        }
+
+
+        //faceted search from faceted search panel
         if (event.currentTarget.id == "facetedSearchContainer"){
+            //do faceted search, get necessary info.
              index = event.target.dataset.echartsbtn.substr(7,tag.length);
              describe = data_facetedSearch[index].describe;
              x_name = data_facetedSearch[index].x_name;
              y_name = data_facetedSearch[index].y_name;
              chart = data_facetedSearch[index].chart;
+
         }
+        //faceted search from recommendation panel
         if (event.currentTarget.id == "chartsContainer"){
             index = event.target.dataset.echartsbtn.substr(4,tag.length);
             console.log("event.target.dataset.echartsbtn = ",event.target.dataset.echartsbtn);
@@ -52,11 +74,18 @@ $(".facetedSearchContainer").click(function (event) {
                 //delete last times div
                 deleteExistFacetedDiv();
 
-                //Create Div and then draw
-                createFacetedDiv();
 
-
-                data = data[0].split('\n');
+                try{
+                    data = data[0].split('\n');
+                }catch (err){
+                    let cnt = {
+                        'changeType': 0,
+                        'changeX':0,
+                        'changeY':0,
+                        'changeGB': 0
+                    };
+                    createFacetedDiv(cnt);
+                }
 
                 // console.log("data0 = ",data);
 
@@ -71,7 +100,7 @@ $(".facetedSearchContainer").click(function (event) {
                         }
                     }
                 }
-                // console.log("data1 = ",data_facetedSearch);
+                console.log("data1 = ",data_facetedSearch);
 
                 // for different type
                 for (let i = 0; i < data_for_show_more.length; i++){
@@ -83,23 +112,47 @@ $(".facetedSearchContainer").click(function (event) {
                     }
                 }
 
-                //for different aggfunc
-                for (let i = 0; i < data_for_show_more.length; i++){
-                    if (describe == data_for_show_more[i].describe && x_name == data_for_show_more[i].x_name && y_name != data_for_show_more[i].y_name && chart == data_for_show_more[i].chart){
-                        let ty_name1 = y_name.substr(4, y_name.length - 1);
-                        let ty_name2 = data_for_show_more[i].y_name.substr(4, data_for_show_more[i].y_name.length - 1);
-                        let fun1 = y_name.substr(0, 3);
-                        let fun2 = data_for_show_more[i].y_name.substr(0,3);
-                        if (ty_name1 == ty_name2 && fun1 != fun2){
-                            let inputData = data_for_show_more[i];
-                            inputData['index'] = data_facetedSearch.length;
-                            inputData['changeTag'] = 'changeAgg';
-                            data_facetedSearch.push(inputData);
-                        }
+                console.log("data2 = ",data_facetedSearch);
+                let cnt = {
+                    'changeType': 0,
+                    'changeX':0,
+                    'changeY':0,
+                    'changeGB': 0
+                };
+                for (let i = 0; i < data_facetedSearch.length; i++){
+                    if (data_facetedSearch[i].changeTag == 'changeX'){
+                        cnt.changeX ++;
+                    }
+                    if (data_facetedSearch[i].changeTag == 'changeY'){
+                        cnt.changeY ++;
+                    }
+                    if (data_facetedSearch[i].changeTag == 'changeType'){
+                        cnt.changeType ++;
+                    }
+                    if (data_facetedSearch[i].changeTag == 'changeBin'){
+                        cnt.changeGB ++;
                     }
                 }
+                //TODO Create Div and then draw
+                createFacetedDiv(cnt);
 
-                document.getElementById("facetedHeader").innerHTML  =  ` <small>${data_facetedSearch.length} visualizations</small>`;
+                //for different aggfunc
+                // for (let i = 0; i < data_for_show_more.length; i++){
+                //     if (describe == data_for_show_more[i].describe && x_name == data_for_show_more[i].x_name && y_name != data_for_show_more[i].y_name && chart == data_for_show_more[i].chart){
+                //         let ty_name1 = y_name.substr(4, y_name.length - 1);
+                //         let ty_name2 = data_for_show_more[i].y_name.substr(4, data_for_show_more[i].y_name.length - 1);
+                //         let fun1 = y_name.substr(0, 3);
+                //         let fun2 = data_for_show_more[i].y_name.substr(0,3);
+                //         if (ty_name1 == ty_name2 && fun1 != fun2){
+                //             let inputData = data_for_show_more[i];
+                //             inputData['index'] = data_facetedSearch.length;
+                //             inputData['changeTag'] = 'changeAgg';
+                //             data_facetedSearch.push(inputData);
+                //         }
+                //     }
+                // }
+
+                document.getElementById("facetedHeader").innerHTML  =  ` <h4>Faceted Search: ${data_facetedSearch.length} visualizations</h4>`;
                 // console.log("data_facetedSearch = ",data_facetedSearch);
 
 
@@ -115,20 +168,18 @@ $(".facetedSearchContainer").click(function (event) {
     }
 });
 
-function createFacetedDiv() {
+//create div container faceted panel.
+function createFacetedDiv(cnt) {
     "use strict";
-    let chartHtml = `<div class="panel panel-default">
-                      <div class="panel-heading">
-                        <h3>Faceted Search: <small id="facetedHeader"> 0 Visualizations</small></h3>
-                        <ul id="myTab" class="nav nav-tabs">
-                          <li class="active"><a href="#visType" data-toggle="tab">By Visualization Type</a></li>
-                          <li><a href="#xAxis" data-toggle="tab">By xAxis</a></li>
-                          <li><a href="#yAxis" data-toggle="tab">By yAxis</a></li>
-                          <li><a href="#ifBin" data-toggle="tab">By Group/Bin</a></li>
-                          <li><a href="#ifAgg" data-toggle="tab">By Aggregates</a></li>
-                        </ul>
-                      </div>
-                      <div class="panel-body">
+    let headingHtml = `<ul id="myTab" class="nav nav-tabs removeFacetedDiv">
+                          <li class="active"><a href="#visType" data-toggle="tab">By Visualization Type (${cnt.changeType})</a></li>
+                          <li><a href="#xAxis" data-toggle="tab">By xAxis (${cnt.changeX})</a></li>
+                          <li><a href="#yAxis" data-toggle="tab">By yAxis (${cnt.changeY})</a></li>
+                          <li><a href="#ifBin" data-toggle="tab">By Group/Bin (${cnt.changeGB})</a></li>
+                        </ul>`;
+    $("#facetedPanelHeading").append(headingHtml);
+
+    let chartHtml = `<div class="removeFacetedDiv">
                         <div id="myTabContent" class="tab-content">
                           <div id="visType" class="tab-pane fade in active">
                             <h4>By Visualization Type</h4>
@@ -150,20 +201,13 @@ function createFacetedDiv() {
                             <hr/>
                             <div id="ifBin-content"></div>
                           </div>
-                          <div id="ifAgg" class="tab-pane fade">
-                            <h4>If aggregates y-axis</h4>
-                            <hr/>
-                            <div id="ifAgg-content"></div>
-                          </div>
                         </div>
-                      </div>
-                    </div>`;
-    let html = document.createElement('div');
-    html.innerHTML = chartHtml;
-    html.className = "removeFacetedDiv";
-    document.getElementById("facetedSearchContainer").appendChild(html);
+                      </div>`;
+
+    $("#facetedSearchContainer").append(chartHtml);
 }
 
+//for visualization in faceted panel.
 function createChartsInFacetedDiv(value, index) {
     "use strict";
     let gridForSingle = [{left: '20%', width: '65%',top:'25%', height: "55%"}];
@@ -205,14 +249,14 @@ function createFacetedChartDiv (changeTag, Echart) {
     // chartHtml += `<button class="btn btn-info btnZoom" style="float:right" data-echartsbtn=${Echart}>Zoom</button> `;
     let html = document.createElement('div');
     html.innerHTML = chartHtml;
-    html.style.cssText = "padding: 1%;border:1px solid #ddd;float:left;display:inline-block";
+    // html.style.cssText = "padding: 1%;border:1px solid #ddd;float:left;display:inline-block";
     html.className = "removeFacetedDiv";
     if (changeTag == "changeType"){
         document.getElementById("visType-content").appendChild(html);
     }
-    if (changeTag == "changeAgg"){
-        document.getElementById("ifAgg-content").appendChild(html);
-    }
+    // if (changeTag == "changeAgg"){
+    //     document.getElementById("ifAgg-content").appendChild(html);
+    // }
     if (changeTag == "changeX"){
         document.getElementById("xAxis-content").appendChild(html);
     }

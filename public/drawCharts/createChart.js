@@ -8,6 +8,12 @@ var deleteExistDiv = function () {
     if($(".removeFacetedDiv").length>0){
         $(".removeFacetedDiv").remove();
     }
+    if($(".removeSelectedVis").length>0){
+        $(".removeSelectedVis").remove();
+    }
+    $("#selectedNumber").text(0);
+
+    $("#facetedHeader").text('Faceted Search: 0 Visualizations')
 };
 
 

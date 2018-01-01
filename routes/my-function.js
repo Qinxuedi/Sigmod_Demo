@@ -91,10 +91,12 @@ module.exports.getColumnValues = async function (tableID, columnID) {
     })
 };
 
-module.exports.getTableColumnNames = function (tableID) {
+module.exports.getTableColumnNameType = function (tableID) {
     return new Promise((resolve, reject) => {
         "use strict";
+        let data = {};
         let columnName = [];
+        let columnType = [];
         tablePool.getConnection(function (err,connection) {
             if (err) reject(err);
             else {
@@ -104,10 +106,25 @@ module.exports.getTableColumnNames = function (tableID) {
                         console.log("1.describe table");
                         //code here
                         for (let i = 0; i < result.length; i++){
+                            if (result[i].Type.toLowerCase().indexOf('varchar') != -1)
+                            {
+                                columnType.push('category');
+                            }
+                            if (result[i].Type.toLowerCase().indexOf('int') != -1 ||
+                                result[i].Type.toLowerCase().indexOf('float') != -1 ||
+                                result[i].Type.toLowerCase().indexOf('double') != -1)
+                            {
+                                columnType.push('numerical');
+                            }
+                            if (result[i].Type.toLowerCase().indexOf('date') != -1 || result[i].Type.toLowerCase().indexOf('year') != -1)
+                            {
+                                columnType.push('date');
+                            }
                             columnName.push(result[i].Field);
                         }
-                        console.log("columnName:",columnName);
-                        resolve(columnName);
+                        data['type'] = columnType;
+                        data['name'] = columnName;
+                        resolve(data);
                     }
                     connection.release();
                 })

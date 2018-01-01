@@ -3,12 +3,19 @@
  */
 var temData;   //全局变量，存储从数据库中返回的 table 数据 十分重要！(表格中的数据)
 var tableName = "electricity"; //全局标量，存储当前数据表格的表名
-var varColName = []; //全局变量，存储当前表格的所有数据列的列名
+var varColName = ['city','date','electricity(kWh)']; //全局变量，存储当前表格的所有数据列的列名 //初始化为第一个表格的
+var varColType = ['category','date','numerical']; //全局变量，存储当前表格的所有数据列的类型 //初始化为第一个表格的
 var colTypeOfUploadExtraData = [];
 var $table = $('#table'); //用于检验表格列的类型的table id
 var $table1 = $('#table_id1'); //用于展示已经上传了的数据表格的id
 var $table_showDataDetails = $('#table_showDataDetails'); //用于展示当前选中数据表的 每一行详细数据
 
+//new scheme;
+// var dataScheme = {
+//     'data': {},
+//     'columnName': [],
+//     'columnType': []
+// };
 
 //For file input / upload function
 //For file input / upload function
@@ -17,7 +24,7 @@ function rowStyle(row, index) {
     if (index === 0) {
         return {
             classes: classes[0]
-        };
+        }
     }
     return {};
 }
@@ -247,26 +254,28 @@ $('#input-id').on('fileuploaded', function (event, data, previewId, index) {
 });
 
 //获取已经上传的数据文件/get data/ cloud data
-function getColumnName(tableID) {
+function getColumnInfo(tableID) {
     $.ajax({
         method: 'GET',    // 如果要使用GET方式，则将此处改为'get'
-        url: "/data/getColumnName",
+        url: "/data/getColumnNameType",
         data: {
             tableName: tableID,
         },
         dataType: 'json',
         success: function (data) {
             "use strict";
-            console.log("返回的columns:",data);
-            varColName = data;
+            console.log("返回的column name:", data.name);
+            console.log("column type:", data.type);
+            varColName = data.name;
+            varColType = data.type;
             //TODO 更新data Tab 里面的 columns
             $("#columns").empty();
             let html = '';
-            for (let i = 0; i < data.length; i++){
+            for (let i = 0; i < data.name.length; i++){
                 html += '<li class="list-group-item">'+
                             '<a class="filterColumns">'+
                             '<span aria-hidden="true" class="glyphicon glyphicon-filter text-dark"></span>'+
-                            '</a>'+data[i]+'</li>';
+                            '</a>'+data.name[i]+'</li>';
             }
             $("#columns").append(html);
         },
@@ -276,6 +285,7 @@ function getColumnName(tableID) {
         }
     });
 }
+
 //1. Bootstrap - table 相关函数
 //监听events 主要是监听选中按钮
 window.operateEvents = {
@@ -287,11 +297,13 @@ window.operateEvents = {
         //给出加载成功提示关闭模态框
         addSuccessfulInfo(0);
         //1.更新表格列的数据.
-        getColumnName(tableName);
+        getColumnInfo(tableName);
         //2.如果过滤器有上个表残留的内容，删除
         $("#filterBuilder").empty();
         //2.选中表格，切换数据(这这里应该是调用后台算法画图)
         //TODO 更换新的数据表，执行后台可视化推荐算法
+        //同时删除上一个数据表画的图和分页组件
+        $("#chartsContainerPage").html();
         DeepEyeRecommend();
     }
 };
@@ -400,7 +412,7 @@ var reqTableDataServerSidePagination = function (tableID) { //加载表
                 pageNumber:1,      //初始化加载第一页，默认第一页
                 pageSize: 15, //每页的记录行数（*）
                 queryParams: queryParams,	// 请求参数，这个关系到后续用到的异步刷新
-                pageList:[10,25,50,100],
+                pageList:[10,25],
                 search: false, //是否启用搜索框
                 strictSearch:true,//设置为 true启用 全匹配搜索，否则为模糊搜索
                 searchOnEnterKey: true, //设置为 true时，按回车触发搜索方法，否则自动触发搜索方法
@@ -418,6 +430,7 @@ var reqTableDataServerSidePagination = function (tableID) { //加载表
     })
 };
 
+///TODO 初次加载首页，初始化deepeye 推荐结果
 function initialVisualization() {
     //初试可视化
     //TODO sum or avg, filter some related charts
@@ -432,7 +445,7 @@ function initialVisualization() {
     }
     let pageNum = Math.ceil(data_response_to_draw.length / pageSize);
     //TODO 更新chartAreaTitle
-    document.getElementById("chartAreaTitle").innerHTML  = '<h4>DeepEye recommendation: ' + ` <small>${data_response_to_draw.length} visualizations</small></h4>`;
+    document.getElementById("chartAreaTitle").innerHTML  = '<h4>DeepEye Recommendation: ' + ` <span>${data_response_to_draw.length} visualizations</span></h4>`;
     $('#chartsContainerPage').html(
         `<nav aria-label="...">
                               <ul class="pagination">

@@ -26,7 +26,7 @@ function DeepEyeRecommend() {
             // console.log("PartialOrder接受后台的data类型:",typeof (data));
             if (data[0] === "{}") {
                 //TODO 更新chartAreaTitle
-                document.getElementById("chartAreaTitle").innerHTML = '<h4>DeepEye recommendation: ' + `<small>${data.length - 1} visualizations</small></h4>`;
+                document.getElementById("chartAreaTitle").innerHTML = '<h4>DeepEye Recommendation: ' + `<span>${data.length - 1} visualizations</span></h4>`;
             }
             else {
                 //TODO sum or avg, filter some related charts
@@ -115,11 +115,11 @@ function DeepEyeRecommend() {
                 console.log("data_response_to_draw ==> ",data_response_to_draw);
                 if ((data.length == 1 && data[0] === undefined) || data.length == 0){
                     //TODO 更新chartAreaTitle
-                    document.getElementById("chartAreaTitle").innerHTML  = '<h4>DeepEye recommendation:  ' + `<small> 0 visualizations</small></h4>`;
+                    document.getElementById("chartAreaTitle").innerHTML  = '<h4>DeepEye Recommendation:  ' + `<span> 0 visualizations</span></h4>`;
                 }else {
                     let pageNum = Math.ceil(data.length / pageSize);
                     //TODO 更新chartAreaTitle
-                    document.getElementById("chartAreaTitle").innerHTML  = '<h4>DeepEye recommendation: ' + ` <small>${data.length} visualizations</small></h4>`;
+                    document.getElementById("chartAreaTitle").innerHTML  = '<h4>DeepEye Recommendation: ' + ` <span>${data.length} visualizations</span></h4>`;
                     $('#chartsContainerPage').html(
                         `<nav aria-label="...">
                               <ul class="pagination">
@@ -188,7 +188,7 @@ function isEmpty(obj) {
 }
 
 
-function eventOfZoomMore(event) { //visualization recommendation phase
+function eventOfZoomMore(event) { //visualization Recommendation phase
     "use strict";
     event = event || window.event; //For IE
     if(event.target.className.match(/btnZoom/)){//FOR ZOOM IN BUTTON AND FUNCTION
@@ -239,6 +239,7 @@ function eventOfZoomMore(event) { //visualization recommendation phase
     }
 }
 
+//父元素代理
 $("#chartsContainer").click(function (event) {
     eventOfZoomMore(event);
 });

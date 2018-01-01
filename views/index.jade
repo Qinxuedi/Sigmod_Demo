@@ -103,51 +103,24 @@ block content
                 th Select Y-axis
                 th From
                 th Group/Bin by
-                th Aggregate
                 th Order by
             tbody#queryTableBody
               tr
                 td
                   select.visualize.form-control
-                    option bar
-                    option line
-                    option pie
-                    option scatter
                 td
                   select.selectX.form-control
-                    option date
-                    option carrier
-                    option dep_delay
-                    option arr_delay
                 td
                   select.selectY.form-control
-                    option passenger
-                    option carrier
-                    option dep_delay
-                    option arr_delay
+                    //change select y dynamically
+                    //把带了聚集函数的y加在这里
                 td
                   select.from.form-control
-                    option #{selectedData}
                 td
                   select.group_bin.form-control
-                    option Group by
-                    option Bin by
-                  select.byWhat.form-control
-                    option date
-                    option carrier
-                    option dep_delay
-                    option arr_delay
-                td
-                  select.agg.form-control
-                    option Sum(&nbsp;)
-                    option Avg(&nbsp;)
-                    option Count(&nbsp;)
+                    //只能对X轴的数据进行group/bin by
                 td
                   select.order.form-control
-                    option date
-                    option carrier
-                    option dep_delay
-                    option arr_delay
           #addQueryDiv
             button.btn.btn-info(type='button', id="addVisQuery" aria-label='Left Align')
               span.glyphicon.glyphicon.glyphicon-plus
@@ -168,7 +141,7 @@ block content
           b DeepEye
       #navbar.navbar-collapse.collapse
         .row
-          .col-md-4.col-md-offset-1.col-sm-4.col-sm-offset-1
+          .col-md-5.col-md-offset-1.col-sm-5.col-sm-offset-1
             //<p> （段落）元素还被设置了等于 1/2 行高（即 10px）的底部外边距（margin）。
             p
               .input-group
@@ -179,9 +152,9 @@ block content
                     |  Search
                   //1. Check if load data
                     2. Click and do function
-          .col-md-3.col-md-offset-2.col-sm-3.col-sm-offset-2
+          .col-md-2.col-md-offset-2.col-sm-2.col-sm-offset-2
             ul.nav.navbar-nav
-              li
+              //li
                 a(href='#')
                   span.glyphicon.glyphicon-bookmark(aria-hidden='true')
                   |   Collections (0)
@@ -209,7 +182,7 @@ block content
             button.btn.btn-default.btn-block(type='button', id="uploadBtn" aria-label='Left Align')
               span.glyphicon.glyphicon.glyphicon-upload
               |   Upload
-            //TODO 没变化一次数据表就自动画图
+            //TODO 每变化一次数据表就自动画图
             //button.btn.btn-default.btn-block(type='button', id="drawBtn" aria-label='Left Align')
             //  span.glyphicon.glyphicon.glyphicon-play-circle
             //  |   Draw
@@ -229,6 +202,7 @@ block content
               |   Filter
           .panel-body
             #filterBuilder
+          .panel-footer#filterFooter
 
 
 
@@ -260,15 +234,32 @@ block content
           .panel-heading
             h3.panel-title#chartAreaTitle
           .panel-body
-          ul#chartsContainer.list-group.facetedSearchContainer(style="max-height:100vh;overflow-y: scroll;")
+          ul#chartsContainer.list-group.facetedSearchContainer(style="max-height:80vh;overflow-y: scroll;")
           #chartsContainerPage
 
 
 
       .col-sm-5.col-md-5.main
+        //area for show charts have been selected
         .panel.panel-default
+          .panel-heading
+            h4#selectedChartsTitle
+              | Your Selected Charts&nbsp;(
+              span#selectedNumber 0
+              | ) :
           .panel-body
-            #facetedSearchContainer.facetedSearchContainer(style="max-height:100vh;overflow-y: scroll;")
+            .row#selectedChartsContainer(style="max-height:15em; overflow-y:scroll;")
+              //selected visualization and button here, created by javascript.
+
+        //area for faceted navigation
+        .panel.panel-default
+          .panel-heading#facetedPanelHeading
+            h4#facetedHeader
+              |Faceted Search: 0 Visualizations
+          .panel-body.facetedSearchContainer#facetedSearchContainer(style="max-height:70vh;overflow-y: scroll;")
+
+
+
 
 
 
