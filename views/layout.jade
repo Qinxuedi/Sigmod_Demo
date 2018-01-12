@@ -80,6 +80,16 @@ html(lang='en')
             initialVisualization();
         });
 
+        $(function () {
+            $("#chartsContainer .smallPic").mouseover(function () {
+                $(this).css('z-index','998');
+                $(this).css('width','480px');
+            });
+            $("#chartsContainer .smallPic").mouseout(function () {
+                $(this).removeAttr("style");
+            })
+        })
+
 
 //        function generateDiv(fatherId, id,index) {
 //            //let chartW = ($('#'+fatherId).width())*0.45;

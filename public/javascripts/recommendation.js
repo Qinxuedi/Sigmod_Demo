@@ -136,9 +136,9 @@ function DeepEyeRecommend() {
                     deleteExistDiv();
                     data.slice(0, pageSize).forEach((value,index) => {
                         // 画6个图
-                        createChart(value, index);
+                        createChart(value, index, false);
                     });
-                    // 绑定事件
+                    // 绑定事件 绑定在父元素上面
                     $('#chartsContainerPage').find('.pagination li').click(function () {
                         ////TODO step 1: 删除之前已经存在的div
                         deleteExistDiv();
@@ -147,7 +147,7 @@ function DeepEyeRecommend() {
                         $(this).siblings().removeClass("active");
                         data.slice((clickPage - 1) * pageSize, clickPage * pageSize).forEach((value, index) => {
                         // TODO 画6个图
-                        createChart(value, (clickPage-1)*pageSize+index);
+                        createChart(value, (clickPage-1)*pageSize+index, false);
                         });
                     });
                 }
@@ -200,7 +200,7 @@ function eventOfZoomMore(event) { //visualization Recommendation phase
         $(function () {
             $('#ZoomDiv').modal({backdrop: 'static', keyboard: false}, 'show');
             // 画图data[event.target.dataset.echartsbtn]
-            createChartInZoom(data_response_to_draw[index], index);
+            createChartInZoom(data_response_to_draw[index], index, false);
             // 关闭modal的时候删除图
             $('#ZoomDiv').on('hidden.bs.modal', function (e) {
                 $("#ZoomVis").html("");
@@ -230,7 +230,7 @@ function eventOfZoomMore(event) { //visualization Recommendation phase
         // 创建模态框
         $(function () {
             $('#showMoreDiv').modal({backdrop: 'static', keyboard: false}, 'show');
-            createChartInZoomForShowMore(value, order1);
+            createChartInZoomForShowMore(value, order1, false);
             // 关闭modal的时候删除图
             $('#showMoreDiv').on('hidden.bs.modal', function (e) {
                 $("#showMoreVis").html("");

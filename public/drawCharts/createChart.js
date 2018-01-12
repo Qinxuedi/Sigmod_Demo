@@ -19,13 +19,11 @@ var deleteExistDiv = function () {
 
 
 var createNewDiv = function (Echart,show_option) { // i 表示现在是第几个 div //推荐时用的
-    // let chartW1= document.getElementById('chartsContainer').clientWidth;
-    // console.log("chartW1 = ",chartW1);
     let chartW = ($('#chartsContainer').width())*0.90;
     let chartH = ($('#chartsContainer').width())*0.75;
     let chartHtml = `<div class="panel panel-default">
         <div class="panel-body">
-        <div id=${Echart}  style="width: `+chartW+`px;height:`+chartH+`px;"></div>`;
+        <div id=${Echart}  style="width: ${chartW}px;height: ${chartH}px;"></div>`;
     if (show_option.length !== 0){
         chartHtml +=`<label for="aggFun" style="float: left" class="control-label">Related charts:</label>
                     <select class=${show_option[0].order1}  style="float: left">`;
@@ -35,11 +33,11 @@ var createNewDiv = function (Echart,show_option) { // i 表示现在是第几个
             chartHtml += `</option>`;
         }
         chartHtml += `</select>
-            <button class="btn btn-info btnShowMore" style="float:left" data-showmore=${show_option[0].order1}>Show</button>`
+            <button class="btn btn-info btnShowMore btn-sm" style="float:left" data-showmore=${show_option[0].order1}>Show</button>`
     }
-    chartHtml += `<button class="btn btn-warning btnSearch" style="float:right" data-echartsbtn=${Echart}>Faceted Search</button>
+    chartHtml += `<button class="btn btn-warning btnSearch btn-sm" style="float:right" data-echartsbtn=${Echart}>Faceted Search</button>
                     </div></div>`;
-    //chartHtml += `<button class="btn btn-info btnZoom" style="float:right" data-echartsbtn=${Echart}>Zoom</button> `;
+    // chartHtml += `<button class="btn btn-info btnZoom" style="float:right" data-echartsbtn=${Echart}>Zoom</button> `;
     let html = document.createElement('div');
     html.innerHTML = chartHtml;
     // html.style.cssText = "padding: 1%;border:1px solid #ddd;float:left;display:inline-block";
@@ -56,10 +54,62 @@ var createNewDivInZoom = function (Echart,PadVid) { // i 表示现在是第几�
     html.className = "removeDiv";
     document.getElementById(PadVid).appendChild(html);
 };
-var createBar = function (drawData, chartID, grid) {
+
+function listLikeGoogleSearch(drawData, chartID, myChart) {
+    let nlp = '';
+    let y_nlp = '';
+    if (drawData.y_name.indexOf('SUM') != -1){
+        y_nlp += ' the summation of ' + drawData.y_name.substr(4,drawData.y_name.length-1-4);
+    }
+    if (drawData.y_name.indexOf('CNT') != -1){
+        y_nlp += ' the amount of '  + drawData.y_name.substr(4,drawData.y_name.length-1-4);
+    }
+    if (drawData.y_name.indexOf('AVG') != -1){
+        y_nlp += ' the average of '  + drawData.y_name.substr(4,drawData.y_name.length-1-4);
+    }
+
+    if (drawData.chart == 'bar'){
+        // console.log("drawData.x_data = ",drawData.x_data[0]);
+        nlp += 'This bar chart shows that' + y_nlp +  ' of ' + drawData.x_data[0][0] + ', ... , ' + drawData.x_data[0][drawData.x_data[0].length-1];
+    }
+
+    if (drawData.chart == 'pie'){
+        nlp += 'This pie chart shows that the proportion of ' + drawData.x_name;
+    }
+
+    if (drawData.chart == 'line'){
+        nlp += 'This line chart reflects ' + y_nlp + ' change over the ' + drawData.x_name;
+    }
+
+    if (drawData.chart == 'scatter'){
+        nlp += 'This scatter chart shows the correlation between ' + drawData.y_name + ' and ' + drawData.x_name;
+    }
+
+    let picInfo = myChart.getDataURL();
+    if (picInfo){
+        let picHtml = `<div class="row removeDiv">
+                          <div class="col-sm-6 col-md-8 smallPic">
+                            <div class="thumbnail"><img class="smallPic" src='${picInfo}' alt="DeepEye Recommendation Visualization"/></div>
+                          </div>
+                          <div class="col-sm-6 col-md-4">
+                            <h5>A ${drawData.chart} with ${drawData.x_name} and ${drawData.y_name}</h5>
+                            <p>${nlp}</p>
+                            <button class="btn btn-default btn-sm btnZoom" data-echartsbtn=${chartID} aria-label="Left Align">
+                                <span class="glyphicon glyphicon-zoom-in" aria-hidden="true"></span> Zoom
+                            </button>
+                            <button class="btn btn-default btn-sm btnSearch" data-echartsbtn=${chartID} aria-label="Left Align">
+                              <span class="glyphicon glyphicon-search" aria-hidden="true"></span> Navigation
+                            </button>
+                            </div>
+                        </div>`;
+        $("#chartsContainer").append(picHtml);
+    }
+}
+
+var createBar = function (drawData, chartID, grid, googleLike) {
     //TODO 清空上一次残留
     myOption.bar.legend.data = [];
-
+    console.log("createBar->drawData:",drawData);
     let Operation =  'Operation: ';
     if (drawData.describe === "") Operation += 'none';
     else Operation += drawData.describe;
@@ -80,7 +130,10 @@ var createBar = function (drawData, chartID, grid) {
     myChart.setOption(myOption.bar);
 
     //TODO save picture and data
-    // let picInfo = myChart.getDataURL();
+    if (googleLike){
+        listLikeGoogleSearch(drawData, chartID, myChart);
+    }
+
     // if (picInfo){
     //     $.ajax({
     //         url: '/savePic',
@@ -102,7 +155,7 @@ var createBar = function (drawData, chartID, grid) {
     //TODO END OF SAVE PIC
     // myChart.setOption(myOption.stackedBar);
 };
-var createStackedBar = function (drawData, chartID, grid) {
+var createStackedBar = function (drawData, chartID, grid, googleLike) {
     //TODO 清空上一次残留
     myOption.stackedBar.legend.data = [];
 
@@ -137,6 +190,10 @@ var createStackedBar = function (drawData, chartID, grid) {
     myChart.setOption(myOption.stackedBar);
 
     //TODO save picture and data
+    if (googleLike){
+        listLikeGoogleSearch(drawData, chartID, myChart);
+    }
+
     // let picInfo = myChart.getDataURL();
     // if (picInfo){
     //     $.ajax({
@@ -157,7 +214,7 @@ var createStackedBar = function (drawData, chartID, grid) {
     //     });
     // }
 };
-var createLine = function (drawData, chartID, grid) {
+var createLine = function (drawData, chartID, grid, googleLike) {
     //TODO 清空上一次残留
     myOption.line.legend.data = [];
 
@@ -180,6 +237,9 @@ var createLine = function (drawData, chartID, grid) {
     myChart.setOption(myOption.line);
 
     //TODO save picture and data
+    if (googleLike){
+        listLikeGoogleSearch(drawData, chartID, myChart);
+    }
     // let picInfo = myChart.getDataURL();
     // if (picInfo){
     //     $.ajax({
@@ -200,7 +260,8 @@ var createLine = function (drawData, chartID, grid) {
     //     });
     // }
 };
-var createStackedLine = function (drawData, chartID, grid) {
+
+var createStackedLine = function (drawData, chartID, grid, googleLike) {
     //TODO 清空上一次残留
     myOption.stackedLine.legend.data = [];
 
@@ -233,6 +294,9 @@ var createStackedLine = function (drawData, chartID, grid) {
     myChart.setOption(myOption.stackedLine);
 
     //TODO save picture and data
+    if (googleLike){
+        listLikeGoogleSearch(drawData, chartID, myChart);
+    }
     // let picInfo = myChart.getDataURL();
     // if (picInfo){
     //     $.ajax({
@@ -253,7 +317,8 @@ var createStackedLine = function (drawData, chartID, grid) {
     //     });
     // }
 };
-var createPie = function (drawData, chartID, grid) {
+
+var createPie = function (drawData, chartID, grid, googleLike) {
     //TODO 清空上一次残留
     myOption.pie.legend.data = [];
 
@@ -282,6 +347,9 @@ var createPie = function (drawData, chartID, grid) {
     myChart.setOption(myOption.pie);
 
     //TODO save picture and data
+    if (googleLike){
+        listLikeGoogleSearch(drawData, chartID, myChart);
+    }
     // let picInfo = myChart.getDataURL();
     // if (picInfo){
     //     $.ajax({
@@ -302,7 +370,7 @@ var createPie = function (drawData, chartID, grid) {
     //     });
     // }
 };
-var createScatter = function (drawData, chartID, grid) {
+var createScatter = function (drawData, chartID, grid, googleLike) {
     //TODO 清空上一次残留
     myOption.scatter.legend.data = [];
 
@@ -334,6 +402,9 @@ var createScatter = function (drawData, chartID, grid) {
         myChart.setOption(myOption.scatter);
 
         //TODO save picture and data
+        if (googleLike){
+            listLikeGoogleSearch(drawData, chartID, myChart);
+        }
         // console.log("scatter!!!!")
         // let picInfo = myChart.getDataURL();
         // if (picInfo){
@@ -378,6 +449,9 @@ var createScatter = function (drawData, chartID, grid) {
         myChart.setOption(myOption.scatter);
 
         //TODO save picture and data
+        if (googleLike){
+            listLikeGoogleSearch(drawData, chartID, myChart);
+        }
         // let picInfo = myChart.getDataURL();
         // if (picInfo){
         //     $.ajax({
@@ -399,7 +473,8 @@ var createScatter = function (drawData, chartID, grid) {
         // }
     }
 };
-var createStackedScatter = function (drawData, chartID, grid) {
+
+var createStackedScatter = function (drawData, chartID, grid, googleLike) {
     //TODO 清空上一次残留
     myOption.stackedScatter.legend.data = [];
 
@@ -439,6 +514,9 @@ var createStackedScatter = function (drawData, chartID, grid) {
     myChart.setOption(myOption.stackedScatter);
 
     //TODO save picture and data
+    if (googleLike){
+        listLikeGoogleSearch(drawData, chartID, myChart);
+    }
     // let picInfo = myChart.getDataURL();
     // if (picInfo){
     //     $.ajax({
@@ -460,7 +538,7 @@ var createStackedScatter = function (drawData, chartID, grid) {
     // }
 };
 
-var createChart = function (value, index) {
+var createChart = function (value, index, googleLike) {
     let gridForSingle = [{left: '20%', width: '65%',top:'25%', height: "55%"}];
     let gridForStacked = [{left: '20%', width: '65%',top:'30%', height: "50%"}];
     console.log("value = ",value);
@@ -481,21 +559,21 @@ var createChart = function (value, index) {
     //TODO 开始画图操作
     if (drawData.classify.length === 0){//TODO 2列的情况
         if (drawData.chart === "bar")
-            createBar(drawData, chartId, gridForSingle);
+            createBar(drawData, chartId, gridForSingle, googleLike);
         else  if (drawData.chart === "line")
-            createLine(drawData, chartId, gridForSingle);
+            createLine(drawData, chartId, gridForSingle, googleLike);
         else  if (drawData.chart === "pie")
-            createPie(drawData, chartId, gridForSingle);
+            createPie(drawData, chartId, gridForSingle, googleLike);
         else if (drawData.chart === "scatter")
-            createScatter(drawData, chartId, gridForSingle);
+            createScatter(drawData, chartId, gridForSingle, googleLike);
     }
     else {//TODO 3列的情况
         if (drawData.chart === "bar")
-            createStackedBar(drawData, chartId, gridForStacked);
+            createStackedBar(drawData, chartId, gridForStacked, googleLike);
         else  if (drawData.chart === "line")
-            createStackedLine(drawData, chartId, gridForStacked);
+            createStackedLine(drawData, chartId, gridForStacked, googleLike);
         else if (drawData.chart === "scatter")
-            createStackedScatter(drawData, chartId, gridForStacked);
+            createStackedScatter(drawData, chartId, gridForStacked, googleLike);
     }
 
 };
@@ -538,7 +616,7 @@ var deepEyeSql_Nlp = function (data, ZoomID) {
     // $("#"+ZoomID).append(nlp);
 }
 
-var createChartInZoom = function  (value, index) {
+var createChartInZoom = function  (value, index, googleLike) {
     let grid = [{x: '20%', width: '70%',y:'22%',height: "64%"}];
     // 画图操作
     let chartId = 'ZoomVis'+index;
@@ -549,28 +627,28 @@ var createChartInZoom = function  (value, index) {
     let drawData = value;
     if (drawData.classify.length === 0) {//TODO 2列的情况
         if (drawData.chart === "bar")
-            createBar(drawData, chartId, grid);
+            createBar(drawData, chartId, grid, googleLike);
         else  if (drawData.chart === "line")
-            createLine(drawData, chartId, grid);
+            createLine(drawData, chartId, grid, googleLike);
         else  if (drawData.chart === "pie")
-            createPie(drawData, chartId, grid);
+            createPie(drawData, chartId, grid, googleLike);
         else if (drawData.chart === "scatter")
-            createScatter(drawData, chartId, grid);
+            createScatter(drawData, chartId, grid, googleLike);
     }
     else{//TODO 3列的情况
         if (drawData.chart === "bar")
-            createStackedBar(drawData, chartId, grid);
+            createStackedBar(drawData, chartId, grid, googleLike);
         else  if (drawData.chart === "line")
-            createStackedLine(drawData, chartId, grid);
+            createStackedLine(drawData, chartId, grid, googleLike);
         else if (drawData.chart === "scatter")
-            createStackedScatter(drawData, chartId, grid);
+            createStackedScatter(drawData, chartId, grid, googleLike);
     }
     //TODO 在zoom 模态框里面增加query 和 natural sentence
     deepEyeSql_Nlp(drawData, 'ZoomVis');
     return  chartId;
 };
 
-var createChartInZoomForShowMore = function  (value, index) {
+var createChartInZoomForShowMore = function  (value, index, googleLike) {
     let grid = [{x: '20%', width: '70%',y:'22%',height: "64%"}];
     // 画图操作
     let chartId = 'showMoreVis'+index;
@@ -581,21 +659,21 @@ var createChartInZoomForShowMore = function  (value, index) {
     let drawData = value;
     if (drawData.classify.length === 0) {//TODO 2列的情况
         if (drawData.chart === "bar")
-            createBar(drawData, chartId, grid);
+            createBar(drawData, chartId, grid, googleLike);
         else  if (drawData.chart === "line")
-            createLine(drawData, chartId, grid);
+            createLine(drawData, chartId, grid, googleLike);
         else  if (drawData.chart === "pie")
-            createPie(drawData, chartId, grid);
+            createPie(drawData, chartId, grid, googleLike);
         else if (drawData.chart === "scatter")
-            createScatter(drawData, chartId, grid);
+            createScatter(drawData, chartId, grid, googleLike);
     }
     else{//TODO 3列的情况
         if (drawData.chart === "bar")
-            createStackedBar(drawData, chartId, grid);
+            createStackedBar(drawData, chartId, grid, googleLike);
         else  if (drawData.chart === "line")
-            createStackedLine(drawData, chartId, grid);
+            createStackedLine(drawData, chartId, grid, googleLike);
         else if (drawData.chart === "scatter")
-            createStackedScatter(drawData, chartId, grid);
+            createStackedScatter(drawData, chartId, grid, googleLike);
     }
     //TODO 在zoom 模态框里面增加query 和 natural sentence
     deepEyeSql_Nlp(drawData, 'showMoreVis');

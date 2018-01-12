@@ -273,9 +273,9 @@ function getColumnInfo(tableID) {
             let html = '';
             for (let i = 0; i < data.name.length; i++){
                 html += '<li class="list-group-item">'+
-                            '<a class="filterColumns">'+
-                            '<span aria-hidden="true" class="glyphicon glyphicon-filter text-dark"></span>'+
-                            '</a>'+data.name[i]+'</li>';
+                            '<a href="#" class="filterColumns">'+
+                            '<span aria-hidden="true" class="glyphicon glyphicon-filter text-dark"></span>'+data.name[i]+
+                            '</a></li>';
             }
             $("#columns").append(html);
         },

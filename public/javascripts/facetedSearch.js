@@ -169,7 +169,7 @@ $(".facetedSearchContainer").click(function (event) {
                 //TODO Create Div and then draw
                 createFacetedDiv(cnt);
                 for (let i = 0; i < data_facetedSearch.length; i++){
-                    createChartsInFacetedDiv(data_facetedSearch[i], i);
+                    createChartsInFacetedDiv(data_facetedSearch[i], i, false);
                 }
 
             },
@@ -220,40 +220,59 @@ function returnDataFromRoutes(selectedIndex) {
     //TODO Create Div and then draw
     createFacetedDiv(cnt);
     for (let i = 0; i < maintainSearchData[selectedIndex].length; i++){
-        createChartsInFacetedDiv(maintainSearchData[selectedIndex][i], i);
+        createChartsInFacetedDiv(maintainSearchData[selectedIndex][i], i, false);
     }
 }
 
 //create div container faceted panel.
 function createFacetedDiv(cnt) {
     "use strict";
+    let ifActive = false;
+    let firstActive = '';
+    if (cnt.changeType > 0 && !ifActive){
+        ifActive = true;
+        firstActive = 'visType';
+    }
+    if (cnt.changeX > 0 && !ifActive){
+        ifActive = true;
+        firstActive = 'xAxis';
+    }
+    if (cnt.changeY > 0 && !ifActive){
+        ifActive = true;
+        firstActive = 'yAxis';
+    }
+    if (cnt.changeGB > 0 && !ifActive){
+        ifActive = true;
+        firstActive = 'ifBin';
+    }
+
     let headingHtml = `<ul id="myTab" class="nav nav-tabs removeFacetedDiv">
-                          <li class="active"><a href="#visType" data-toggle="tab">By Visualization Type (${cnt.changeType})</a></li>
-                          <li><a href="#xAxis" data-toggle="tab">By xAxis (${cnt.changeX})</a></li>
-                          <li><a href="#yAxis" data-toggle="tab">By yAxis (${cnt.changeY})</a></li>
-                          <li><a href="#ifBin" data-toggle="tab">By Group/Bin (${cnt.changeGB})</a></li>
+                          <li class="${firstActive == "visType" ? "active" : ""}"><a href="#visType" data-toggle="tab">By Visualization Type (${cnt.changeType})</a></li>
+                          <li class="${firstActive == "xAxis" ? "active" : ""}"><a href="#xAxis" data-toggle="tab">By xAxis (${cnt.changeX})</a></li>
+                          <li class="${firstActive == "yAxis" ? "active" : ""}"><a href="#yAxis" data-toggle="tab">By yAxis (${cnt.changeY})</a></li>
+                          <li class="${firstActive == "ifBin" ? "active" : ""}"><a href="#ifBin" data-toggle="tab">By Group/Bin (${cnt.changeGB})</a></li>
                         </ul>`;
     $("#facetedPanelHeading").empty();
     $("#facetedPanelHeading").append(headingHtml);
 
     let chartHtml = `<div class="removeFacetedDiv">
                         <div id="myTabContent" class="tab-content">
-                          <div id="visType" class="tab-pane fade in active">
+                          <div id="visType" class="${firstActive == "visType" ? "tab-pane fade in active" : "tab-pane fade"}">
                             <h4>By Visualization Type</h4>
                             <hr/>
                             <div id="visType-content"></div>
                           </div>
-                          <div id="xAxis" class="tab-pane fade">
+                          <div id="xAxis" class="${firstActive == "xAxis" ? "tab-pane fade in active" : "tab-pane fade"}">
                             <h4>By x-axis</h4>
                             <hr/>
                             <div id="xAxis-content"></div>
                           </div>
-                          <div id="yAxis" class="tab-pane fade">
+                          <div id="yAxis" class="${firstActive == "yAxis" ? "tab-pane fade in active" : "tab-pane fade"}">
                             <h4>By y-axis</h4>
                             <hr/>
                             <div id="yAxis-content"></div>
                           </div>
-                          <div id="ifBin" class="tab-pane fade">
+                          <div id="ifBin" class="${firstActive == "ifBin" ? "tab-pane fade in active" : "tab-pane fade"}">
                             <h4>If Group/Bin by x-axis or y-axis</h4>
                             <hr/>
                             <div id="ifBin-content"></div>
@@ -265,7 +284,7 @@ function createFacetedDiv(cnt) {
 }
 
 //for visualization in faceted panel.
-function createChartsInFacetedDiv(value, index) {
+function createChartsInFacetedDiv(value, index, googleLike) {
     "use strict";
     let gridForSingle = [{left: '20%', width: '65%',top:'25%', height: "55%"}];
     let gridForStacked = [{left: '20%', width: '65%',top:'30%', height: "50%"}];
@@ -279,21 +298,21 @@ function createChartsInFacetedDiv(value, index) {
     //TODO 开始画图操作
     if (drawData.classify.length === 0){//TODO 2列的情况
         if (drawData.chart === "bar")
-            createBar(drawData, chartId, gridForSingle);
+            createBar(drawData, chartId, gridForSingle, googleLike);
         else  if (drawData.chart === "line")
-            createLine(drawData, chartId, gridForSingle);
+            createLine(drawData, chartId, gridForSingle, googleLike);
         else  if (drawData.chart === "pie")
-            createPie(drawData, chartId, gridForSingle);
+            createPie(drawData, chartId, gridForSingle, googleLike);
         else if (drawData.chart === "scatter")
-            createScatter(drawData, chartId, gridForSingle);
+            createScatter(drawData, chartId, gridForSingle, googleLike);
     }
     else {//TODO 3列的情况
         if (drawData.chart === "bar")
-            createStackedBar(drawData, chartId, gridForStacked);
+            createStackedBar(drawData, chartId, gridForStacked, googleLike);
         else  if (drawData.chart === "line")
-            createStackedLine(drawData, chartId, gridForStacked);
+            createStackedLine(drawData, chartId, gridForStacked, googleLike);
         else if (drawData.chart === "scatter")
-            createStackedScatter(drawData, chartId, gridForStacked);
+            createStackedScatter(drawData, chartId, gridForStacked, googleLike);
     }
 }
 
