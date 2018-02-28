@@ -245,12 +245,22 @@ function createFacetedDiv(cnt) {
         ifActive = true;
         firstActive = 'ifBin';
     }
-
+    if (cnt.similar > 0 && !ifActive){
+        ifActive = true;
+        firstActive = 'similar';
+    }
+    if (cnt.different > 0 && !ifActive){
+        ifActive = true;
+        firstActive = 'different';
+    }
+    //TODO similar trend
     let headingHtml = `<ul id="myTab" class="nav nav-tabs removeFacetedDiv">
                           <li class="${firstActive == "visType" ? "active" : ""}"><a href="#visType" data-toggle="tab">By Visualization Type (${cnt.changeType})</a></li>
                           <li class="${firstActive == "xAxis" ? "active" : ""}"><a href="#xAxis" data-toggle="tab">By xAxis (${cnt.changeX})</a></li>
                           <li class="${firstActive == "yAxis" ? "active" : ""}"><a href="#yAxis" data-toggle="tab">By yAxis (${cnt.changeY})</a></li>
                           <li class="${firstActive == "ifBin" ? "active" : ""}"><a href="#ifBin" data-toggle="tab">By Group/Bin (${cnt.changeGB})</a></li>
+                          <li class="${firstActive == "similar" ? "active" : ""}"><a href="#similar" data-toggle="tab">By Similar Trend(${cnt.similar})</a></li>
+                          <li class="${firstActive == "different" ? "active" : ""}"><a href="#different" data-toggle="tab">By Different Trend(${cnt.different})</a></li>
                         </ul>`;
     $("#facetedPanelHeading").empty();
     $("#facetedPanelHeading").append(headingHtml);
@@ -276,6 +286,16 @@ function createFacetedDiv(cnt) {
                             <h4>If Group/Bin by x-axis or y-axis</h4>
                             <hr/>
                             <div id="ifBin-content"></div>
+                          </div>
+                          <div id="similar" class="${firstActive == "similar" ? "tab-pane fade in active" : "tab-pane fade"}">
+                            <h4>Similar trend</h4>
+                            <hr/>
+                            <div id="similar-content"></div>
+                          </div>
+                          <div id="similar" class="${firstActive == "different" ? "tab-pane fade in active" : "tab-pane fade"}">
+                            <h4>Different trend</h4>
+                            <hr/>
+                            <div id="different-content"></div>
                           </div>
                         </div>
                       </div>`;

@@ -9,6 +9,7 @@ var users = require('./routes/users');
 var data = require('./routes/data');
 var visualization = require('./routes/visualization');
 var facetedSearch = require('./routes/facetedSearch');
+var vizByFilter = require('./routes/vizByFilter');
 var app = express();
 
 // view engine setup
@@ -30,6 +31,7 @@ app.use('/users', users);
 app.use('/data',data);
 app.use('/visualization',visualization);
 app.use('/facetedSearch', facetedSearch);
+app.use('/vizByFilter', vizByFilter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

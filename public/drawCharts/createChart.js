@@ -21,6 +21,7 @@ var deleteExistDiv = function () {
 var createNewDiv = function (Echart,show_option) { // i 表示现在是第几个 div //推荐时用的
     let chartW = ($('#chartsContainer').width())*0.90;
     let chartH = ($('#chartsContainer').width())*0.75;
+    //style="display: none"
     let chartHtml = `<div class="panel panel-default">
         <div class="panel-body">
         <div id=${Echart}  style="width: ${chartW}px;height: ${chartH}px;"></div>`;
@@ -88,17 +89,22 @@ function listLikeGoogleSearch(drawData, chartID, myChart) {
     let picInfo = myChart.getDataURL();
     if (picInfo){
         let picHtml = `<div class="row removeDiv">
-                          <div class="col-sm-6 col-md-8 smallPic">
+                          <div class="col-sm-4 col-md-5 smallPic">
                             <div class="thumbnail"><img class="smallPic" src='${picInfo}' alt="DeepEye Recommendation Visualization"/></div>
                           </div>
-                          <div class="col-sm-6 col-md-4">
-                            <h5>A ${drawData.chart} with ${drawData.x_name} and ${drawData.y_name}</h5>
+                          <div class="col-sm-8 col-md-7">
+                            <a>
+                                <h4>A ${drawData.chart} with ${drawData.x_name} and ${drawData.y_name}</h4>
+                            </a>
                             <p>${nlp}</p>
                             <button class="btn btn-default btn-sm btnZoom" data-echartsbtn=${chartID} aria-label="Left Align">
                                 <span class="glyphicon glyphicon-zoom-in" aria-hidden="true"></span> Zoom
                             </button>
                             <button class="btn btn-default btn-sm btnSearch" data-echartsbtn=${chartID} aria-label="Left Align">
-                              <span class="glyphicon glyphicon-search" aria-hidden="true"></span> Navigation
+                              <span class="glyphicon glyphicon-search" aria-hidden="true"></span> Faceted
+                            </button>
+                            <button class="btn btn-default btn-sm btnSearch" data-echartsbtn=${chartID} aria-label="Left Align">
+                              <span class="glyphicon glyphicon-eye-open" aria-hidden="true"></span> Show Query
                             </button>
                             </div>
                         </div>`;

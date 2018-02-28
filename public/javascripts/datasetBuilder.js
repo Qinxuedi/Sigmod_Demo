@@ -213,6 +213,8 @@ $("#input-id").fileinput({
 });
 
 $('#input-id').on('fileloaded', function (event, file, previewId, index, reader) {
+    "use strict";
+    alert("fix bugs... ...");
     // 检查文件名字是否过长
     let fileNameLength = file.name.length;
     if (fileNameLength >= 41){
@@ -300,6 +302,9 @@ window.operateEvents = {
         getColumnInfo(tableName);
         //2.如果过滤器有上个表残留的内容，删除
         $("#filterBuilder").empty();
+        //TODO; If filter successfully, then clean this array.
+        //清空上一个数据集的过滤条件
+        selectedDataAfterFilter = {};
         //2.选中表格，切换数据(这这里应该是调用后台算法画图)
         //TODO 更换新的数据表，执行后台可视化推荐算法
         //同时删除上一个数据表画的图和分页组件
@@ -310,10 +315,11 @@ window.operateEvents = {
         maintainSearchData = {};
         facetedSearchCOUNT = 1;
         $("#searchRoutes").empty();
-
+        // Recommend top-k visualizations by DeepEye
         DeepEyeRecommend();
     }
 };
+
 function operateFormatter(value, row, index) {
     return [
         '<button type="button" class="btn btn-default selectCloudData" aria-label="Left Align" title="selectCloudData">',
@@ -469,7 +475,7 @@ function initialVisualization() {
     deleteExistDiv();
     data_response_to_draw.slice(0, pageSize).forEach((value,index) => {
         // 画6个图
-        createChart(value, index);
+        createChart(value, index, false);
     });
     // 绑定事件
     $('#chartsContainerPage').find('.pagination li').click(function () {
@@ -480,7 +486,7 @@ function initialVisualization() {
         $(this).siblings().removeClass("active");
         data_response_to_draw.slice((clickPage - 1) * pageSize, clickPage * pageSize).forEach((value, index) => {
             // TODO 画6个图
-            createChart(value, (clickPage-1)*pageSize+index);
+            createChart(value, (clickPage-1)*pageSize+index, false);
         });
     });
 }

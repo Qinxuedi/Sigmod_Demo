@@ -74,7 +74,7 @@ router.get('/Machine_Learning',async function (req, res, next) {
             // console.log("reqSql ==> ",reqSql);
         }
     }else{//进行Column selection
-        //get filed and datatype here
+        //get filed and data type here
         //code ...
         let j = 0;
         for (let i = 0; i < columnName.length; i++){
@@ -125,7 +125,7 @@ router.get('/Machine_Learning',async function (req, res, next) {
             let argv = [];
             argv.push(cPath);
             argv.push(tableName);
-            argv.push(reqSql);
+            argv.push(reqSql); // We can add WHERE CLAUSE in this sql
             // console.log("columnNameType.length == ",columnNameType.length);
             for (let i = 0; i < columnNameType.length; i++){
                 argv.push(columnNameType[i]);

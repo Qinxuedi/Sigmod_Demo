@@ -19,8 +19,8 @@ block content
           button.btn.btn-success( type='button', data-dismiss='modal') OK
 
   //上传数据文件的模态框
-  #uploadModal.modal.fade(tabindex='-1', role='dialog', aria-labelledby='myModalLabel', aria-hidden='true')
-    .modal-dialog
+  #uploadModal.modal.fade.bs-example-modal-lg(tabindex='-1', role='dialog', aria-labelledby='myModalLabel', aria-hidden='true')
+    .modal-dialog.modal-lg
       .modal-content
         .modal-header
           button.close(type='button', data-dismiss='modal', aria-label='Close')
@@ -194,7 +194,7 @@ block content
                   |electricity
             button.btn.btn-default.btn-block(type='button', id="uploadBtn" aria-label='Left Align')
               span.glyphicon.glyphicon.glyphicon-upload
-              |   Upload
+              |   Select Dataset
             //TODO 每变化一次数据表就自动画图
             //button.btn.btn-default.btn-block(type='button', id="drawBtn" aria-label='Left Align')
             //  span.glyphicon.glyphicon.glyphicon-play-circle
