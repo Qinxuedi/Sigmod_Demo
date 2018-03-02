@@ -112,7 +112,9 @@ $(".facetedSearchContainer").click(function (event) {
                         'changeType': 0,
                         'changeX':0,
                         'changeY':0,
-                        'changeGB': 0
+                        'changeGB': 0,
+                        'similar': 0,
+                        'different': 0
                     };
                     createFacetedDiv(cnt);
                     $("#facetedHeader").text('Faceted Search: 0 Visualizations'); // set zero
@@ -150,7 +152,9 @@ $(".facetedSearchContainer").click(function (event) {
                     'changeType': 0,
                     'changeX':0,
                     'changeY':0,
-                    'changeGB': 0
+                    'changeGB': 0,
+                    'similar': 0,
+                    'different': 0
                 };
                 for (let i = 0; i < data_facetedSearch.length; i++){
                     if (data_facetedSearch[i].changeTag == 'changeX'){
@@ -164,6 +168,9 @@ $(".facetedSearchContainer").click(function (event) {
                     }
                     if (data_facetedSearch[i].changeTag == 'changeBin'){
                         cnt.changeGB ++;
+                    }
+                    if (data_facetedSearch[i].changeTag == 'similarTrend'){
+                        cnt.similar ++;
                     }
                 }
                 //TODO Create Div and then draw

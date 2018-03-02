@@ -15,8 +15,20 @@ $("#NL2Vis").click(function () { //点击了submit按钮，开始获取input内�
             console.log("后台返回的数据:",data);
             //1. 解析后台返回的数据，如果后台不能理解用户输入的查询语言，则提示用户换一种方式重新输入
             //2. 如果后台能理解用户输入的查询语言，则在模态框让用户再检查一遍
-            renderQuery(data);
-            $('#CheckKeywordQueryDiv').modal({backdrop: 'static', keyboard: false}, 'show')
+            
+            selectedKeywords = {
+                "visType" : data[0].success.VisualizationType,
+                "selectedAttr": data[0].success.Attributes,
+                "selectedAgg": data[0].success.Aggregates,
+                "otherFeatures": data[0].success.OtherFeatures
+            };
+            console.log(selectedKeywords);
+
+            //2. stone this Object and check in my-jQuery-function.js
+            DeepEyeRecommend();
+
+            //3.deleteExistQueryDiv();
+            deleteExistQueryDiv();
         },
         error: function(jqXHR, textStatus, errorThrown){
             alert("something wrong!")

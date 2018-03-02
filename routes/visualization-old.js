@@ -74,7 +74,7 @@ router.get('/Machine_Learning',async function (req, res, next) {
             // console.log("reqSql ==> ",reqSql);
         }
     }else{//进行Column selection
-        //get filed and datatype here
+        //get filed and data type here
         //code ...
         let j = 0;
         for (let i = 0; i < columnName.length; i++){
@@ -125,7 +125,7 @@ router.get('/Machine_Learning',async function (req, res, next) {
             let argv = [];
             argv.push(cPath);
             argv.push(tableName);
-            argv.push(reqSql);
+            argv.push(reqSql); // We can add WHERE CLAUSE in this sql
             // console.log("columnNameType.length == ",columnNameType.length);
             for (let i = 0; i < columnNameType.length; i++){
                 argv.push(columnNameType[i]);
@@ -152,7 +152,13 @@ router.get('/Machine_Learning',async function (req, res, next) {
         console.log("Learning_to_Rank 执行完毕，返回结果");
         // console.log("Learning_to_Rank 产生的结果:",data);
         res.send({data});
-
+        // await dbUtil.queryEscape('DROP TABLE if exists `Partial_Order#' + tableName + '`');
+        // await dbUtil.queryEscape('CREATE TABLE `Partial_Order#' + tableName + '` (`id` int(11) NOT NULL,`data` json DEFAULT NULL,PRIMARY KEY (`id`)) DEFAULT CHARSET=utf8;');
+        // response.forEach(async (value, index) => {
+        //
+        //     await dbUtil.queryEscape("INSERT INTO `dataVisDB`.`Partial_Order#" + tableName + "` (`id`, `data`) VALUES ('" + index +"', '" + value +"')");
+        // });
+        // res.send({data:response.map(v=>JSON.parse(v)).slice(0,4),number:response.length});
     }
     catch(err){
         console.log(err);
@@ -264,7 +270,7 @@ router.get('/NL2Vis',async function(req, res, next){
     let columnName = [];
     let columnType = [];
     //接受用户输入的natural language query，
-    //console.log("info:"+info);
+    console.log("info:"+info);
     try {
         await new Promise((resolve, reject) => {
             pool.getConnection(function (err,connection) {
@@ -295,34 +301,28 @@ router.get('/NL2Vis',async function(req, res, next){
 
 
 function matchVisType(splitQuery, nlpObject) {
-    //
-    let visTypeDic = {
-        "bar":["bar"],"bars":["bar"], 'stacked':["bar"],'grouped':["bar"],'grouping':["bar"],
-        'category':["bar"],'histogram':["bar"],'column':["bar"],'columns':["bar"],
-        "line":["line"],'lines':["line"],'time':["line"],
-        'series':["line"],'trend':["line"],'trends':["line"],'relationship':["line","scatter"],'relation':["line","scatter"],
-        'correlate':["line","scatter"],'correlation':["line","scatter"],'correlations':["line","scatter"],'correlated':["line","scatter"],
-        'correlates':["line","scatter"],'related':["line","scatter"],'relates':["line","scatter"],
-        'positive':["line","scatter"],'negative':["line","scatter"],
-        'fluctuate':["line"],'fluctuates':["line"],'fluctuation':["line"],'wave':["line"],
-        "pie":["pie"],'part':["pie"],'whole':["pie"],'proportion':["pie"],
-        "scatter":["scatter"],'plot':["scatter"],'between':["scatter"],
-        'distribution':["scatter"],'distribute':["scatter"],'distributes':["scatter"],'distributing':["scatter"],'distributed':["scatter"],
-        'max':["bar","line"],'maximum':["bar","line"],'min':["bar","line"],'minimum':["bar","line"],
-    };
-    for (let i =0; i< splitQuery.length;i++){
-        if(visTypeDic[splitQuery[i]]){
-            let typeList = visTypeDic[splitQuery[i]];
-            for (let j in typeList){
-                if(nlpObject.success.VisualizationType.indexOf(typeList[j]) < 0){
-                    nlpObject.success.VisualizationType.push(typeList[j]);
-                }
+    let visType = {
+        "bar" : ['bar','bars','stacked','grouped','grouping','category','histogram','column','columns','trend','max','maximum','min','minimum'],
+        "line": ['line','lines','graph','over','time','times','series','trend','trends','max','maximum','min','minimum','relationship','relation','correlate','correlation','correlations','correlated','correlates','related','relation','relates','positive','negative','fluctuate','fluctuates','fluctuation','wave'],
+        "pie": ['pie','part','whole','proportion','max','maximum','min','minimum'],
+        "scatter": ['scatter','plot','between','relationship','relation','distribution','distribute','distributes','distributing','distributed','correlate','correlation','correlations','correlated','correlates','related','relation','relates','positive','negative']
+    }; //toLowerCase();
+    for (let i = 0; i < splitQuery.length; i++){
+        for (let j = 0; j < visType.bar.length; j++){//match bar
+            if (splitQuery[i] == visType.bar[j]) {
+                console.log("visType.bar[j]:",visType.bar[j]);
+                nlpObject.success.VisualizationType.push('bar');
             }
         }
-    }
-
-    if(nlpObject.success.VisualizationType.length == 0){
-        nlpObject.success.VisualizationType.push("bar", "line","pie","scatter");
+        for (let j = 0; j < visType.line.length; j++){//match line
+            if (splitQuery[i] == visType.line[j]) nlpObject.success.VisualizationType.push('line');
+        }
+        for (let j = 0; j < visType.pie.length; j++){//match pie
+            if (splitQuery[i] == visType.pie[j]) nlpObject.success.VisualizationType.push('pie');
+        }
+        for (let j = 0; j < visType.pie.length; j++){//match scatter
+            if (splitQuery[i] == visType.scatter[j]) nlpObject.success.VisualizationType.push('scatter');
+        }
     }
     return nlpObject;
 }
@@ -333,48 +333,42 @@ function matchAttributes(splitQuery, columnName, nlpObject) {
             if (columnName[j] == splitQuery[i]) nlpObject.success.Attributes.push(splitQuery[i]);
         }
     }
-
-    if (nlpObject.success.Attributes.length == 0) {
-        for (let i = 0; i < columnName.length; i++) {
-            nlpObject.success.Attributes.push(columnName[i]);
-        }
-    }
     return nlpObject;
 }
 
 function matchAggregates(splitQuery, nlpObject) {
-    //
-    let aggrDic = {
-        "sum":["sum"],'summarize':["sum"],'sums':["sum"],'all':["sum","count"],
-        "avg":["avg"],'average':["avg"],'averages':["avg"],
-        "count":["count"],'counts':["count"],
+    let aggWords = {
+        "sum" : ['sum','summarize', 'by', 'per', 'group','sums','all'],
+        "avg" : ['avg', 'average','averages','by', 'per', 'group'],
+        "count" : ['count','counts','all', 'by', 'per', 'group']
     };
-    for (let i =0; i< splitQuery.length;i++){
-        if(aggrDic[splitQuery[i]]){
-            let typeList = aggrDic[splitQuery[i]];
-            for (let j in typeList){
-                if(nlpObject.success.Aggregates.indexOf(typeList[j]) < 0){
-                    nlpObject.success.Aggregates.push(typeList[j]);
-                }
-            }
+    for (let i = 0; i < splitQuery.length; i++){//match for avg
+        for (let j = 0; j < aggWords.avg.length; j++){
+            if (splitQuery[i] == aggWords.avg[j]) nlpObject.success.Aggregates.push('avg');
         }
-    }
-
-    if(nlpObject.success.Aggregates.length == 0){
-        nlpObject.success.Aggregates.push("sum","avg","count");
+        for (let j = 0; j < aggWords.sum.length; j++){//match for sum
+            if (splitQuery[i] == aggWords.sum[j]) nlpObject.success.Aggregates.push('sum');
+        }
+        for (let j = 0; j < aggWords.count.length; j++){
+            if (splitQuery[i] == aggWords.count[j]) nlpObject.success.Aggregates.push('count');
+        }
     }
     return nlpObject;
 }
 
 function matchOtherFeatures(splitQuery, nlpObject) {
-    
+    let otherFeatures = ['grouped','grouping','max','maximum','min','minimum','over','time','times','series','trend','trends','correlate','correlation',
+        'correlations','correlated','correlates','related','relation','relates','positive','negative','fluctuate','fluctuates','fluctuation','wave','proportion',
+        'relationship','relation','distribution','distribute','distributes','distributing','distributed','about'];
+    for (let i = 0; i < splitQuery.length; i++){//match for other features
+        for (let j = 0; j < otherFeatures.length; j++){
+            if (splitQuery[i] == otherFeatures[j]) nlpObject.success.OtherFeatures.push(splitQuery[i]);
+        }
+    }
     return nlpObject;
 }
 
 function nlInterpretation(columnName, columnType, query) {
-
-    var keywords_fixed = ['pie', 'line', 'bar', 'scatter'];
-    var stopwords = [];
     //0. Init nlpObject;
     let nlpObject = {
         "failure":"Sorry, I am not sure what is your meaning, can you try asking that in a different way",
@@ -388,7 +382,6 @@ function nlInterpretation(columnName, columnType, query) {
 
     //现在获取了dataset 的column name, column value, 以及用户的natural language query.
     //1. 将column name/type 全部用小写存储，用户输入的query也全部转成小写.
-    // do 
     for (let i = 0; i < columnName.length; i++){
         columnName[i] = columnName[i].toLowerCase();
         columnType[i] = columnType[i].toLowerCase()
@@ -398,9 +391,6 @@ function nlInterpretation(columnName, columnType, query) {
     query = query.toLowerCase(); //全部用小写存储
     let splitQuery = query.split(' ');
     console.log("query after splitting: ", splitQuery);
-
-    // We care about noun
-    // Parser
 
     //2. match visualization type from query.
     nlpObject = matchVisType(splitQuery, nlpObject);
