@@ -169,7 +169,7 @@ $(".facetedSearchContainer").click(function (event) {
                     if (data_facetedSearch[i].changeTag == 'changeBin'){
                         cnt.changeGB ++;
                     }
-                    if (data_facetedSearch[i].changeTag == 'similarTrend'){
+                    if (data_facetedSearch[i].changeTag == 'similar'){
                         cnt.similar ++;
                     }
                 }
@@ -266,8 +266,8 @@ function createFacetedDiv(cnt) {
                           <li class="${firstActive == "xAxis" ? "active" : ""}"><a href="#xAxis" data-toggle="tab">By xAxis (${cnt.changeX})</a></li>
                           <li class="${firstActive == "yAxis" ? "active" : ""}"><a href="#yAxis" data-toggle="tab">By yAxis (${cnt.changeY})</a></li>
                           <li class="${firstActive == "ifBin" ? "active" : ""}"><a href="#ifBin" data-toggle="tab">By Group/Bin (${cnt.changeGB})</a></li>
-                          <li class="${firstActive == "similar" ? "active" : ""}"><a href="#similar" data-toggle="tab">By Similar Trend(${cnt.similar})</a></li>
-                          <li class="${firstActive == "different" ? "active" : ""}"><a href="#different" data-toggle="tab">By Different Trend(${cnt.different})</a></li>
+                          <li class="${firstActive == "similar" ? "active" : ""}"><a href="#similar" data-toggle="tab">By Similar Trend (${cnt.similar})</a></li>
+                          <li class="${firstActive == "different" ? "active" : ""}"><a href="#different" data-toggle="tab">By Different Trend (${cnt.different})</a></li>
                         </ul>`;
     $("#facetedPanelHeading").empty();
     $("#facetedPanelHeading").append(headingHtml);
@@ -299,7 +299,7 @@ function createFacetedDiv(cnt) {
                             <hr/>
                             <div id="similar-content"></div>
                           </div>
-                          <div id="similar" class="${firstActive == "different" ? "tab-pane fade in active" : "tab-pane fade"}">
+                          <div id="different" class="${firstActive == "different" ? "tab-pane fade in active" : "tab-pane fade"}">
                             <h4>Different trend</h4>
                             <hr/>
                             <div id="different-content"></div>
@@ -371,6 +371,12 @@ function createFacetedChartDiv (changeTag, Echart) {
     }
     if (changeTag == "changeChart"){
         document.getElementById("visType-content").appendChild(html);
+    }
+    if (changeTag == "similar"){
+        document.getElementById("similar-content").appendChild(html);
+    }
+    if (changeTag == "changeChart"){
+        document.getElementById("different-content").appendChild(html);
     }
 }
 

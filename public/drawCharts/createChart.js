@@ -229,6 +229,7 @@ var createLine = function (drawData, chartID, grid, googleLike) {
     else Operation += drawData.describe;
 
     let myChart = echarts.init(document.getElementById(chartID));
+    console.log("drawData.x_data[0] = ",drawData.x_data[0])
     myOption.line.xAxis.data = drawData.x_data[0];
     myOption.line.series[0].data = drawData.y_data[0];
     myOption.line.legend.data.push(drawData.y_name);

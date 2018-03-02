@@ -2,14 +2,13 @@ import datetime
 from features import Type
 from view import View
 class Navigation(object):
-    def __init__(self,instance,describe,x_name,y_name,chart):
+    def __init__(self,instance,describe,x_name,y_name,chart,filter_id,filter_value):
         self.instance=instance
         self.describe = describe
-        self.x_name, self.y_name,self.z_name= x_name, y_name,''
+        self.x_name, self.y_name,self.z_name,self.filter_id,self.filter_value = x_name, y_name,'',filter_id,filter_value
         if len(self.describe)>=3 and self.describe[0:3]=='BIN':
             t=self.x_name.find('/')
-            if t != -1:
-                self.x_name=self.x_name[0:t]
+            self.x_name=self.x_name[0:t]
         self.x_id=self.instance.ids[self.x_name]
         if self.y_name>=5 and (self.y_name[0:4]=='AVG(' or self.y_name[0:4]=='SUM(' or self.y_name[0:4]=='CNT('):
             self.y_id=self.instance.ids[self.y_name[4:-1]]
@@ -58,7 +57,7 @@ class Navigation(object):
                     continue
                 if self.fit(table,i,self.y_id,self.chart):
                     v=View(table,i,self.y_id,-1,1,[table.T[i]],[table.T[self.y_id]],self.chart)
-                    v.output('changeX','')
+                    v.output('changeX')
         #case 2:group by x, then group by other categorical/temporal
         elif len(self.describe1)>=5 and self.describe1[0:5]=='GROUP' and self.describe2=='':
             for i in range(self.instance.column_num):
@@ -88,7 +87,7 @@ class Navigation(object):
                     new_y_id=0
                 if self.fit(table,i,new_y_id,self.chart):
                     v=View(table,new_x_id,new_y_id,-1,1,[table.T[new_x_id]], [table.T[new_y_id]], self.chart)
-                    v.output('changeX','')
+                    v.output('changeX')
         #case 3:group by z, group by x then group by z,group by other categorical/temporal
         elif len(self.describe1)>=5 and self.describe1[0:5]=='GROUP' and len(self.describe2)>=5 and self.describe2[0:5]=='GROUP':
             for i in range(self.instance.column_num):
@@ -129,7 +128,7 @@ class Navigation(object):
                 series_data = [table.T[new_y_id][series * delta:(series + 1) * delta] for series in range(table.classify_num)]
                 if self.fit(table,i,new_y_id,self.chart):
                     v = View(table, new_x_id, new_y_id, self.z_id, table.classify_num, [table.T[new_x_id][0:delta]],series_data, self.chart)
-                    v.output('changeX','')
+                    v.output('changeX')
 
 
     def changeY(self):
@@ -178,7 +177,6 @@ class Navigation(object):
                 new_y_id=i
                 if new_x_id==-1:
                     break
-        self.X=table.T[new_x_id]
         self.Y=table.T[new_y_id]
 
         if self.z_id==-1:
@@ -186,7 +184,7 @@ class Navigation(object):
                 if table.types[i]==Type.numerical and table.names[i]!=self.y_name:
                     if self.fit(table,self.x_id,i,self.chart):
                         v=View(table,new_x_id,i,-1,1,[table.T[new_x_id]],[table.T[i]],self.chart)
-                        v.output('changeY','')
+                        v.output('changeY')
         else:
             for i in range(table.column_num):
                 if table.types[i]==Type.numerical and table.names[i]!=self.y_name:
@@ -194,7 +192,7 @@ class Navigation(object):
                     series_data=[table.T[i][series*delta:(series+1)*delta] for series in range(table.classify_num)]
                     if self.fit(table,self.x_id,i,self.chart):
                         v=View(table,new_x_id,i,self.z_id,table.classify_num,[table.T[new_x_id][0:delta]],series_data,self.chart)
-                        v.output('changeY','')
+                        v.output('changeY')
 
     def changeZ(self):
         pass
@@ -228,7 +226,7 @@ class Navigation(object):
                 if new_x_id != -1:
                     break
         v = View(table, new_x_id, new_y_id, -1, 1, [table.T[new_x_id]], [table.T[new_y_id]], self.chart)
-        v.output('changeBin','')
+        v.output('changeBin')
 
     def changeNormalBin(self):
         bin=self.describe.split()[-1]
@@ -275,7 +273,7 @@ class Navigation(object):
         delta=table.tuple_num/table.classify_num
         series_data=[table.T[new_y_id][series*delta:(series+1)*delta] for series in range(table.classify_num)]
         v=View(table,new_x_id,new_y_id,self.z_id,table.classify_num,[table.T[new_x_id][0:delta]],series_data,self.chart)
-        v.output('changeBin','')
+        v.output('changeBin')
 
 
     def changeGroupBin(self):
@@ -303,92 +301,70 @@ class Navigation(object):
     def changeChart(self):
         pass
 
-    def findSimilar(self):
-        if self.chart!='line':
+    def changeFilter(self):
+        if self.filter_id==-1:
             return
-        for i in range(self.instance.column_num):
-            if self.x_id==i or self.instance.types[i]!=Type.categorical:
+
+        for i in range(self.instance.tables[0].features[self.filter_id].distinct):
+            filter_value=self.instance.tables[0].features[self.filter_id].distinct_values[i][0]
+            if filter_value==self.filter_value:
                 continue
-            x_distinct,i_distinct=self.instance.tables[0].features[self.x_id].distinct,self.instance.tables[0].features[i].distinct
-            if x_distinct*i_distinct!=self.instance.tuple_num:
+            table=self.instance.tables[0]
+            table.D=[]
+            table.types[self.filter_id]=Type.none
+            table.tuple_num=0
+            for tuple in self.instance.D:
+                if tuple[self.filter_id]==filter_value:
+                    table.D.append(tuple)
+                    table.tuple_num+=1
+            if table.tuple_num!=self.instance.tables[0].tuple_num:
                 continue
-            self.instance.tables[0].D.sort(key=lambda tuple: tuple[i])
-            self.instance.tables[0].T=map(list,zip(*self.instance.tables[0].D))
-            for j in range(self.instance.tables[0].features[i].distinct):
-                data=self.instance.tables[0].T[self.y_id][j*x_distinct:(j+1)*x_distinct]
-                min1,max1,min2,max2=min(data),max(data),min(self.Y),max(self.Y)
-                d1=[1.0*(y-min1)/(max1-min1) for y in data]
+            table.getFeatures()
+            if table.features[self.x_id].ratio!=self.instance.tables[self.origin_table_id].features[self.x_id].ratio:
+                continue
+
+            #case 1:none
+            if self.describe == '':
+                new_table=table
+            #case 2:group by...
+            elif len(self.describe1) >= 5 and self.describe1[0:5] == 'GROUP' and self.describe2 == '':
+                new_table=table.dealWithGroup(self.x_id,0,table.tuple_num,True,True)
+            #case 3:bin by...
+            elif len(self.describe1) >= 3 and self.describe1[0:3] == 'BIN' and self.describe2 == '':
+                if self.describe1[-4:]=='TIME':
+                    new_table=table.dealWithIntervalBin(self.x_id,0,table.tuple_num,True,True)
+                elif self.describe1[-4:]=='HOUR':
+                    new_table=table.dealWithHourBin(self.x_id,0,table.tuple_num,True,True)
+                else:
+                    new_table = table.dealWithWeekBin(self.x_id, 0, table.tuple_num, True, True)
+            #case 4:group by ... ,group by...
+            elif len(self.describe1) >= 5 and self.describe1[0:5] == 'GROUP' and len(self.describe2) >= 5 and self.describe2[0:5] == 'GROUP':
+                pass
+            #case 5:group by...,bin by...
+            elif len(self.describe1) >= 5 and self.describe1[0:5] == 'GROUP' and len(self.describe2) >= 3 and self.describe2[0:3] == 'BIN':
+                pass
+            new_x_id=new_y_id=-1
+            for i in range(new_table.column_num):
+                if new_table.names[i]==self.x_name:
+                    new_x_id=i
+                    if new_y_id!=-1:
+                        break
+                if new_table.names[i]==self.y_name:
+                    new_y_id=i
+                    if new_x_id!=-1:
+                        break
+            new_table.getFeatures()
+            v=View(new_table,new_x_id,new_y_id,-1,1,[new_table.T[new_x_id]],[new_table.T[new_y_id]],self.chart)
+            v.output('changeFilter='+filter_value)
+            if self.chart=='line':
+                f1,f2=new_table.features[new_y_id],self.instance.tables[self.origin_table_id].features[new_y_id]
+                min1,max1,min2,max2=f1.min,f1.max,f2.min,f2.max
+                d1=[1.0*(y-min1)/(max1-min1) for y in new_table.T[new_y_id]]
                 d2=[1.0*(y-min2)/(max2-min2) for y in self.Y]
-                d=reduce(lambda x,y:x+y,[pow(d1[i]-d2[i],2) for k in range(x_distinct)])/x_distinct
-                if d>0.001:
-                    v=View(self.instance.tables[0],self.x_id,self.y_id,-1,1,[self.X],[data],self.chart)
-                    v.output('similar',self.instance.names[i]+'='+self.instance.tables[0].features[i].distinct_values[j][0])
-
-
-    # def changeFilter(self):
-    #     if self.filter_id==-1:
-    #         return
-    #
-    #     for i in range(self.instance.tables[0].features[self.filter_id].distinct):
-    #         filter_value=self.instance.tables[0].features[self.filter_id].distinct_values[i][0]
-    #         if filter_value==self.filter_value:
-    #             continue
-    #         table=self.instance.tables[0]
-    #         table.D=[]
-    #         table.types[self.filter_id]=Type.none
-    #         table.tuple_num=0
-    #         for tuple in self.instance.D:
-    #             if tuple[self.filter_id]==filter_value:
-    #                 table.D.append(tuple)
-    #                 table.tuple_num+=1
-    #         if table.tuple_num!=self.instance.tables[0].tuple_num:
-    #             continue
-    #         table.getFeatures()
-    #         if table.features[self.x_id].ratio!=self.instance.tables[self.origin_table_id].features[self.x_id].ratio:
-    #             continue
-    #
-    #         #case 1:none
-    #         if self.describe == '':
-    #             new_table=table
-    #         #case 2:group by...
-    #         elif len(self.describe1) >= 5 and self.describe1[0:5] == 'GROUP' and self.describe2 == '':
-    #             new_table=table.dealWithGroup(self.x_id,0,table.tuple_num,True,True)
-    #         #case 3:bin by...
-    #         elif len(self.describe1) >= 3 and self.describe1[0:3] == 'BIN' and self.describe2 == '':
-    #             if self.describe1[-4:]=='TIME':
-    #                 new_table=table.dealWithIntervalBin(self.x_id,0,table.tuple_num,True,True)
-    #             elif self.describe1[-4:]=='HOUR':
-    #                 new_table=table.dealWithHourBin(self.x_id,0,table.tuple_num,True,True)
-    #             else:
-    #                 new_table = table.dealWithWeekBin(self.x_id, 0, table.tuple_num, True, True)
-    #         #case 4:group by ... ,group by...
-    #         elif len(self.describe1) >= 5 and self.describe1[0:5] == 'GROUP' and len(self.describe2) >= 5 and self.describe2[0:5] == 'GROUP':
-    #             pass
-    #         #case 5:group by...,bin by...
-    #         elif len(self.describe1) >= 5 and self.describe1[0:5] == 'GROUP' and len(self.describe2) >= 3 and self.describe2[0:3] == 'BIN':
-    #             pass
-    #         new_x_id=new_y_id=-1
-    #         for i in range(new_table.column_num):
-    #             if new_table.names[i]==self.x_name:
-    #                 new_x_id=i
-    #                 if new_y_id!=-1:
-    #                     break
-    #             if new_table.names[i]==self.y_name:
-    #                 new_y_id=i
-    #                 if new_x_id!=-1:
-    #                     break
-    #         new_table.getFeatures()
-    #         v=View(new_table,new_x_id,new_y_id,-1,1,[new_table.T[new_x_id]],[new_table.T[new_y_id]],self.chart)
-    #         v.output('changeFilter='+filter_value)
-    #         if self.chart=='line':
-    #             f1,f2=new_table.features[new_y_id],self.instance.tables[self.origin_table_id].features[new_y_id]
-    #             min1,max1,min2,max2=f1.min,f1.max,f2.min,f2.max
-    #             d1=[1.0*(y-min1)/(max1-min1) for y in new_table.T[new_y_id]]
-    #             d2=[1.0*(y-min2)/(max2-min2) for y in self.Y]
-    #             d=reduce(lambda x,y:x+y,[pow(d1[i]-d2[i],2) for i in range(new_table.tuple_num)])/new_table.tuple_num
-    #             if d>0.01:
-    #                 v = View(new_table, new_x_id, new_y_id,-1,1, [new_table.T[new_x_id]], [new_table.T[new_y_id]],self.chart)
-    #                 v.output('similarTrend='+filter_value)
+                d=reduce(lambda x,y:x+y,[pow(d1[i]-d2[i],2) for i in range(new_table.tuple_num)])/new_table.tuple_num
+                if d>0.01:
+                    v = View(new_table, new_x_id, new_y_id,-1,1, [new_table.T[new_x_id]], [new_table.T[new_y_id]],self.chart)
+                    v.output('similarTrend='+filter_value)
 
 
 

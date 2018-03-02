@@ -21,7 +21,7 @@ class View(object):
         self.chart = chart
         self.tuple_num = table.tuple_num
 
-    def output(self,changeTag,describe_more):
+    def output(self,changeTag):
         classify = str([])
         if self.series_num > 1:
             classify=str([v[0] for v in self.table.classes]).replace("u'",'\'').decode("unicode-escape").replace("'",'"')
@@ -37,7 +37,7 @@ class View(object):
         y_data = str(self.Y)
         if self.fy.type == Type.numerical:
             y_data = y_data.replace('L', '')
-        data = '{"changeTag": ' + '"' + changeTag + '"' + ', "describe":"' + describe_more + ','  + self.table.describe + '","x_name":"' + self.fx.name + '","y_name":"' + self.fy.name + '","chart":"' + self.chart + '","classify":' + classify + ',"x_data":' + x_data + ',"y_data":' + y_data + '}'
+        data = '{"changeTag": ' + '"' + changeTag + '"' + ', "describe":"' + self.table.describe + '","x_name":"' + self.fx.name + '","y_name":"' + self.fy.name + '","chart":"' + self.chart + '","classify":' + classify + ',"x_data":' + x_data + ',"y_data":' + y_data + '}'
         print data
 
 

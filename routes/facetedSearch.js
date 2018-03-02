@@ -16,7 +16,7 @@ router.get('/', async function(req, res, next) {
             const cPath = process.cwd() +'/FacetedNavigation/FacetedNavigation.py';
             let argv = [];
             argv.push(cPath);
-            argv.push('`'+tableName+'`');
+            argv.push(tableName);
             argv.push(describe);
             argv.push(x_name);
             argv.push(y_name);
