@@ -208,7 +208,9 @@ function returnDataFromRoutes(selectedIndex) {
         'changeType': 0,
         'changeX':0,
         'changeY':0,
-        'changeGB': 0
+        'changeGB': 0,
+        'similar': 0,
+        'different': 0
     };
     for (let i = 0; i < maintainSearchData[selectedIndex].length; i++){
         if (maintainSearchData[selectedIndex][i].changeTag == 'changeX'){
@@ -222,6 +224,12 @@ function returnDataFromRoutes(selectedIndex) {
         }
         if (maintainSearchData[selectedIndex][i].changeTag == 'changeBin'){
             cnt.changeGB ++;
+        }
+        if (maintainSearchData[selectedIndex][i].changeTag == 'similar'){
+            cnt.similar ++;
+        }
+        if (maintainSearchData[selectedIndex][i].changeTag == 'different'){
+            cnt.different ++;
         }
     }
     //TODO Create Div and then draw

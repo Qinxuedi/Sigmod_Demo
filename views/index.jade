@@ -150,7 +150,8 @@ block content
   nav.navbar.navbar-inverse.navbar-fixed-top
     .container-fluid
       .navbar-header
-        a.navbar-brand(href='#')
+        a.navbar-brand(href='/')
+          //img(alt="DeepEye" src="./images/logo.png" style="width:80px;height:37.2px")
           b DeepEye
       #navbar.navbar-collapse.collapse
         .row
@@ -263,7 +264,7 @@ block content
 
       .col-sm-5.col-md-5.main
         //area for show charts have been selected
-        .panel.panel-default
+        .panel.panel-default#browseHistory
           .panel-heading
             h4#selectedChartsTitle
               | Browsing History&nbsp;(
@@ -274,14 +275,14 @@ block content
               //selected visualization and button here, created by javascript.
 
         //area for faceted navigation
-        .panel.panel-default
+        .panel.panel-default#fixedDiv
           .panel-heading
             ol.breadcrumb#searchRoutes(style="margin-bottom:-10px; margin-top:-10px; margin-left:-15px; !important;")
               //route list here
             h4#facetedHeader
               |Faceted Search: 0 Visualizations
             #facetedPanelHeading
-          .panel-body.facetedSearchContainer#facetedSearchContainer(style="max-height:70vh;overflow-y: scroll;")
+          .panel-body.facetedSearchContainer#facetedSearchContainer(style="max-height:70vh;overflow-y: scroll; !important;")
 
 
 

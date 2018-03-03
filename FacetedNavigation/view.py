@@ -37,7 +37,11 @@ class View(object):
         y_data = str(self.Y)
         if self.fy.type == Type.numerical:
             y_data = y_data.replace('L', '')
-        data = '{"changeTag": ' + '"' + changeTag + '"' + ', "describe":"' + describe_more + ','  + self.table.describe + '","x_name":"' + self.fx.name + '","y_name":"' + self.fy.name + '","chart":"' + self.chart + '","classify":' + classify + ',"x_data":' + x_data + ',"y_data":' + y_data + '}'
+
+        connector = ''
+        if self.table.describe != '' and describe_more != '':
+            connector = ','
+        data = '{"changeTag": ' + '"' + changeTag + '"' + ', "describe":"' + describe_more + connector + self.table.describe + '","x_name":"' + self.fx.name + '","y_name":"' + self.fy.name + '","chart":"' + self.chart + '","classify":' + classify + ',"x_data":' + x_data + ',"y_data":' + y_data + '}'
         print data
 
 

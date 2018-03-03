@@ -91,6 +91,20 @@ html(lang='en')
         })
 
 
+        //add listening to monitor the faceted search div, when should fixed or float
+        // row js to implement
+        window.onscroll = function () {
+            var distance = document.documentElement.scrollTop || document.body.scrollTop;  //获取距离页面顶部的距离
+            var fixedDom = document.getElementById("fixedDiv"); //获取div元素
+            // change em to px
+            if (distance >= 15*16) { //当距离顶部超过300px时
+                fixedDom.classList.add("fixed");
+                $("#fixedDiv").width(document.getElementById("browseHistory").clientWidth);
+            } else { //如果距离顶部小于300px
+                fixedDom.classList.remove("fixed");
+            }
+        };
+
 //        function generateDiv(fatherId, id,index) {
 //            //let chartW = ($('#'+fatherId).width())*0.45;
 //            //let chartH = ($('#'+fatherId).width())*0.45*0.80;
