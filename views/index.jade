@@ -239,7 +239,7 @@ block content
 
       .col-sm-5.col-sm-offset-2.col-md-5.col-md-offset-2.main
         .input-group.input-group-lg
-          input.form-control(id = 'KeywordQuery' type='text', placeholder='e.g., Show me line charts about electricity')
+          input.form-control(id = 'KeywordQuery' onkeypress="EnterPress(event)" type='text', placeholder='e.g., Show me line charts about electricity')
           span.input-group-btn
             button.btn.btn-default(type='button' id = 'NL2Vis')
               span.glyphicon.glyphicon-search(aria-hidden='true')

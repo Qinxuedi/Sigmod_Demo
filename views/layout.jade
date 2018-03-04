@@ -68,12 +68,19 @@ html(lang='en')
     //script deepeye recommendation
     script(src='./javascripts/recommendation.js')
     //script keyword to visualization
-    script(src='./javascripts/Keywords2Viz/Keyword2Vis.js')
+    script(src='./javascripts/keywords2Vis.js')
     //script for faceted search
     script(src='./javascripts/facetedSearch.js')
     //for pace
     script(src='./pace/pace.min.js')
     script(type='text/javascript').
+        // capture the keyboard "Enter"
+        function EnterPress(e) { //传入 event
+            var e = e || window.event;
+            if (e.keyCode == 13) {
+                NL2Vis();
+            }
+        }
         //TODO 初始化数据表和可视化
         $(function () {
             //TODO init data & visualization
