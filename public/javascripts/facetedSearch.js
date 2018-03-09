@@ -114,7 +114,8 @@ $(".facetedSearchContainer").click(function (event) {
                         'changeY':0,
                         'changeGB': 0,
                         'similar': 0,
-                        'different': 0
+                        'different': 0,
+                        'category': 0
                     };
                     createFacetedDiv(cnt);
                     $("#facetedHeader").text('Faceted Search: 0 Visualizations'); // set zero
@@ -154,7 +155,8 @@ $(".facetedSearchContainer").click(function (event) {
                     'changeY':0,
                     'changeGB': 0,
                     'similar': 0,
-                    'different': 0
+                    'different': 0,
+                    'category': 0
                 };
                 for (let i = 0; i < data_facetedSearch.length; i++){
                     if (data_facetedSearch[i].changeTag == 'changeX'){
@@ -171,6 +173,12 @@ $(".facetedSearchContainer").click(function (event) {
                     }
                     if (data_facetedSearch[i].changeTag == 'similar'){
                         cnt.similar ++;
+                    }
+                    if (data_facetedSearch[i].changeTag == 'different'){
+                        cnt.different ++;
+                    }
+                    if (data_facetedSearch[i].changeTag == 'changeCategory'){
+                        cnt.category ++;
                     }
                 }
                 //TODO Create Div and then draw
@@ -210,7 +218,8 @@ function returnDataFromRoutes(selectedIndex) {
         'changeY':0,
         'changeGB': 0,
         'similar': 0,
-        'different': 0
+        'different': 0,
+        'category': 0
     };
     for (let i = 0; i < maintainSearchData[selectedIndex].length; i++){
         if (maintainSearchData[selectedIndex][i].changeTag == 'changeX'){
@@ -230,6 +239,9 @@ function returnDataFromRoutes(selectedIndex) {
         }
         if (maintainSearchData[selectedIndex][i].changeTag == 'different'){
             cnt.different ++;
+        }
+        if (maintainSearchData[selectedIndex][i].changeTag == 'changeCategory'){
+            cnt.category ++;
         }
     }
     //TODO Create Div and then draw
@@ -268,6 +280,10 @@ function createFacetedDiv(cnt) {
         ifActive = true;
         firstActive = 'different';
     }
+    if (cnt.category > 0 && !ifActive){
+        ifActive = true;
+        firstActive = 'category';
+    }
     //TODO similar trend
     let headingHtml = `<ul id="myTab" class="nav nav-tabs removeFacetedDiv">
                           <li class="${firstActive == "visType" ? "active" : ""}"><a href="#visType" data-toggle="tab">By Visualization Type (${cnt.changeType})</a></li>
@@ -276,6 +292,7 @@ function createFacetedDiv(cnt) {
                           <li class="${firstActive == "ifBin" ? "active" : ""}"><a href="#ifBin" data-toggle="tab">By Group/Bin (${cnt.changeGB})</a></li>
                           <li class="${firstActive == "similar" ? "active" : ""}"><a href="#similar" data-toggle="tab">By Similar Trend (${cnt.similar})</a></li>
                           <li class="${firstActive == "different" ? "active" : ""}"><a href="#different" data-toggle="tab">By Different Trend (${cnt.different})</a></li>
+                          <li class="${firstActive == "category" ? "active" : ""}"><a href="#category" data-toggle="tab">By Different Category (${cnt.category})</a></li>
                         </ul>`;
     $("#facetedPanelHeading").empty();
     $("#facetedPanelHeading").append(headingHtml);
@@ -311,6 +328,11 @@ function createFacetedDiv(cnt) {
                             <h4>Different trend</h4>
                             <hr/>
                             <div id="different-content"></div>
+                          </div>
+                          <div id="category" class="${firstActive == "category" ? "tab-pane fade in active" : "tab-pane fade"}">
+                            <h4>Different trend</h4>
+                            <hr/>
+                            <div id="category-content"></div>
                           </div>
                         </div>
                       </div>`;
@@ -383,8 +405,11 @@ function createFacetedChartDiv (changeTag, Echart) {
     if (changeTag == "similar"){
         document.getElementById("similar-content").appendChild(html);
     }
-    if (changeTag == "changeChart"){
+    if (changeTag == "different"){
         document.getElementById("different-content").appendChild(html);
+    }
+    if (changeTag == "changeCategory"){
+        document.getElementById("category-content").appendChild(html);
     }
 }
 

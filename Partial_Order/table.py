@@ -482,7 +482,7 @@ class Table(object):
                 new_tables.append(self.dealWithPNBin(i,0,self.tuple_num,True,True))
 
         for i in range(self.column_num):
-            if self.types[i]!=Type.categorical or self.features[i].distinct>5:
+            if self.types[i]!=Type.categorical or self.features[i].distinct>6:
                 continue
             self.D.sort(key=lambda tuple:tuple[i])
             ######for categorized scatter########

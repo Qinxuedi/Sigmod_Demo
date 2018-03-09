@@ -17,7 +17,6 @@ var deleteExistDiv = function () {
 };
 
 
-
 var createNewDiv = function (Echart,show_option) { // i 表示现在是第几个 div //推荐时用的
     let chartW = ($('#chartsContainer').width())*0.90;
     let chartH = ($('#chartsContainer').width())*0.75;

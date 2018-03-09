@@ -191,7 +191,7 @@ block content
           .panel-body(style="max-height:30em;overflow-y: scroll;")
             p Data:
               button.btn.btn-lg.btn-link(id="dataBtn")
-                span.label.label-default#selectedTableName
+                span.label.label-primary#selectedTableName
                   |electricity
             button.btn.btn-default.btn-block(type='button', id="uploadBtn" aria-label='Left Align')
               span.glyphicon.glyphicon.glyphicon-upload
@@ -201,6 +201,8 @@ block content
             //  span.glyphicon.glyphicon.glyphicon-play-circle
             //  |   Draw
             br
+            p # of Rows:&nbsp
+              span#rows 3618
             |Columns:
             ul.list-group#columns
               each val in columnName

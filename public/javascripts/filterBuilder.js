@@ -159,40 +159,47 @@ $("#filterFooter").on('click','#filterBtn',function () {
 });
 
 //事件委托机制。 监听用户选择去min,max
-$("#filterBuilder").on('change mousemove', '#minSlider', function () {
-    // if ($("#minSlider").val() > $("#maxSlider").val()){
-    //     let min = $("#maxSlider").val() - 1;
-    //     $("#minValue").text(min);
-    //     // set slider bar value
-    // }else {
-    //     $("#minValue").text($("#minSlider").val());
-    // }
-    $("#minValue").text($("#minSlider").val());
-    // 实时更新选中的范围
-    //TODO put value in the obj
-    if($.isEmptyObject(selectedDataAfterFilter[$("#maxValue").parent().parent().parent().attr("id").substr(7,)])){// 空对象
-        let tmpObj = {'min': $("#minSlider").val()};
-        selectedDataAfterFilter[$("#minValue").parent().parent().parent().attr("id").substr(7,)] = tmpObj;
+$("#filterBuilder").on('click', '#minSlider', function () {
+    // console.log("max slide  ","min = ",$("#minSlider").val(), "max = ",$("#maxSlider").val())
+    let max = $("#maxSlider").val();
+    let min = $("#minSlider").val();
+    if (min > max){
+        document.getElementById("minSlider").value = $("#maxSlider").val() - 1;
+        $("#minValue").text($("#maxSlider").val() - 1);
+        // set slider bar value
+        console.log("can not")
     }else {
-        selectedDataAfterFilter[$("#minValue").parent().parent().parent().attr("id").substr(7,)]['min'] = $("#minSlider").val();
+        console.log("can")
+        $("#minValue").text($("#minSlider").val());
+        //TODO put value in the obj
+        if($.isEmptyObject(selectedDataAfterFilter[$("#maxValue").parent().parent().parent().attr("id").substr(7,)])){// 空对象
+            let tmpObj = {'min': $("#minSlider").val()};
+            selectedDataAfterFilter[$("#minValue").parent().parent().parent().attr("id").substr(7,)] = tmpObj;
+        }else {
+            selectedDataAfterFilter[$("#minValue").parent().parent().parent().attr("id").substr(7,)]['min'] = $("#minSlider").val();
+        }
     }
 });
 
-$("#filterBuilder").on('change mousemove', '#maxSlider', function () {
-    // if ($("#maxSlider").val() < $("#minSlider").val()){
-    //     let max = $("#minSlider").val() + 1;
-    //     $("#maxValue").text(max);
-    //     // set slider bar value
-    // }else{
-    //     $("#maxValue").text($("#maxSlider").val());
-    // }
-    $("#maxValue").text($("#maxSlider").val());
-    //TODO put value in the obj
-    if($.isEmptyObject(selectedDataAfterFilter[$("#maxValue").parent().parent().parent().attr("id").substr(7,)])){// 空对象
-        let tmpObj = {'max': $("#maxSlider").val()};
-        selectedDataAfterFilter[$("#maxValue").parent().parent().parent().attr("id").substr(7,)] = tmpObj;
-    }else {
-        selectedDataAfterFilter[$("#maxValue").parent().parent().parent().attr("id").substr(7,)]['max'] = $("#maxSlider").val();
+$("#filterBuilder").on('click', '#maxSlider', function () {
+    // console.log("max slide  ","min = ",$("#minSlider").val(), "max = ",$("#maxSlider").val(), '$("#maxSlider").val() < $("#minSlider").val()', $("#maxSlider").val() < $("#minSlider").val() )
+    let max = $("#maxSlider").val();
+    let min = $("#minSlider").val();
+    if (max < min){
+        document.getElementById("maxSlider").value = $("#minSlider").val() + 1;
+        $("#maxValue").text($("#minSlider").val() + 1);
+        // set slider bar value
+        console.log("can not")
+    }else{
+        console.log("can")
+        $("#maxValue").text($("#maxSlider").val());
+        //TODO put value in the obj
+        if($.isEmptyObject(selectedDataAfterFilter[$("#maxValue").parent().parent().parent().attr("id").substr(7,)])){// 空对象
+            let tmpObj = {'max': $("#maxSlider").val()};
+            selectedDataAfterFilter[$("#maxValue").parent().parent().parent().attr("id").substr(7,)] = tmpObj;
+        }else {
+            selectedDataAfterFilter[$("#maxValue").parent().parent().parent().attr("id").substr(7,)]['max'] = $("#maxSlider").val();
+        }
     }
 });
 

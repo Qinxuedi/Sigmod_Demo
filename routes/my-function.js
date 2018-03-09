@@ -91,12 +91,33 @@ module.exports.getColumnValues = async function (tableID, columnID) {
     })
 };
 
-module.exports.getTableColumnNameType = function (tableID) {
+module.exports.getTableColumnNameType = async function (tableID) {
+    "use strict";
+    let data = {};
+    let columnName = [];
+    let columnType = [];
+    try {
+        await new Promise((resolve, reject) => {
+            tablePool.getConnection(function (err,connection) {
+                if (err) reject(err);
+                else {
+                    connection.query('SELECT COUNT(*) FROM ' +"`"+tableID+"`",function (err,result) {
+                        if (err) reject(err);
+                        else {
+                            // console.log("result = ",result[0]['COUNT(*)'])
+                            data['rows'] = result[0]['COUNT(*)'];
+                            resolve(columnType);
+                        }
+                        connection.release();
+                    })
+                }
+            })
+
+        })
+    }catch (err){
+        console.log(err);
+    }
     return new Promise((resolve, reject) => {
-        "use strict";
-        let data = {};
-        let columnName = [];
-        let columnType = [];
         tablePool.getConnection(function (err,connection) {
             if (err) reject(err);
             else {

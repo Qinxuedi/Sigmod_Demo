@@ -129,7 +129,7 @@ class Table(object):
 
                 # calculate distinct,ratio for categorical,temporal
                 if f.type == Type.categorical or f.type == Type.temporal:
-                    f.distinct = self.tuple_num
+                    f.distinct = self.tuple_num / self.classify_num
                     f.ratio = 1.0
 
                 self.features.append(f)

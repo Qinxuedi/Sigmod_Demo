@@ -13,7 +13,7 @@ router.get('/',async function (req, res, next) {
     "use strict";
     let filterData = req.query.selectedDataAfterFilter;
     let tableName = req.query.tableName;
-    console.log(filterData);
+    // console.log(filterData);
 
     let columnName = [];
     let columnType = [];
