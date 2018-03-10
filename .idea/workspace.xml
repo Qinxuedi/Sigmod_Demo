@@ -1,9 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="61aba216-f19e-4b67-babd-860863e3720f" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/Partial_Order/view.py" afterPath="$PROJECT_DIR$/Partial_Order/view.py" />
-    </list>
+    <list default="true" id="61aba216-f19e-4b67-babd-860863e3720f" name="Default" comment="" />
     <ignored path="$PROJECT_DIR$/.tmp/" />
     <ignored path="$PROJECT_DIR$/temp/" />
     <ignored path="$PROJECT_DIR$/tmp/" />
@@ -601,12 +599,12 @@
       <workItem from="1519712009719" duration="19480000" />
       <workItem from="1519869089228" duration="21323000" />
       <workItem from="1520496334865" duration="645000" />
-      <workItem from="1520509608527" duration="10845000" />
+      <workItem from="1520509608527" duration="10914000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="220484000" />
+    <option name="totallyTimeSpent" value="220553000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="0" y="0" width="1680" height="1050" extended-state="0" />
