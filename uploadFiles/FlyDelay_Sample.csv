@@ -1,1 +1,1152 @@
-2017,2017/1/1,AA,"Charlotte, NC","Chicago, IL",-6,-19,89,599,NO2017,2017/1/2,AA,"Charlotte, NC","Chicago, IL",-3,-19,84,599,NO2017,2017/1/3,AA,"Charlotte, NC","Chicago, IL",-6,-13,94,599,NO2017,2017/1/4,AA,"Charlotte, NC","Chicago, IL",24,14,90,599,NO2017,2017/1/5,AA,"Charlotte, NC","Chicago, IL",-8,-19,91,599,NO2017,2017/1/6,AA,"Charlotte, NC","Chicago, IL",,,,599,YES2017,2017/1/7,AA,"Charlotte, NC","Chicago, IL",116,106,92,599,NO2017,2017/1/8,AA,"Charlotte, NC","Chicago, IL",142,125,88,599,NO2017,2017/1/11,AA,"Charlotte, NC","Chicago, IL",-12,-1,105,599,NO2017,2017/1/12,AA,"Charlotte, NC","Chicago, IL",-5,-9,92,599,NO2017,2017/1/13,AA,"Charlotte, NC","Chicago, IL",-6,4,96,599,NO2017,2017/1/14,AA,"Charlotte, NC","Chicago, IL",0,-14,90,599,NO2017,2017/1/15,AA,"Charlotte, NC","Chicago, IL",18,-1,93,599,NO2017,2017/1/18,AA,"Charlotte, NC","Chicago, IL",-5,-15,87,599,NO2017,2017/1/19,AA,"Charlotte, NC","Chicago, IL",-8,-23,84,599,NO2017,2017/1/20,AA,"Charlotte, NC","Chicago, IL",19,-1,85,599,NO2017,2017/1/21,AA,"Charlotte, NC","Chicago, IL",-2,-22,81,599,NO2017,2017/1/22,AA,"Charlotte, NC","Chicago, IL",27,-1,84,599,NO2017,2017/1/25,AA,"Charlotte, NC","Chicago, IL",-9,-19,89,599,NO2017,2017/1/26,AA,"Charlotte, NC","Chicago, IL",-1,3,91,599,NO2017,2017/1/27,AA,"Charlotte, NC","Chicago, IL",-6,-5,90,599,NO2017,2017/1/28,AA,"Charlotte, NC","Chicago, IL",-5,-17,87,599,NO2017,2017/1/29,AA,"Charlotte, NC","Chicago, IL",-5,-9,88,599,NO2017,2017/1/7,AA,"Chicago, IL","Charlotte, NC",94,71,75,599,NO2017,2017/1/9,AA,"Charlotte, NC","Chicago, IL",3,19,107,599,NO2017,2017/1/10,AA,"Charlotte, NC","Chicago, IL",33,35,94,599,NO2017,2017/1/1,AS,"Seattle, WA","Chicago, IL",-5,13,204,1721,NO2017,2017/1/1,AS,"Chicago, IL","Seattle, WA",-2,57,237,1721,NO2017,2017/1/1,AS,"Chicago, IL","Seattle, WA",108,81,228,1721,NO2017,2017/1/1,AS,"Anchorage, AK","Chicago, IL",4,18,356,2846,NO2017,2017/1/1,AS,"Chicago, IL","Anchorage, AK",-1,-49,367,2846,NO2017,2017/1/27,AS,"Seattle, WA","Chicago, IL",-5,0,216,1721,NO2017,2017/1/27,AS,"Portland, OR","Chicago, IL",-8,-15,213,1739,NO2017,2017/1/27,AS,"Chicago, IL","Portland, OR",-8,-34,231,1739,NO2017,2017/1/28,AS,"Seattle, WA","Chicago, IL",-14,-26,208,1721,NO2017,2017/1/28,AS,"Chicago, IL","Seattle, WA",-8,-10,246,1721,NO2017,2017/1/28,AS,"Seattle, WA","Chicago, IL",9,1,205,1721,NO2017,2017/1/28,AS,"Chicago, IL","Seattle, WA",-13,-44,232,1721,NO2017,2017/1/28,AS,"Seattle, WA","Chicago, IL",-4,-14,212,1721,NO2017,2017/1/28,AS,"Chicago, IL","Seattle, WA",-12,-45,231,1721,NO2017,2017/1/28,AS,"Chicago, IL","Seattle, WA",-12,-11,249,1721,NO2017,2017/1/2,B6,"New York, NY","Chicago, IL",176,183,137,740,NO2017,2017/1/3,B6,"New York, NY","Chicago, IL",-10,-18,116,740,NO2017,2017/1/4,B6,"New York, NY","Chicago, IL",-5,-22,124,740,NO2017,2017/1/5,B6,"New York, NY","Chicago, IL",-9,-31,126,740,NO2017,2017/1/6,B6,"New York, NY","Chicago, IL",27,15,129,740,NO2017,2017/1/7,B6,"New York, NY","Chicago, IL",685,,,740,YES2017,2017/1/8,B6,"New York, NY","Chicago, IL",122,119,123,740,NO2017,2017/1/9,B6,"New York, NY","Chicago, IL",158,156,140,740,NO2017,2017/1/10,B6,"New York, NY","Chicago, IL",154,144,130,740,NO2017,2017/1/11,B6,"New York, NY","Chicago, IL",-1,3,136,740,NO2017,2017/1/12,B6,"New York, NY","Chicago, IL",0,-2,141,740,NO2017,2017/1/13,B6,"New York, NY","Chicago, IL",-3,23,152,740,NO2017,2017/1/14,B6,"New York, NY","Chicago, IL",-3,13,137,740,NO2017,2017/1/15,B6,"New York, NY","Chicago, IL",76,104,132,740,NO2017,2017/1/16,B6,"New York, NY","Chicago, IL",-4,15,134,740,NO2017,2017/1/17,B6,"New York, NY","Chicago, IL",28,16,130,740,NO2017,2017/1/18,B6,"New York, NY","Chicago, IL",52,18,116,740,NO2017,2017/1/19,B6,"New York, NY","Chicago, IL",-3,21,137,740,NO2017,2017/1/20,B6,"New York, NY","Chicago, IL",-6,-36,110,740,NO2017,2017/1/21,B6,"New York, NY","Chicago, IL",34,7,124,740,NO2017,2017/1/22,B6,"New York, NY","Chicago, IL",-4,-6,117,740,NO2017,2017/1/23,B6,"New York, NY","Chicago, IL",96,108,113,740,NO2017,2017/1/5,DL,"Chicago, IL","Atlanta, GA",-4,-13,84,591,NO2017,2017/1/5,DL,"Atlanta, GA","Chicago, IL",-2,-14,98,606,NO2017,2017/1/5,DL,"Chicago, IL","Salt Lake City, UT",16,14,194,1250,NO2017,2017/1/5,DL,"Salt Lake City, UT","Chicago, IL",11,1,145,1250,NO2017,2017/1/5,DL,"Atlanta, GA","Chicago, IL",17,20,95,606,NO2017,2017/1/22,DL,"Chicago, IL","Detroit, MI",-1,-1,53,235,NO2017,2017/1/22,DL,"Detroit, MI","Chicago, IL",3,4,47,235,NO2017,2017/1/22,DL,"Chicago, IL","Detroit, MI",-9,-11,50,235,NO2017,2017/1/22,DL,"Atlanta, GA","Chicago, IL",-1,11,91,606,NO2017,2017/1/22,DL,"Chicago, IL","Atlanta, GA",68,62,96,606,NO2017,2017/1/31,DL,"Atlanta, GA","Chicago, IL",-5,-15,99,606,NO2017,2017/1/31,DL,"Chicago, IL","Atlanta, GA",-11,-36,82,606,NO2017,2017/1/31,DL,"Chicago, IL","Minneapolis, MN",-6,-29,59,334,NO2017,2017/1/31,DL,"Atlanta, GA","Chicago, IL",-3,-7,101,606,NO2017,2017/1/31,DL,"Chicago, IL","Atlanta, GA",-1,-26,83,606,NO2017,2017/1/31,DL,"Atlanta, GA","Chicago, IL",0,-6,99,591,NO2017,2017/1/31,DL,"Chicago, IL","Atlanta, GA",-3,-21,82,591,NO2017,2017/1/31,DL,"Detroit, MI","Chicago, IL",-6,9,48,235,NO2017,2017/1/1,EV,"Chicago, IL","Charleston, SC",281,281,102,760,NO2017,2017/1/4,EV,"Syracuse, NY","Chicago, IL",-6,-26,103,607,NO2017,2017/1/5,EV,"Syracuse, NY","Chicago, IL",-7,-22,107,607,NO2017,2017/1/6,EV,"Syracuse, NY","Chicago, IL",14,12,110,607,NO2017,2017/1/7,EV,"Syracuse, NY","Chicago, IL",0,-21,102,607,NO2017,2017/1/8,EV,"Syracuse, NY","Chicago, IL",-2,-30,96,607,NO2017,2017/1/9,EV,"Syracuse, NY","Chicago, IL",-7,43,105,607,NO2017,2017/1/10,EV,"Syracuse, NY","Chicago, IL",-3,-15,109,607,NO2017,2017/1/11,EV,"Syracuse, NY","Chicago, IL",450,428,108,607,NO2017,2017/1/12,EV,"Syracuse, NY","Chicago, IL",-3,2,130,607,NO2017,2017/1/13,EV,"Syracuse, NY","Chicago, IL",-7,-11,121,607,NO2017,2017/1/14,EV,"Syracuse, NY","Chicago, IL",0,15,119,607,NO2017,2017/1/15,EV,"Syracuse, NY","Chicago, IL",-4,-35,99,607,NO2017,2017/1/16,EV,"Syracuse, NY","Chicago, IL",80,81,115,607,NO2017,2017/1/17,EV,"Syracuse, NY","Chicago, IL",-9,-6,101,607,NO2017,2017/1/18,EV,"Syracuse, NY","Chicago, IL",-7,-45,94,607,NO2017,2017/1/19,EV,"Syracuse, NY","Chicago, IL",-3,-36,95,607,NO2017,2017/1/20,EV,"Syracuse, NY","Chicago, IL",-1,-20,102,607,NO2017,2017/1/21,EV,"Syracuse, NY","Chicago, IL",-6,-36,102,607,NO2017,2017/1/22,EV,"Syracuse, NY","Chicago, IL",-5,-36,97,607,NO2017,2017/1/23,EV,"Syracuse, NY","Chicago, IL",-11,-36,93,607,NO2017,2017/1/24,EV,"Syracuse, NY","Chicago, IL",-9,4,90,607,NO2017,2017/1/25,EV,"Syracuse, NY","Chicago, IL",32,25,118,607,NO2017,2017/1/26,EV,"Syracuse, NY","Chicago, IL",-10,-38,105,607,NO2017,2017/1/27,EV,"Syracuse, NY","Chicago, IL",-10,-23,98,607,NO2017,2017/1/28,EV,"Syracuse, NY","Chicago, IL",-8,-34,98,607,NO2017,2017/1/29,EV,"Syracuse, NY","Chicago, IL",-8,-21,104,607,NO2017,2017/1/30,EV,"Syracuse, NY","Chicago, IL",-4,-25,93,607,NO2017,2017/1/31,EV,"Syracuse, NY","Chicago, IL",-7,-30,98,607,NO2017,2017/1/28,OO,"Peoria, IL","Detroit, MI",-5,-23,65,346,NO2017,2017/1/28,OO,"Peoria, IL","Detroit, MI",-8,-9,62,346,NO2017,2017/1/28,OO,"Salt Lake City, UT","Chicago, IL",-6,-15,161,1250,NO2017,2017/1/28,OO,"Chicago, IL","Salt Lake City, UT",-4,-24,168,1250,NO2017,2017/1/28,OO,"Salt Lake City, UT","Chicago, IL",-4,3,169,1250,NO2017,2017/1/28,OO,"Detroit, MI","Chicago, IL",-1,29,43,228,NO2017,2017/1/28,OO,"Chicago, IL","Salt Lake City, UT",-8,-34,168,1250,NO2017,2017/1/28,OO,"Detroit, MI","Peoria, IL",14,16,58,346,NO2017,2017/1/28,OO,"Moline, IL","Minneapolis, MN",-2,-7,55,274,NO2017,2017/1/28,OO,"Detroit, MI","Chicago, IL",5,19,49,235,NO2017,2017/1/28,OO,"Chicago, IL","Detroit, MI",150,133,46,235,NO2017,2017/1/31,OO,"Cleveland, OH","Chicago, IL",-1,1,65,316,NO2017,2017/1/31,OO,"Milwaukee, WI","Chicago, IL",-10,-15,31,67,NO2017,2017/1/31,OO,"San Antonio, TX","Chicago, IL",-3,11,148,1041,NO2017,2017/1/18,UA,"Austin, TX","Chicago, IL",-6,-32,121,977,NO2017,2017/1/18,UA,"Chicago, IL","Boston, MA",-3,4,116,867,NO2017,2017/1/18,UA,"Chicago, IL","Los Angeles, CA",8,-6,218,1744,NO2017,2017/1/18,UA,"Chicago, IL","Pittsburgh, PA",-2,-8,56,413,NO2017,2017/1/18,UA,"Columbus, OH","Chicago, IL",-8,-35,51,296,NO2017,2017/1/18,UA,"Austin, TX","Chicago, IL",-11,-31,122,977,NO2017,2017/1/18,UA,"Chicago, IL","Denver, CO",-6,-30,114,888,NO2017,2017/1/18,UA,"Washington, DC","Chicago, IL",-13,-18,97,612,NO2017,2017/1/18,UA,"San Juan, PR","Chicago, IL",11,3,275,2072,NO2017,2017/1/18,UA,"Fort Lauderdale, FL","Chicago, IL",-3,-13,169,1182,NO2017,2017/1/18,UA,"Chicago, IL","Columbus, OH",-2,-3,51,296,NO2017,2017/1/18,UA,"Albany, NY","Chicago, IL",10,-6,107,723,NO2017,2017/1/18,UA,"Chicago, IL","Las Vegas, NV",-4,-35,181,1514,NO2017,2017/1/18,UA,"Chicago, IL","Minneapolis, MN",-3,-23,56,334,NO2017,2017/1/18,UA,"Los Angeles, CA","Chicago, IL",1,3,224,1744,NO2017,2017/1/18,UA,"Chicago, IL","Houston, TX",-2,6,145,925,NO2017,2017/1/18,UA,"Cleveland, OH","Chicago, IL",-8,-32,52,316,NO2017,2017/1/18,UA,"Newark, NJ","Chicago, IL",-5,-31,102,719,NO2017,2017/1/18,UA,"Chicago, IL","Boston, MA",2,9,118,867,NO2017,2017/1/18,UA,"San Francisco, CA","Chicago, IL",0,10,210,1846,NO2017,2017/1/18,UA,"Charlotte, NC","Chicago, IL",-12,-29,97,599,NO2017,2017/1/18,UA,"Detroit, MI","Chicago, IL",-9,-37,43,235,NO2017,2017/1/18,UA,"Chicago, IL","San Francisco, CA",162,171,247,1846,NO2017,2017/1/18,UA,"New Orleans, LA","Chicago, IL",-9,-25,120,837,NO2017,2017/1/18,UA,"Chicago, IL","New York, NY",-5,-13,107,733,NO2017,2017/1/18,UA,"Chicago, IL","Omaha, NE",-1,-10,62,416,NO2017,2017/1/18,UA,"Chicago, IL","Newark, NJ",4,0,97,719,NO2017,2017/1/18,UA,"Chicago, IL","Pittsburgh, PA",-3,-6,61,413,NO2017,2017/1/13,UA,"San Francisco, CA","Chicago, IL",14,-8,202,1846,NO2017,2017/1/13,UA,"Baltimore, MD","Chicago, IL",-6,-10,108,622,NO2017,2017/1/13,UA,"Chicago, IL","Washington, DC",-3,-19,74,612,NO2017,2017/1/13,UA,"Denver, CO","Chicago, IL",17,0,101,888,NO2017,2017/1/13,UA,"Chicago, IL","Phoenix, AZ",6,7,204,1440,NO2017,2017/1/13,UA,"Chicago, IL","Newark, NJ",33,16,86,719,NO2017,2017/1/13,UA,"Chicago, IL","Denver, CO",-5,-1,138,888,NO2017,2017/1/13,UA,"Chicago, IL","Boston, MA",-5,-13,96,867,NO2017,2017/1/13,UA,"Chicago, IL","Washington, DC",-6,-15,73,588,NO2017,2017/1/13,UA,"Chicago, IL","San Francisco, CA",0,-13,260,1846,NO2017,2017/1/13,UA,"Los Angeles, CA","Chicago, IL",-4,-17,197,1744,NO2017,2017/1/13,UA,"Chicago, IL","New York, NY",63,33,87,733,NO2017,2017/1/13,UA,"Washington, DC","Chicago, IL",0,7,102,588,NO2017,2017/1/13,UA,"Chicago, IL","Austin, TX",0,-2,142,977,NO2017,2017/1/13,UA,"Columbus, OH","Chicago, IL",-7,-2,63,296,NO2017,2017/1/13,UA,"Chicago, IL","Portland, OR",16,7,241,1739,NO2017,2017/1/13,UA,"New York, NY","Chicago, IL",-6,34,134,733,NO2017,2017/1/13,UA,"Chicago, IL","Las Vegas, NV",-12,22,235,1514,NO2017,2017/1/13,UA,"Minneapolis, MN","Chicago, IL",-4,-21,49,334,NO2017,2017/1/13,UA,"Chicago, IL","New Orleans, LA",-2,-17,118,837,NO2017,2017/1/13,UA,"Chicago, IL","Salt Lake City, UT",18,4,191,1250,NO2017,2017/1/11,VX,"San Francisco, CA","Chicago, IL",8,-1,198,1846,NO2017,2017/1/11,VX,"Chicago, IL","San Francisco, CA",2,15,280,1846,NO2017,2017/1/11,VX,"Chicago, IL","Los Angeles, CA",-3,0,261,1744,NO2017,2017/1/11,VX,"Los Angeles, CA","Chicago, IL",18,-12,191,1744,NO2017,2017/1/11,VX,"Los Angeles, CA","Chicago, IL",-7,-28,181,1744,NO2017,2017/1/11,VX,"Chicago, IL","Los Angeles, CA",-7,29,278,1744,NO2017,2017/1/12,VX,"San Francisco, CA","Chicago, IL",-2,-11,206,1846,NO2017,2017/1/12,VX,"Chicago, IL","San Francisco, CA",2,38,291,1846,NO2017,2017/1/12,VX,"Chicago, IL","Los Angeles, CA",42,95,283,1744,NO2017,2017/1/12,VX,"Los Angeles, CA","Chicago, IL",61,35,180,1744,NO2017,2017/1/12,VX,"Los Angeles, CA","Chicago, IL",-3,-19,187,1744,NO2017,2017/1/12,VX,"Chicago, IL","Los Angeles, CA",34,32,253,1744,NO2017,2017/1/13,VX,"San Francisco, CA","Chicago, IL",-5,-15,211,1846,NO2017,2017/1/13,VX,"Chicago, IL","San Francisco, CA",-8,-7,266,1846,NO2017,2017/1/13,VX,"Chicago, IL","Los Angeles, CA",1,19,257,1744,NO2017,2017/1/13,VX,"Los Angeles, CA","Chicago, IL",-5,-13,203,1744,NO2017,2017/1/13,VX,"Los Angeles, CA","Chicago, IL",-4,-15,198,1744,NO2017,2017/1/13,VX,"Chicago, IL","Los Angeles, CA",-7,-12,252,1744,NO2017,2017/1/14,VX,"San Francisco, CA","Chicago, IL",1,-6,212,1846,NO2017,2017/1/14,VX,"Chicago, IL","San Francisco, CA",-9,-18,259,1846,NO2017,2017/1/14,VX,"Chicago, IL","Los Angeles, CA",6,-1,251,1744,NO2017,2017/1/14,VX,"Los Angeles, CA","Chicago, IL",11,-8,199,1744,NO2017,2017/1/15,VX,"San Francisco, CA","Chicago, IL",-6,-2,216,1846,NO2017,2017/1/15,VX,"Chicago, IL","San Francisco, CA",-4,-21,245,1846,NO2017,2017/1/15,VX,"Chicago, IL","Los Angeles, CA",-8,-9,245,1744,NO2017,2017/1/15,VX,"Los Angeles, CA","Chicago, IL",-4,-10,209,1744,NO2017,2017/1/15,VX,"Los Angeles, CA","Chicago, IL",-7,-2,210,1744,NO2017,2017/1/15,VX,"Chicago, IL","Los Angeles, CA",-6,-34,227,1744,NO2017,2017/1/16,VX,"San Francisco, CA","Chicago, IL",0,17,233,1846,NO2017,2017/1/16,VX,"Chicago, IL","San Francisco, CA",16,-12,231,1846,NO2017,2017/1/16,VX,"Chicago, IL","Los Angeles, CA",-5,-43,219,1744,NO2017,2017/1/16,VX,"Los Angeles, CA","Chicago, IL",5,4,211,1744,NO2017,2017/1/16,VX,"Los Angeles, CA","Chicago, IL",-4,-4,209,1744,NO2017,2017/1/16,VX,"Chicago, IL","Los Angeles, CA",-6,-30,218,1744,NO2017,2017/1/17,VX,"San Francisco, CA","Chicago, IL",-1,17,238,1846,NO2017,2017/1/17,VX,"Chicago, IL","San Francisco, CA",15,-28,218,1846,NO2017,2017/1/17,VX,"Chicago, IL","Los Angeles, CA",-4,-36,215,1744,NO2017,2017/1/17,VX,"Los Angeles, CA","Chicago, IL",-1,11,220,1744,NO2017,2017/1/17,VX,"Los Angeles, CA","Chicago, IL",-4,7,215,1744,NO2017,2017/1/17,VX,"Chicago, IL","Los Angeles, CA",-4,-49,208,1744,NO2017,2017/1/18,VX,"San Francisco, CA","Chicago, IL",46,74,234,1846,NO2017,2017/1/18,VX,"Chicago, IL","San Francisco, CA",75,87,257,1846,NO2017,2017/1/18,VX,"Chicago, IL","Los Angeles, CA",-4,-43,212,1744,NO2017,2017/1/18,VX,"Los Angeles, CA","Chicago, IL",19,43,222,1744,NO2017,2017/1/18,VX,"Los Angeles, CA","Chicago, IL",-6,3,212,1744,NO2017,2017/1/18,VX,"Chicago, IL","Los Angeles, CA",34,24,219,1744,NO2017,2017/1/19,VX,"San Francisco, CA","Chicago, IL",2,11,227,1846,NO2017,2017/1/19,VX,"Chicago, IL","San Francisco, CA",30,14,232,1846,NO2017,2017/1/19,VX,"Chicago, IL","Los Angeles, CA",-5,-15,232,1744,NO2017,2017/1/19,VX,"Los Angeles, CA","Chicago, IL",0,-3,209,1744,NO2017,2017/1/19,VX,"Los Angeles, CA","Chicago, IL",-3,4,210,1744,NO2017,2017/1/19,VX,"Chicago, IL","Los Angeles, CA",-5,-24,222,1744,NO2017,2017/1/2,VX,"Chicago, IL","San Francisco, CA",-2,21,281,1846,NO2017,2017/1/2,VX,"San Francisco, CA","Chicago, IL",3,-16,202,1846,NO2017,2017/1/2,VX,"San Francisco, CA","Chicago, IL",0,-9,202,1846,NO2017,2017/1/2,VX,"Chicago, IL","San Francisco, CA",-5,24,277,1846,NO2017,2017/1/2,VX,"San Francisco, CA","Chicago, IL",44,11,192,1846,NO2017,2017/1/2,VX,"Chicago, IL","San Francisco, CA",38,81,288,1846,NO2017,2017/1/2,VX,"Chicago, IL","Los Angeles, CA",-8,29,266,1744,NO2017,2017/1/2,VX,"Los Angeles, CA","Chicago, IL",12,-2,194,1744,NO2017,2017/1/2,VX,"Los Angeles, CA","Chicago, IL",14,-6,184,1744,NO2017,2017/1/2,VX,"Chicago, IL","Los Angeles, CA",-6,-2,265,1744,NO2017,2017/1/20,VX,"San Francisco, CA","Chicago, IL",8,21,221,1846,NO2017,2017/1/20,VX,"Chicago, IL","San Francisco, CA",15,29,235,1846,NO2017,2017/1/1,WN,"Nashville, TN","Chicago, IL",13,2,63,395,NO2017,2017/1/1,WN,"Boston, MA","Chicago, IL",-5,-20,142,861,NO2017,2017/1/1,WN,"Boston, MA","Chicago, IL",-4,-18,141,861,NO2017,2017/1/1,WN,"Boston, MA","Chicago, IL",-1,-1,146,861,NO2017,2017/1/1,WN,"Boston, MA","Chicago, IL",13,5,141,861,NO2017,2017/1/1,WN,"Buffalo, NY","Chicago, IL",-2,-22,78,468,NO2017,2017/1/1,WN,"Buffalo, NY","Chicago, IL",0,-7,83,468,NO2017,2017/1/1,WN,"Buffalo, NY","Chicago, IL",3,-15,85,468,NO2017,2017/1/1,WN,"Baltimore, MD","Chicago, IL",-7,-25,100,611,NO2017,2017/1/1,WN,"Baltimore, MD","Chicago, IL",21,20,99,611,NO2017,2017/1/1,WN,"Baltimore, MD","Chicago, IL",-4,-14,107,611,NO2017,2017/1/1,WN,"Baltimore, MD","Chicago, IL",-3,-13,101,611,NO2017,2017/1/1,WN,"Baltimore, MD","Chicago, IL",29,23,101,611,NO2017,2017/1/1,WN,"Charleston, SC","Chicago, IL",-2,0,111,745,NO2017,2017/1/1,WN,"Cleveland, OH","Chicago, IL",-5,-13,54,307,NO2017,2017/1/1,WN,"Cleveland, OH","Chicago, IL",0,-19,48,307,NO2017,2017/1/2,WN,"San Antonio, TX","Chicago, IL",-2,-13,124,1036,NO2017,2017/1/2,WN,"San Antonio, TX","Chicago, IL",,,,1036,YES2017,2017/1/2,WN,"Louisville, KY","Chicago, IL",-3,-7,48,271,NO2017,2017/1/2,WN,"Louisville, KY","Chicago, IL",-4,-5,51,271,NO2017,2017/1/10,WN,"Orlando, FL","Chicago, IL",-1,-16,140,990,NO2017,2017/1/10,WN,"Chicago, IL","Albuquerque, NM",11,14,167,1121,NO2017,2017/1/10,WN,"Chicago, IL","Albany, NY",24,42,83,717,NO2017,2017/1/10,WN,"Chicago, IL","Albany, NY",0,-1,87,717,NO2017,2017/1/10,WN,"Chicago, IL","Atlanta, GA",97,90,81,591,NO2017,2017/1/10,WN,"Chicago, IL","Atlanta, GA",5,-4,87,591,NO2017,2017/1/10,WN,"Chicago, IL","Atlanta, GA",4,5,88,591,NO2017,2017/1/10,WN,"Chicago, IL","Atlanta, GA",-5,-20,86,591,NO2017,2017/1/10,WN,"Chicago, IL","Atlanta, GA",-1,4,89,591,NO2017,2017/1/10,WN,"Chicago, IL","Atlanta, GA",5,0,80,591,NO2017,2017/1/2,AA,"Santa Ana, CA","Chicago, IL",8,30,190,1726,NO2017,2017/1/3,AA,"Santa Ana, CA","Chicago, IL",-3,-31,187,1726,NO2017,2017/1/4,AA,"Santa Ana, CA","Chicago, IL",0,-20,196,1726,NO2017,2017/1/7,AA,"Santa Ana, CA","Chicago, IL",-6,-21,198,1726,NO2017,2017/1/8,AA,"Santa Ana, CA","Chicago, IL",-4,-23,200,1726,NO2017,2017/1/9,AA,"Santa Ana, CA","Chicago, IL",-5,-27,189,1726,NO2017,2017/1/10,AA,"Santa Ana, CA","Chicago, IL",-8,7,233,1726,NO2017,2017/1/11,AA,"Santa Ana, CA","Chicago, IL",-5,-37,186,1726,NO2017,2017/1/12,AA,"Santa Ana, CA","Chicago, IL",-8,-35,190,1726,NO2017,2017/1/13,AA,"Santa Ana, CA","Chicago, IL",-2,-33,187,1726,NO2017,2017/1/14,AA,"Santa Ana, CA","Chicago, IL",-12,-26,206,1726,NO2017,2017/1/16,AA,"Santa Ana, CA","Chicago, IL",-1,-14,213,1726,NO2017,2017/1/17,AA,"Santa Ana, CA","Chicago, IL",0,-1,213,1726,NO2017,2017/1/18,AA,"Santa Ana, CA","Chicago, IL",1,14,222,1726,NO2017,2017/1/19,AA,"Santa Ana, CA","Chicago, IL",-6,-8,211,1726,NO2017,2017/1/20,AA,"Santa Ana, CA","Chicago, IL",-1,,,1726,NO2017,2017/1/21,AA,"Santa Ana, CA","Chicago, IL",0,-25,197,1726,NO2017,2017/1/23,AA,"Santa Ana, CA","Chicago, IL",-9,-51,182,1726,NO2017,2017/1/24,AA,"Santa Ana, CA","Chicago, IL",-3,-33,184,1726,NO2017,2017/1/25,AA,"Santa Ana, CA","Chicago, IL",0,-15,200,1726,NO2017,2017/1/26,AA,"Santa Ana, CA","Chicago, IL",-2,-22,199,1726,NO2017,2017/1/27,AA,"Santa Ana, CA","Chicago, IL",-4,-3,214,1726,NO2017,2017/1/12,DL,"Atlanta, GA","Chicago, IL",79,80,93,606,NO2017,2017/1/12,DL,"Atlanta, GA","Chicago, IL",-2,-16,87,591,NO2017,2017/1/12,DL,"Chicago, IL","Atlanta, GA",33,41,85,606,NO2017,2017/1/12,DL,"Atlanta, GA","Bloomington/Normal, IL",-11,-13,80,533,NO2017,2017/1/12,DL,"Atlanta, GA","Chicago, IL",110,101,89,606,NO2017,2017/1/12,DL,"Chicago, IL","Atlanta, GA",98,77,84,606,NO2017,2017/1/12,DL,"Atlanta, GA","Chicago, IL",-2,-1,93,606,NO2017,2017/1/12,DL,"Chicago, IL","Atlanta, GA",11,-13,83,606,NO2017,2017/1/12,DL,"Chicago, IL","Minneapolis, MN",-4,1,58,334,NO2017,2017/1/12,DL,"Atlanta, GA","Chicago, IL",-1,-10,94,606,NO2017,2017/1/12,DL,"Chicago, IL","Atlanta, GA",1,-13,87,606,NO2017,2017/1/12,DL,"Atlanta, GA","Chicago, IL",-2,-15,88,591,NO2017,2017/1/12,DL,"Chicago, IL","Atlanta, GA",0,-9,91,591,NO2017,2017/1/12,DL,"Detroit, MI","Chicago, IL",15,33,51,235,NO2017,2017/1/13,DL,"Atlanta, GA","Chicago, IL",4,9,99,606,NO2017,2017/1/13,DL,"Chicago, IL","Atlanta, GA",1,-21,85,606,NO2017,2017/1/13,DL,"Bloomington/Normal, IL","Atlanta, GA",-5,-29,77,533,NO2017,2017/1/13,DL,"Atlanta, GA","Chicago, IL",-4,-7,91,591,NO2017,2017/1/6,EV,"Chicago, IL","Syracuse, NY",-2,-20,77,607,NO2017,2017/1/7,EV,"Chicago, IL","Syracuse, NY",59,46,84,607,NO2017,2017/1/8,EV,"Chicago, IL","Syracuse, NY",-5,-14,87,607,NO2017,2017/1/9,EV,"Chicago, IL","Syracuse, NY",6,-2,76,607,NO2017,2017/1/10,EV,"Chicago, IL","Syracuse, NY",,,,607,YES2017,2017/1/11,EV,"Chicago, IL","Syracuse, NY",0,4,73,607,NO2017,2017/1/12,EV,"Chicago, IL","Syracuse, NY",68,56,78,607,NO2017,2017/1/13,EV,"Chicago, IL","Syracuse, NY",-3,-15,75,607,NO2017,2017/1/14,EV,"Chicago, IL","Syracuse, NY",-10,-25,74,607,NO2017,2017/1/15,EV,"Chicago, IL","Syracuse, NY",1,-1,77,607,NO2017,2017/1/16,EV,"Chicago, IL","Syracuse, NY",-5,5,81,607,NO2017,2017/1/17,EV,"Chicago, IL","Syracuse, NY",-4,-16,78,607,NO2017,2017/1/18,EV,"Chicago, IL","Syracuse, NY",-1,4,87,607,NO2017,2017/1/19,EV,"Chicago, IL","Syracuse, NY",-6,-14,82,607,NO2017,2017/1/20,EV,"Chicago, IL","Syracuse, NY",-2,-13,83,607,NO2017,2017/1/21,EV,"Chicago, IL","Syracuse, NY",-1,-21,75,607,NO2017,2017/1/22,EV,"Chicago, IL","Syracuse, NY",6,19,81,607,NO2017,2017/1/23,EV,"Chicago, IL","Syracuse, NY",-2,-11,86,607,NO2017,2017/1/14,NK,"Dallas/Fort Worth, TX","Chicago, IL",-1,-23,99,802,NO2017,2017/1/15,NK,"Dallas/Fort Worth, TX","Chicago, IL",-1,9,108,802,NO2017,2017/1/16,NK,"Dallas/Fort Worth, TX","Chicago, IL",-6,-12,98,802,NO2017,2017/1/17,NK,"Dallas/Fort Worth, TX","Chicago, IL",-5,-22,101,802,NO2017,2017/1/18,NK,"Dallas/Fort Worth, TX","Chicago, IL",-7,-18,96,802,NO2017,2017/1/19,NK,"Dallas/Fort Worth, TX","Chicago, IL",-4,-4,102,802,NO2017,2017/1/20,NK,"Dallas/Fort Worth, TX","Chicago, IL",-9,-18,105,802,NO2017,2017/1/21,NK,"Dallas/Fort Worth, TX","Chicago, IL",-3,9,101,802,NO2017,2017/1/22,NK,"Dallas/Fort Worth, TX","Chicago, IL",-2,14,110,802,NO2017,2017/1/23,NK,"Dallas/Fort Worth, TX","Chicago, IL",32,11,99,802,NO2017,2017/1/24,NK,"Dallas/Fort Worth, TX","Chicago, IL",-7,-17,97,802,NO2017,2017/1/25,NK,"Dallas/Fort Worth, TX","Chicago, IL",-10,-15,103,802,NO2017,2017/1/26,NK,"Dallas/Fort Worth, TX","Chicago, IL",-3,-14,101,802,NO2017,2017/1/27,NK,"Dallas/Fort Worth, TX","Chicago, IL",-7,-17,107,802,NO2017,2017/1/28,NK,"Dallas/Fort Worth, TX","Chicago, IL",-8,-10,108,802,NO2017,2017/1/29,NK,"Dallas/Fort Worth, TX","Chicago, IL",-5,-6,118,802,NO2017,2017/1/30,NK,"Dallas/Fort Worth, TX","Chicago, IL",-6,7,120,802,NO2017,2017/1/31,NK,"Dallas/Fort Worth, TX","Chicago, IL",-9,-5,113,802,NO2017,2017/1/1,NK,"New Orleans, LA","Chicago, IL",-16,-26,116,837,NO2017,2017/1/2,NK,"New Orleans, LA","Chicago, IL",209,193,115,837,NO2017,2017/1/3,NK,"New Orleans, LA","Chicago, IL",-9,-2,132,837,NO2017,2017/1/4,NK,"New Orleans, LA","Chicago, IL",-19,-23,120,837,NO2017,2017/1/5,NK,"New Orleans, LA","Chicago, IL",-7,1,123,837,NO2017,2017/1/6,NK,"New Orleans, LA","Chicago, IL",26,21,118,837,NO2017,2017/1/7,NK,"New Orleans, LA","Chicago, IL",,,,837,YES2017,2017/1/8,NK,"New Orleans, LA","Chicago, IL",-7,2,134,837,NO2017,2017/1/9,UA,"Chicago, IL","San Francisco, CA",24,47,288,1846,NO2017,2017/1/9,UA,"New Orleans, LA","Chicago, IL",-2,-15,123,837,NO2017,2017/1/9,UA,"Chicago, IL","New York, NY",96,65,88,733,NO2017,2017/1/9,UA,"Chicago, IL","Omaha, NE",258,244,64,416,NO2017,2017/1/9,UA,"Chicago, IL","Pittsburgh, PA",-3,-11,56,413,NO2017,2017/1/9,UA,"Atlanta, GA","Chicago, IL",-7,-6,110,606,NO2017,2017/1/9,UA,"Chicago, IL","Newark, NJ",0,-6,87,719,NO2017,2017/1/9,UA,"Houston, TX","Chicago, IL",72,51,116,925,NO2017,2017/1/9,UA,"Phoenix, AZ","Chicago, IL",6,1,175,1440,NO2017,2017/1/9,UA,"Cincinnati, OH","Chicago, IL",108,94,58,264,NO2017,2017/1/9,UA,"Detroit, MI","Chicago, IL",-6,-29,45,235,NO2017,2017/1/9,UA,"Chicago, IL","Houston, TX",-2,-10,130,925,NO2017,2017/1/9,UA,"Omaha, NE","Chicago, IL",-2,-17,60,416,NO2017,2017/1/9,UA,"Cleveland, OH","Chicago, IL",-5,-9,59,316,NO2017,2017/1/9,UA,"Chicago, IL","Houston, TX",9,7,133,925,NO2017,2017/1/9,UA,"St. Louis, MO","Chicago, IL",-15,-35,47,258,NO2017,2017/1/8,WN,"Baltimore, MD","Chicago, IL",-1,-7,99,611,NO2017,2017/1/8,WN,"Baltimore, MD","Chicago, IL",31,24,96,611,NO2017,2017/1/8,WN,"Baltimore, MD","Chicago, IL",9,6,103,611,NO2017,2017/1/8,WN,"Baltimore, MD","Chicago, IL",-3,-7,101,611,NO2017,2017/1/8,WN,"Baltimore, MD","Chicago, IL",12,1,101,611,NO2017,2017/1/8,WN,"Charleston, SC","Chicago, IL",-3,-8,116,745,NO2017,2017/1/8,WN,"Cleveland, OH","Chicago, IL",-6,4,55,307,NO2017,2017/1/8,WN,"Cleveland, OH","Chicago, IL",14,12,55,307,NO2017,2017/1/8,WN,"Cleveland, OH","Chicago, IL",19,13,55,307,NO2017,2017/1/8,WN,"Cleveland, OH","Chicago, IL",-2,5,52,307,NO2017,2017/1/8,WN,"Charlotte, NC","Chicago, IL",-2,-11,93,584,NO2017,2017/1/8,WN,"Charlotte, NC","Chicago, IL",0,3,91,584,NO2017,2017/1/8,WN,"Columbus, OH","Chicago, IL",-2,-7,54,283,NO2017,2017/1/8,WN,"Columbus, OH","Chicago, IL",7,-5,59,283,NO2017,2017/1/8,WN,"Columbus, OH","Chicago, IL",14,7,54,283,NO2017,2017/1/8,WN,"Dallas, TX","Chicago, IL",15,14,114,793,NO2017,2017/1/8,WN,"Dallas, TX","Chicago, IL",6,9,113,793,NO
+2016,2016/1/1,AA,NO,"Charlotte, NC","Chicago, IL",-6,-19,89,599
+2016,2016/1/2,AA,NO,"Charlotte, NC","Chicago, IL",-3,-19,84,599
+2016,2016/1/3,AA,NO,"Charlotte, NC","Chicago, IL",-6,-13,94,599
+2016,2016/1/4,AA,NO,"Charlotte, NC","Chicago, IL",24,14,90,599
+2016,2016/1/5,AA,NO,"Charlotte, NC","Chicago, IL",-8,-19,91,599
+2016,2016/1/6,AA,YES,"Charlotte, NC","Chicago, IL",,,,599
+2016,2016/1/7,AA,NO,"Charlotte, NC","Chicago, IL",116,106,92,599
+2016,2016/1/8,AA,NO,"Charlotte, NC","Chicago, IL",142,125,88,599
+2016,2016/1/11,AA,NO,"Charlotte, NC","Chicago, IL",-12,-1,105,599
+2016,2016/1/12,AA,NO,"Charlotte, NC","Chicago, IL",-5,-9,92,599
+2016,2016/1/13,AA,NO,"Charlotte, NC","Chicago, IL",-6,4,96,599
+2016,2016/1/14,AA,NO,"Charlotte, NC","Chicago, IL",0,-14,90,599
+2016,2016/1/15,AA,NO,"Charlotte, NC","Chicago, IL",18,-1,93,599
+2016,2016/1/18,AA,NO,"Charlotte, NC","Chicago, IL",-5,-15,87,599
+2016,2016/1/19,AA,NO,"Charlotte, NC","Chicago, IL",-8,-23,84,599
+2016,2016/1/20,AA,NO,"Charlotte, NC","Chicago, IL",19,-1,85,599
+2016,2016/1/21,AA,NO,"Charlotte, NC","Chicago, IL",-2,-22,81,599
+2016,2016/1/22,AA,NO,"Charlotte, NC","Chicago, IL",27,-1,84,599
+2016,2016/1/25,AA,NO,"Charlotte, NC","Chicago, IL",-9,-19,89,599
+2016,2016/1/26,AA,NO,"Charlotte, NC","Chicago, IL",-1,3,91,599
+2016,2016/1/27,AA,NO,"Charlotte, NC","Chicago, IL",-6,-5,90,599
+2016,2016/1/28,AA,NO,"Charlotte, NC","Chicago, IL",-5,-17,87,599
+2016,2016/1/29,AA,NO,"Charlotte, NC","Chicago, IL",-5,-9,88,599
+2016,2016/1/7,AA,NO,"Chicago, IL","Charlotte, NC",94,71,75,599
+2016,2016/1/9,AA,NO,"Charlotte, NC","Chicago, IL",3,19,107,599
+2016,2016/1/10,AA,NO,"Charlotte, NC","Chicago, IL",33,35,94,599
+2016,2016/1/1,AS,NO,"Seattle, WA","Chicago, IL",-5,13,204,1721
+2016,2016/1/1,AS,NO,"Chicago, IL","Seattle, WA",-2,57,237,1721
+2016,2016/1/1,AS,NO,"Chicago, IL","Seattle, WA",108,81,228,1721
+2016,2016/1/1,AS,NO,"Anchorage, AK","Chicago, IL",4,18,356,2846
+2016,2016/1/1,AS,NO,"Chicago, IL","Anchorage, AK",-1,-49,367,2846
+2016,2016/1/27,AS,NO,"Seattle, WA","Chicago, IL",-5,0,216,1721
+2016,2016/1/27,AS,NO,"Portland, OR","Chicago, IL",-8,-15,213,1739
+2016,2016/1/27,AS,NO,"Chicago, IL","Portland, OR",-8,-34,231,1739
+2016,2016/1/28,AS,NO,"Seattle, WA","Chicago, IL",-14,-26,208,1721
+2016,2016/1/28,AS,NO,"Chicago, IL","Seattle, WA",-8,-10,246,1721
+2016,2016/1/28,AS,NO,"Seattle, WA","Chicago, IL",9,1,205,1721
+2016,2016/1/28,AS,NO,"Chicago, IL","Seattle, WA",-13,-44,232,1721
+2016,2016/1/28,AS,NO,"Seattle, WA","Chicago, IL",-4,-14,212,1721
+2016,2016/1/28,AS,NO,"Chicago, IL","Seattle, WA",-12,-45,231,1721
+2016,2016/1/28,AS,NO,"Chicago, IL","Seattle, WA",-12,-11,249,1721
+2016,2016/1/2,B6,NO,"New York, NY","Chicago, IL",176,183,137,740
+2016,2016/1/3,B6,NO,"New York, NY","Chicago, IL",-10,-18,116,740
+2016,2016/1/4,B6,NO,"New York, NY","Chicago, IL",-5,-22,124,740
+2016,2016/1/5,B6,NO,"New York, NY","Chicago, IL",-9,-31,126,740
+2016,2016/1/6,B6,NO,"New York, NY","Chicago, IL",27,15,129,740
+2016,2016/1/7,B6,YES,"New York, NY","Chicago, IL",685,,,740
+2016,2016/1/8,B6,NO,"New York, NY","Chicago, IL",122,119,123,740
+2016,2016/1/9,B6,NO,"New York, NY","Chicago, IL",158,156,140,740
+2016,2016/1/10,B6,NO,"New York, NY","Chicago, IL",154,144,130,740
+2016,2016/1/11,B6,NO,"New York, NY","Chicago, IL",-1,3,136,740
+2016,2016/1/12,B6,NO,"New York, NY","Chicago, IL",0,-2,141,740
+2016,2016/1/13,B6,NO,"New York, NY","Chicago, IL",-3,23,152,740
+2016,2016/1/14,B6,NO,"New York, NY","Chicago, IL",-3,13,137,740
+2016,2016/1/15,B6,NO,"New York, NY","Chicago, IL",76,104,132,740
+2016,2016/1/16,B6,NO,"New York, NY","Chicago, IL",-4,15,134,740
+2016,2016/1/17,B6,NO,"New York, NY","Chicago, IL",28,16,130,740
+2016,2016/1/18,B6,NO,"New York, NY","Chicago, IL",52,18,116,740
+2016,2016/1/19,B6,NO,"New York, NY","Chicago, IL",-3,21,137,740
+2016,2016/1/20,B6,NO,"New York, NY","Chicago, IL",-6,-36,110,740
+2016,2016/1/21,B6,NO,"New York, NY","Chicago, IL",34,7,124,740
+2016,2016/1/22,B6,NO,"New York, NY","Chicago, IL",-4,-6,117,740
+2016,2016/1/23,B6,NO,"New York, NY","Chicago, IL",96,108,113,740
+2016,2016/1/5,DL,NO,"Chicago, IL","Atlanta, GA",-4,-13,84,591
+2016,2016/1/5,DL,NO,"Atlanta, GA","Chicago, IL",-2,-14,98,606
+2016,2016/1/5,DL,NO,"Chicago, IL","Salt Lake City, UT",16,14,194,1250
+2016,2016/1/5,DL,NO,"Salt Lake City, UT","Chicago, IL",11,1,145,1250
+2016,2016/1/5,DL,NO,"Atlanta, GA","Chicago, IL",17,20,95,606
+2016,2016/1/22,DL,NO,"Chicago, IL","Detroit, MI",-1,-1,53,235
+2016,2016/1/22,DL,NO,"Detroit, MI","Chicago, IL",3,4,47,235
+2016,2016/1/22,DL,NO,"Chicago, IL","Detroit, MI",-9,-11,50,235
+2016,2016/1/22,DL,NO,"Atlanta, GA","Chicago, IL",-1,11,91,606
+2016,2016/1/22,DL,NO,"Chicago, IL","Atlanta, GA",68,62,96,606
+2016,2016/1/31,DL,NO,"Atlanta, GA","Chicago, IL",-5,-15,99,606
+2016,2016/1/31,DL,NO,"Chicago, IL","Atlanta, GA",-11,-36,82,606
+2016,2016/1/31,DL,NO,"Chicago, IL","Minneapolis, MN",-6,-29,59,334
+2016,2016/1/31,DL,NO,"Atlanta, GA","Chicago, IL",-3,-7,101,606
+2016,2016/1/31,DL,NO,"Chicago, IL","Atlanta, GA",-1,-26,83,606
+2016,2016/1/31,DL,NO,"Atlanta, GA","Chicago, IL",0,-6,99,591
+2016,2016/1/31,DL,NO,"Chicago, IL","Atlanta, GA",-3,-21,82,591
+2016,2016/1/31,DL,NO,"Detroit, MI","Chicago, IL",-6,9,48,235
+2016,2016/1/1,EV,NO,"Chicago, IL","Charleston, SC",281,281,102,760
+2016,2016/1/4,EV,NO,"Syracuse, NY","Chicago, IL",-6,-26,103,607
+2016,2016/1/5,EV,NO,"Syracuse, NY","Chicago, IL",-7,-22,107,607
+2016,2016/1/6,EV,NO,"Syracuse, NY","Chicago, IL",14,12,110,607
+2016,2016/1/7,EV,NO,"Syracuse, NY","Chicago, IL",0,-21,102,607
+2016,2016/1/8,EV,NO,"Syracuse, NY","Chicago, IL",-2,-30,96,607
+2016,2016/1/9,EV,NO,"Syracuse, NY","Chicago, IL",-7,43,105,607
+2016,2016/1/10,EV,NO,"Syracuse, NY","Chicago, IL",-3,-15,109,607
+2016,2016/1/11,EV,NO,"Syracuse, NY","Chicago, IL",450,428,108,607
+2016,2016/1/12,EV,NO,"Syracuse, NY","Chicago, IL",-3,2,130,607
+2016,2016/1/13,EV,NO,"Syracuse, NY","Chicago, IL",-7,-11,121,607
+2016,2016/1/14,EV,NO,"Syracuse, NY","Chicago, IL",0,15,119,607
+2016,2016/1/15,EV,NO,"Syracuse, NY","Chicago, IL",-4,-35,99,607
+2016,2016/1/16,EV,NO,"Syracuse, NY","Chicago, IL",80,81,115,607
+2016,2016/1/17,EV,NO,"Syracuse, NY","Chicago, IL",-9,-6,101,607
+2016,2016/1/18,EV,NO,"Syracuse, NY","Chicago, IL",-7,-45,94,607
+2016,2016/1/19,EV,NO,"Syracuse, NY","Chicago, IL",-3,-36,95,607
+2016,2016/1/20,EV,NO,"Syracuse, NY","Chicago, IL",-1,-20,102,607
+2016,2016/1/21,EV,NO,"Syracuse, NY","Chicago, IL",-6,-36,102,607
+2016,2016/1/22,EV,NO,"Syracuse, NY","Chicago, IL",-5,-36,97,607
+2016,2016/1/23,EV,NO,"Syracuse, NY","Chicago, IL",-11,-36,93,607
+2016,2016/1/24,EV,NO,"Syracuse, NY","Chicago, IL",-9,4,90,607
+2016,2016/1/25,EV,NO,"Syracuse, NY","Chicago, IL",32,25,118,607
+2016,2016/1/26,EV,NO,"Syracuse, NY","Chicago, IL",-10,-38,105,607
+2016,2016/1/27,EV,NO,"Syracuse, NY","Chicago, IL",-10,-23,98,607
+2016,2016/1/28,EV,NO,"Syracuse, NY","Chicago, IL",-8,-34,98,607
+2016,2016/1/29,EV,NO,"Syracuse, NY","Chicago, IL",-8,-21,104,607
+2016,2016/1/30,EV,NO,"Syracuse, NY","Chicago, IL",-4,-25,93,607
+2016,2016/1/31,EV,NO,"Syracuse, NY","Chicago, IL",-7,-30,98,607
+2016,2016/1/28,OO,NO,"Peoria, IL","Detroit, MI",-5,-23,65,346
+2016,2016/1/28,OO,NO,"Peoria, IL","Detroit, MI",-8,-9,62,346
+2016,2016/1/28,OO,NO,"Salt Lake City, UT","Chicago, IL",-6,-15,161,1250
+2016,2016/1/28,OO,NO,"Chicago, IL","Salt Lake City, UT",-4,-24,168,1250
+2016,2016/1/28,OO,NO,"Salt Lake City, UT","Chicago, IL",-4,3,169,1250
+2016,2016/1/28,OO,NO,"Detroit, MI","Chicago, IL",-1,29,43,228
+2016,2016/1/28,OO,NO,"Chicago, IL","Salt Lake City, UT",-8,-34,168,1250
+2016,2016/1/28,OO,NO,"Detroit, MI","Peoria, IL",14,16,58,346
+2016,2016/1/28,OO,NO,"Moline, IL","Minneapolis, MN",-2,-7,55,274
+2016,2016/1/28,OO,NO,"Detroit, MI","Chicago, IL",5,19,49,235
+2016,2016/1/28,OO,NO,"Chicago, IL","Detroit, MI",150,133,46,235
+2016,2016/1/31,OO,NO,"Cleveland, OH","Chicago, IL",-1,1,65,316
+2016,2016/1/31,OO,NO,"Milwaukee, WI","Chicago, IL",-10,-15,31,67
+2016,2016/1/31,OO,NO,"San Antonio, TX","Chicago, IL",-3,11,148,1041
+2016,2016/1/18,UA,NO,"Austin, TX","Chicago, IL",-6,-32,121,977
+2016,2016/1/18,UA,NO,"Chicago, IL","Boston, MA",-3,4,116,867
+2016,2016/1/18,UA,NO,"Chicago, IL","Los Angeles, CA",8,-6,218,1744
+2016,2016/1/18,UA,NO,"Chicago, IL","Pittsburgh, PA",-2,-8,56,413
+2016,2016/1/18,UA,NO,"Columbus, OH","Chicago, IL",-8,-35,51,296
+2016,2016/1/18,UA,NO,"Austin, TX","Chicago, IL",-11,-31,122,977
+2016,2016/1/18,UA,NO,"Chicago, IL","Denver, CO",-6,-30,114,888
+2016,2016/1/18,UA,NO,"Washington, DC","Chicago, IL",-13,-18,97,612
+2016,2016/1/18,UA,NO,"San Juan, PR","Chicago, IL",11,3,275,2072
+2016,2016/1/18,UA,NO,"Fort Lauderdale, FL","Chicago, IL",-3,-13,169,1182
+2016,2016/1/18,UA,NO,"Chicago, IL","Columbus, OH",-2,-3,51,296
+2016,2016/1/18,UA,NO,"Albany, NY","Chicago, IL",10,-6,107,723
+2016,2016/1/18,UA,NO,"Chicago, IL","Las Vegas, NV",-4,-35,181,1514
+2016,2016/1/18,UA,NO,"Chicago, IL","Minneapolis, MN",-3,-23,56,334
+2016,2016/1/18,UA,NO,"Los Angeles, CA","Chicago, IL",1,3,224,1744
+2016,2016/1/18,UA,NO,"Chicago, IL","Houston, TX",-2,6,145,925
+2016,2016/1/18,UA,NO,"Cleveland, OH","Chicago, IL",-8,-32,52,316
+2016,2016/1/18,UA,NO,"Newark, NJ","Chicago, IL",-5,-31,102,719
+2016,2016/1/18,UA,NO,"Chicago, IL","Boston, MA",2,9,118,867
+2016,2016/1/18,UA,NO,"San Francisco, CA","Chicago, IL",0,10,210,1846
+2016,2016/1/18,UA,NO,"Charlotte, NC","Chicago, IL",-12,-29,97,599
+2016,2016/1/18,UA,NO,"Detroit, MI","Chicago, IL",-9,-37,43,235
+2016,2016/1/18,UA,NO,"Chicago, IL","San Francisco, CA",162,171,247,1846
+2016,2016/1/18,UA,NO,"New Orleans, LA","Chicago, IL",-9,-25,120,837
+2016,2016/1/18,UA,NO,"Chicago, IL","New York, NY",-5,-13,107,733
+2016,2016/1/18,UA,NO,"Chicago, IL","Omaha, NE",-1,-10,62,416
+2016,2016/1/18,UA,NO,"Chicago, IL","Newark, NJ",4,0,97,719
+2016,2016/1/18,UA,NO,"Chicago, IL","Pittsburgh, PA",-3,-6,61,413
+2016,2016/1/13,UA,NO,"San Francisco, CA","Chicago, IL",14,-8,202,1846
+2016,2016/1/13,UA,NO,"Baltimore, MD","Chicago, IL",-6,-10,108,622
+2016,2016/1/13,UA,NO,"Chicago, IL","Washington, DC",-3,-19,74,612
+2016,2016/1/13,UA,NO,"Denver, CO","Chicago, IL",17,0,101,888
+2016,2016/1/13,UA,NO,"Chicago, IL","Phoenix, AZ",6,7,204,1440
+2016,2016/1/13,UA,NO,"Chicago, IL","Newark, NJ",33,16,86,719
+2016,2016/1/13,UA,NO,"Chicago, IL","Denver, CO",-5,-1,138,888
+2016,2016/1/13,UA,NO,"Chicago, IL","Boston, MA",-5,-13,96,867
+2016,2016/1/13,UA,NO,"Chicago, IL","Washington, DC",-6,-15,73,588
+2016,2016/1/13,UA,NO,"Chicago, IL","San Francisco, CA",0,-13,260,1846
+2016,2016/1/13,UA,NO,"Los Angeles, CA","Chicago, IL",-4,-17,197,1744
+2016,2016/1/13,UA,NO,"Chicago, IL","New York, NY",63,33,87,733
+2016,2016/1/13,UA,NO,"Washington, DC","Chicago, IL",0,7,102,588
+2016,2016/1/13,UA,NO,"Chicago, IL","Austin, TX",0,-2,142,977
+2016,2016/1/13,UA,NO,"Columbus, OH","Chicago, IL",-7,-2,63,296
+2016,2016/1/13,UA,NO,"Chicago, IL","Portland, OR",16,7,241,1739
+2016,2016/1/13,UA,NO,"New York, NY","Chicago, IL",-6,34,134,733
+2016,2016/1/13,UA,NO,"Chicago, IL","Las Vegas, NV",-12,22,235,1514
+2016,2016/1/13,UA,NO,"Minneapolis, MN","Chicago, IL",-4,-21,49,334
+2016,2016/1/13,UA,NO,"Chicago, IL","New Orleans, LA",-2,-17,118,837
+2016,2016/1/13,UA,NO,"Chicago, IL","Salt Lake City, UT",18,4,191,1250
+2016,2016/1/11,VX,NO,"San Francisco, CA","Chicago, IL",8,-1,198,1846
+2016,2016/1/11,VX,NO,"Chicago, IL","San Francisco, CA",2,15,280,1846
+2016,2016/1/11,VX,NO,"Chicago, IL","Los Angeles, CA",-3,0,261,1744
+2016,2016/1/11,VX,NO,"Los Angeles, CA","Chicago, IL",18,-12,191,1744
+2016,2016/1/11,VX,NO,"Los Angeles, CA","Chicago, IL",-7,-28,181,1744
+2016,2016/1/11,VX,NO,"Chicago, IL","Los Angeles, CA",-7,29,278,1744
+2016,2016/1/12,VX,NO,"San Francisco, CA","Chicago, IL",-2,-11,206,1846
+2016,2016/1/12,VX,NO,"Chicago, IL","San Francisco, CA",2,38,291,1846
+2016,2016/1/12,VX,NO,"Chicago, IL","Los Angeles, CA",42,95,283,1744
+2016,2016/1/12,VX,NO,"Los Angeles, CA","Chicago, IL",61,35,180,1744
+2016,2016/1/12,VX,NO,"Los Angeles, CA","Chicago, IL",-3,-19,187,1744
+2016,2016/1/12,VX,NO,"Chicago, IL","Los Angeles, CA",34,32,253,1744
+2016,2016/1/13,VX,NO,"San Francisco, CA","Chicago, IL",-5,-15,211,1846
+2016,2016/1/13,VX,NO,"Chicago, IL","San Francisco, CA",-8,-7,266,1846
+2016,2016/1/13,VX,NO,"Chicago, IL","Los Angeles, CA",1,19,257,1744
+2016,2016/1/13,VX,NO,"Los Angeles, CA","Chicago, IL",-5,-13,203,1744
+2016,2016/1/13,VX,NO,"Los Angeles, CA","Chicago, IL",-4,-15,198,1744
+2016,2016/1/13,VX,NO,"Chicago, IL","Los Angeles, CA",-7,-12,252,1744
+2016,2016/1/14,VX,NO,"San Francisco, CA","Chicago, IL",1,-6,212,1846
+2016,2016/1/14,VX,NO,"Chicago, IL","San Francisco, CA",-9,-18,259,1846
+2016,2016/1/14,VX,NO,"Chicago, IL","Los Angeles, CA",6,-1,251,1744
+2016,2016/1/14,VX,NO,"Los Angeles, CA","Chicago, IL",11,-8,199,1744
+2016,2016/1/15,VX,NO,"San Francisco, CA","Chicago, IL",-6,-2,216,1846
+2016,2016/1/15,VX,NO,"Chicago, IL","San Francisco, CA",-4,-21,245,1846
+2016,2016/1/15,VX,NO,"Chicago, IL","Los Angeles, CA",-8,-9,245,1744
+2016,2016/1/15,VX,NO,"Los Angeles, CA","Chicago, IL",-4,-10,209,1744
+2016,2016/1/15,VX,NO,"Los Angeles, CA","Chicago, IL",-7,-2,210,1744
+2016,2016/1/15,VX,NO,"Chicago, IL","Los Angeles, CA",-6,-34,227,1744
+2016,2016/1/16,VX,NO,"San Francisco, CA","Chicago, IL",0,17,233,1846
+2016,2016/1/16,VX,NO,"Chicago, IL","San Francisco, CA",16,-12,231,1846
+2016,2016/1/16,VX,NO,"Chicago, IL","Los Angeles, CA",-5,-43,219,1744
+2016,2016/1/16,VX,NO,"Los Angeles, CA","Chicago, IL",5,4,211,1744
+2016,2016/1/16,VX,NO,"Los Angeles, CA","Chicago, IL",-4,-4,209,1744
+2016,2016/1/16,VX,NO,"Chicago, IL","Los Angeles, CA",-6,-30,218,1744
+2016,2016/1/17,VX,NO,"San Francisco, CA","Chicago, IL",-1,17,238,1846
+2016,2016/1/17,VX,NO,"Chicago, IL","San Francisco, CA",15,-28,218,1846
+2016,2016/1/17,VX,NO,"Chicago, IL","Los Angeles, CA",-4,-36,215,1744
+2016,2016/1/17,VX,NO,"Los Angeles, CA","Chicago, IL",-1,11,220,1744
+2016,2016/1/17,VX,NO,"Los Angeles, CA","Chicago, IL",-4,7,215,1744
+2016,2016/1/17,VX,NO,"Chicago, IL","Los Angeles, CA",-4,-49,208,1744
+2016,2016/1/18,VX,NO,"San Francisco, CA","Chicago, IL",46,74,234,1846
+2016,2016/1/18,VX,NO,"Chicago, IL","San Francisco, CA",75,87,257,1846
+2016,2016/1/18,VX,NO,"Chicago, IL","Los Angeles, CA",-4,-43,212,1744
+2016,2016/1/18,VX,NO,"Los Angeles, CA","Chicago, IL",19,43,222,1744
+2016,2016/1/18,VX,NO,"Los Angeles, CA","Chicago, IL",-6,3,212,1744
+2016,2016/1/18,VX,NO,"Chicago, IL","Los Angeles, CA",34,24,219,1744
+2016,2016/1/19,VX,NO,"San Francisco, CA","Chicago, IL",2,11,227,1846
+2016,2016/1/19,VX,NO,"Chicago, IL","San Francisco, CA",30,14,232,1846
+2016,2016/1/19,VX,NO,"Chicago, IL","Los Angeles, CA",-5,-15,232,1744
+2016,2016/1/19,VX,NO,"Los Angeles, CA","Chicago, IL",0,-3,209,1744
+2016,2016/1/19,VX,NO,"Los Angeles, CA","Chicago, IL",-3,4,210,1744
+2016,2016/1/19,VX,NO,"Chicago, IL","Los Angeles, CA",-5,-24,222,1744
+2016,2016/1/2,VX,NO,"Chicago, IL","San Francisco, CA",-2,21,281,1846
+2016,2016/1/2,VX,NO,"San Francisco, CA","Chicago, IL",3,-16,202,1846
+2016,2016/1/2,VX,NO,"San Francisco, CA","Chicago, IL",0,-9,202,1846
+2016,2016/1/2,VX,NO,"Chicago, IL","San Francisco, CA",-5,24,277,1846
+2016,2016/1/2,VX,NO,"San Francisco, CA","Chicago, IL",44,11,192,1846
+2016,2016/1/2,VX,NO,"Chicago, IL","San Francisco, CA",38,81,288,1846
+2016,2016/1/2,VX,NO,"Chicago, IL","Los Angeles, CA",-8,29,266,1744
+2016,2016/1/2,VX,NO,"Los Angeles, CA","Chicago, IL",12,-2,194,1744
+2016,2016/1/2,VX,NO,"Los Angeles, CA","Chicago, IL",14,-6,184,1744
+2016,2016/1/2,VX,NO,"Chicago, IL","Los Angeles, CA",-6,-2,265,1744
+2016,2016/1/20,VX,NO,"San Francisco, CA","Chicago, IL",8,21,221,1846
+2016,2016/1/20,VX,NO,"Chicago, IL","San Francisco, CA",15,29,235,1846
+2016,2016/1/1,WN,NO,"Nashville, TN","Chicago, IL",13,2,63,395
+2016,2016/1/1,WN,NO,"Boston, MA","Chicago, IL",-5,-20,142,861
+2016,2016/1/1,WN,NO,"Boston, MA","Chicago, IL",-4,-18,141,861
+2016,2016/1/1,WN,NO,"Boston, MA","Chicago, IL",-1,-1,146,861
+2016,2016/1/1,WN,NO,"Boston, MA","Chicago, IL",13,5,141,861
+2016,2016/1/1,WN,NO,"Buffalo, NY","Chicago, IL",-2,-22,78,468
+2016,2016/1/1,WN,NO,"Buffalo, NY","Chicago, IL",0,-7,83,468
+2016,2016/1/1,WN,NO,"Buffalo, NY","Chicago, IL",3,-15,85,468
+2016,2016/1/1,WN,NO,"Baltimore, MD","Chicago, IL",-7,-25,100,611
+2016,2016/1/1,WN,NO,"Baltimore, MD","Chicago, IL",21,20,99,611
+2016,2016/1/1,WN,NO,"Baltimore, MD","Chicago, IL",-4,-14,107,611
+2016,2016/1/1,WN,NO,"Baltimore, MD","Chicago, IL",-3,-13,101,611
+2016,2016/1/1,WN,NO,"Baltimore, MD","Chicago, IL",29,23,101,611
+2016,2016/1/1,WN,NO,"Charleston, SC","Chicago, IL",-2,0,111,745
+2016,2016/1/1,WN,NO,"Cleveland, OH","Chicago, IL",-5,-13,54,307
+2016,2016/1/1,WN,NO,"Cleveland, OH","Chicago, IL",0,-19,48,307
+2016,2016/1/2,WN,NO,"San Antonio, TX","Chicago, IL",-2,-13,124,1036
+2016,2016/1/2,WN,YES,"San Antonio, TX","Chicago, IL",,,,1036
+2016,2016/1/2,WN,NO,"Louisville, KY","Chicago, IL",-3,-7,48,271
+2016,2016/1/2,WN,NO,"Louisville, KY","Chicago, IL",-4,-5,51,271
+2016,2016/1/10,WN,NO,"Orlando, FL","Chicago, IL",-1,-16,140,990
+2016,2016/1/10,WN,NO,"Chicago, IL","Albuquerque, NM",11,14,167,1121
+2016,2016/1/10,WN,NO,"Chicago, IL","Albany, NY",24,42,83,717
+2016,2016/1/10,WN,NO,"Chicago, IL","Albany, NY",0,-1,87,717
+2016,2016/1/10,WN,NO,"Chicago, IL","Atlanta, GA",97,90,81,591
+2016,2016/1/10,WN,NO,"Chicago, IL","Atlanta, GA",5,-4,87,591
+2016,2016/1/10,WN,NO,"Chicago, IL","Atlanta, GA",4,5,88,591
+2016,2016/1/10,WN,NO,"Chicago, IL","Atlanta, GA",-5,-20,86,591
+2016,2016/1/10,WN,NO,"Chicago, IL","Atlanta, GA",-1,4,89,591
+2016,2016/1/10,WN,NO,"Chicago, IL","Atlanta, GA",5,0,80,591
+2016,2016/1/2,AA,NO,"Santa Ana, CA","Chicago, IL",8,30,190,1726
+2016,2016/1/3,AA,NO,"Santa Ana, CA","Chicago, IL",-3,-31,187,1726
+2016,2016/1/4,AA,NO,"Santa Ana, CA","Chicago, IL",0,-20,196,1726
+2016,2016/1/7,AA,NO,"Santa Ana, CA","Chicago, IL",-6,-21,198,1726
+2016,2016/1/8,AA,NO,"Santa Ana, CA","Chicago, IL",-4,-23,200,1726
+2016,2016/1/9,AA,NO,"Santa Ana, CA","Chicago, IL",-5,-27,189,1726
+2016,2016/1/10,AA,NO,"Santa Ana, CA","Chicago, IL",-8,7,233,1726
+2016,2016/1/11,AA,NO,"Santa Ana, CA","Chicago, IL",-5,-37,186,1726
+2016,2016/1/12,AA,NO,"Santa Ana, CA","Chicago, IL",-8,-35,190,1726
+2016,2016/1/13,AA,NO,"Santa Ana, CA","Chicago, IL",-2,-33,187,1726
+2016,2016/1/14,AA,NO,"Santa Ana, CA","Chicago, IL",-12,-26,206,1726
+2016,2016/1/16,AA,NO,"Santa Ana, CA","Chicago, IL",-1,-14,213,1726
+2016,2016/1/17,AA,NO,"Santa Ana, CA","Chicago, IL",0,-1,213,1726
+2016,2016/1/18,AA,NO,"Santa Ana, CA","Chicago, IL",1,14,222,1726
+2016,2016/1/19,AA,NO,"Santa Ana, CA","Chicago, IL",-6,-8,211,1726
+2016,2016/1/20,AA,NO,"Santa Ana, CA","Chicago, IL",-1,,,1726
+2016,2016/1/21,AA,NO,"Santa Ana, CA","Chicago, IL",0,-25,197,1726
+2016,2016/1/23,AA,NO,"Santa Ana, CA","Chicago, IL",-9,-51,182,1726
+2016,2016/1/24,AA,NO,"Santa Ana, CA","Chicago, IL",-3,-33,184,1726
+2016,2016/1/25,AA,NO,"Santa Ana, CA","Chicago, IL",0,-15,200,1726
+2016,2016/1/26,AA,NO,"Santa Ana, CA","Chicago, IL",-2,-22,199,1726
+2016,2016/1/27,AA,NO,"Santa Ana, CA","Chicago, IL",-4,-3,214,1726
+2016,2016/1/12,DL,NO,"Atlanta, GA","Chicago, IL",79,80,93,606
+2016,2016/1/12,DL,NO,"Atlanta, GA","Chicago, IL",-2,-16,87,591
+2016,2016/1/12,DL,NO,"Chicago, IL","Atlanta, GA",33,41,85,606
+2016,2016/1/12,DL,NO,"Atlanta, GA","Bloomington/Normal, IL",-11,-13,80,533
+2016,2016/1/12,DL,NO,"Atlanta, GA","Chicago, IL",110,101,89,606
+2016,2016/1/12,DL,NO,"Chicago, IL","Atlanta, GA",98,77,84,606
+2016,2016/1/12,DL,NO,"Atlanta, GA","Chicago, IL",-2,-1,93,606
+2016,2016/1/12,DL,NO,"Chicago, IL","Atlanta, GA",11,-13,83,606
+2016,2016/1/12,DL,NO,"Chicago, IL","Minneapolis, MN",-4,1,58,334
+2016,2016/1/12,DL,NO,"Atlanta, GA","Chicago, IL",-1,-10,94,606
+2016,2016/1/12,DL,NO,"Chicago, IL","Atlanta, GA",1,-13,87,606
+2016,2016/1/12,DL,NO,"Atlanta, GA","Chicago, IL",-2,-15,88,591
+2016,2016/1/12,DL,NO,"Chicago, IL","Atlanta, GA",0,-9,91,591
+2016,2016/1/12,DL,NO,"Detroit, MI","Chicago, IL",15,33,51,235
+2016,2016/1/13,DL,NO,"Atlanta, GA","Chicago, IL",4,9,99,606
+2016,2016/1/13,DL,NO,"Chicago, IL","Atlanta, GA",1,-21,85,606
+2016,2016/1/13,DL,NO,"Bloomington/Normal, IL","Atlanta, GA",-5,-29,77,533
+2016,2016/1/13,DL,NO,"Atlanta, GA","Chicago, IL",-4,-7,91,591
+2016,2016/1/6,EV,NO,"Chicago, IL","Syracuse, NY",-2,-20,77,607
+2016,2016/1/7,EV,NO,"Chicago, IL","Syracuse, NY",59,46,84,607
+2016,2016/1/8,EV,NO,"Chicago, IL","Syracuse, NY",-5,-14,87,607
+2016,2016/1/9,EV,NO,"Chicago, IL","Syracuse, NY",6,-2,76,607
+2016,2016/1/10,EV,YES,"Chicago, IL","Syracuse, NY",,,,607
+2016,2016/1/11,EV,NO,"Chicago, IL","Syracuse, NY",0,4,73,607
+2016,2016/1/12,EV,NO,"Chicago, IL","Syracuse, NY",68,56,78,607
+2016,2016/1/13,EV,NO,"Chicago, IL","Syracuse, NY",-3,-15,75,607
+2016,2016/1/14,EV,NO,"Chicago, IL","Syracuse, NY",-10,-25,74,607
+2016,2016/1/15,EV,NO,"Chicago, IL","Syracuse, NY",1,-1,77,607
+2016,2016/1/16,EV,NO,"Chicago, IL","Syracuse, NY",-5,5,81,607
+2016,2016/1/17,EV,NO,"Chicago, IL","Syracuse, NY",-4,-16,78,607
+2016,2016/1/18,EV,NO,"Chicago, IL","Syracuse, NY",-1,4,87,607
+2016,2016/1/19,EV,NO,"Chicago, IL","Syracuse, NY",-6,-14,82,607
+2016,2016/1/20,EV,NO,"Chicago, IL","Syracuse, NY",-2,-13,83,607
+2016,2016/1/21,EV,NO,"Chicago, IL","Syracuse, NY",-1,-21,75,607
+2016,2016/1/22,EV,NO,"Chicago, IL","Syracuse, NY",6,19,81,607
+2016,2016/1/23,EV,NO,"Chicago, IL","Syracuse, NY",-2,-11,86,607
+2016,2016/1/14,NK,NO,"Dallas/Fort Worth, TX","Chicago, IL",-1,-23,99,802
+2016,2016/1/15,NK,NO,"Dallas/Fort Worth, TX","Chicago, IL",-1,9,108,802
+2016,2016/1/16,NK,NO,"Dallas/Fort Worth, TX","Chicago, IL",-6,-12,98,802
+2016,2016/1/17,NK,NO,"Dallas/Fort Worth, TX","Chicago, IL",-5,-22,101,802
+2016,2016/1/18,NK,NO,"Dallas/Fort Worth, TX","Chicago, IL",-7,-18,96,802
+2016,2016/1/19,NK,NO,"Dallas/Fort Worth, TX","Chicago, IL",-4,-4,102,802
+2016,2016/1/20,NK,NO,"Dallas/Fort Worth, TX","Chicago, IL",-9,-18,105,802
+2016,2016/1/21,NK,NO,"Dallas/Fort Worth, TX","Chicago, IL",-3,9,101,802
+2016,2016/1/22,NK,NO,"Dallas/Fort Worth, TX","Chicago, IL",-2,14,110,802
+2016,2016/1/23,NK,NO,"Dallas/Fort Worth, TX","Chicago, IL",32,11,99,802
+2016,2016/1/24,NK,NO,"Dallas/Fort Worth, TX","Chicago, IL",-7,-17,97,802
+2016,2016/1/25,NK,NO,"Dallas/Fort Worth, TX","Chicago, IL",-10,-15,103,802
+2016,2016/1/26,NK,NO,"Dallas/Fort Worth, TX","Chicago, IL",-3,-14,101,802
+2016,2016/1/27,NK,NO,"Dallas/Fort Worth, TX","Chicago, IL",-7,-17,107,802
+2016,2016/1/28,NK,NO,"Dallas/Fort Worth, TX","Chicago, IL",-8,-10,108,802
+2016,2016/1/29,NK,NO,"Dallas/Fort Worth, TX","Chicago, IL",-5,-6,118,802
+2016,2016/1/30,NK,NO,"Dallas/Fort Worth, TX","Chicago, IL",-6,7,120,802
+2016,2016/1/31,NK,NO,"Dallas/Fort Worth, TX","Chicago, IL",-9,-5,113,802
+2016,2016/1/1,NK,NO,"New Orleans, LA","Chicago, IL",-16,-26,116,837
+2016,2016/1/2,NK,NO,"New Orleans, LA","Chicago, IL",209,193,115,837
+2016,2016/1/3,NK,NO,"New Orleans, LA","Chicago, IL",-9,-2,132,837
+2016,2016/1/4,NK,NO,"New Orleans, LA","Chicago, IL",-19,-23,120,837
+2016,2016/1/5,NK,NO,"New Orleans, LA","Chicago, IL",-7,1,123,837
+2016,2016/1/6,NK,NO,"New Orleans, LA","Chicago, IL",26,21,118,837
+2016,2016/1/7,NK,YES,"New Orleans, LA","Chicago, IL",,,,837
+2016,2016/1/8,NK,NO,"New Orleans, LA","Chicago, IL",-7,2,134,837
+2016,2016/1/9,UA,NO,"Chicago, IL","San Francisco, CA",24,47,288,1846
+2016,2016/1/9,UA,NO,"New Orleans, LA","Chicago, IL",-2,-15,123,837
+2016,2016/1/9,UA,NO,"Chicago, IL","New York, NY",96,65,88,733
+2016,2016/1/9,UA,NO,"Chicago, IL","Omaha, NE",258,244,64,416
+2016,2016/1/9,UA,NO,"Chicago, IL","Pittsburgh, PA",-3,-11,56,413
+2016,2016/1/9,UA,NO,"Atlanta, GA","Chicago, IL",-7,-6,110,606
+2016,2016/1/9,UA,NO,"Chicago, IL","Newark, NJ",0,-6,87,719
+2016,2016/1/9,UA,NO,"Houston, TX","Chicago, IL",72,51,116,925
+2016,2016/1/9,UA,NO,"Phoenix, AZ","Chicago, IL",6,1,175,1440
+2016,2016/1/9,UA,NO,"Cincinnati, OH","Chicago, IL",108,94,58,264
+2016,2016/1/9,UA,NO,"Detroit, MI","Chicago, IL",-6,-29,45,235
+2016,2016/1/9,UA,NO,"Chicago, IL","Houston, TX",-2,-10,130,925
+2016,2016/1/9,UA,NO,"Omaha, NE","Chicago, IL",-2,-17,60,416
+2016,2016/1/9,UA,NO,"Cleveland, OH","Chicago, IL",-5,-9,59,316
+2016,2016/1/9,UA,NO,"Chicago, IL","Houston, TX",9,7,133,925
+2016,2016/1/9,UA,NO,"St. Louis, MO","Chicago, IL",-15,-35,47,258
+2016,2016/1/8,WN,NO,"Baltimore, MD","Chicago, IL",-1,-7,99,611
+2016,2016/1/8,WN,NO,"Baltimore, MD","Chicago, IL",31,24,96,611
+2016,2016/1/8,WN,NO,"Baltimore, MD","Chicago, IL",9,6,103,611
+2016,2016/1/8,WN,NO,"Baltimore, MD","Chicago, IL",-3,-7,101,611
+2016,2016/1/8,WN,NO,"Baltimore, MD","Chicago, IL",12,1,101,611
+2016,2016/1/8,WN,NO,"Charleston, SC","Chicago, IL",-3,-8,116,745
+2016,2016/1/8,WN,NO,"Cleveland, OH","Chicago, IL",-6,4,55,307
+2016,2016/1/8,WN,NO,"Cleveland, OH","Chicago, IL",14,12,55,307
+2016,2016/1/8,WN,NO,"Cleveland, OH","Chicago, IL",19,13,55,307
+2016,2016/1/8,WN,NO,"Cleveland, OH","Chicago, IL",-2,5,52,307
+2016,2016/1/8,WN,NO,"Charlotte, NC","Chicago, IL",-2,-11,93,584
+2016,2016/1/8,WN,NO,"Charlotte, NC","Chicago, IL",0,3,91,584
+2016,2016/1/8,WN,NO,"Columbus, OH","Chicago, IL",-2,-7,54,283
+2016,2016/1/8,WN,NO,"Columbus, OH","Chicago, IL",7,-5,59,283
+2016,2016/1/8,WN,NO,"Columbus, OH","Chicago, IL",14,7,54,283
+2016,2016/1/8,WN,NO,"Dallas, TX","Chicago, IL",15,14,114,793
+2016,2016/1/8,WN,NO,"Dallas, TX","Chicago, IL",6,9,113,793
+2017,2017/1/1,AA,NO,"Charlotte, NC","Chicago, IL",-6,-19,89,599
+2017,2017/1/2,AA,NO,"Charlotte, NC","Chicago, IL",-3,-19,84,599
+2017,2017/1/3,AA,NO,"Charlotte, NC","Chicago, IL",-6,-13,94,599
+2017,2017/1/4,AA,NO,"Charlotte, NC","Chicago, IL",24,14,90,599
+2017,2017/1/5,AA,NO,"Charlotte, NC","Chicago, IL",-8,-19,91,599
+2017,2017/1/6,AA,YES,"Charlotte, NC","Chicago, IL",,,,599
+2017,2017/1/7,AA,NO,"Charlotte, NC","Chicago, IL",116,106,92,599
+2017,2017/1/8,AA,NO,"Charlotte, NC","Chicago, IL",142,125,88,599
+2017,2017/1/11,AA,NO,"Charlotte, NC","Chicago, IL",-12,-1,105,599
+2017,2017/1/12,AA,NO,"Charlotte, NC","Chicago, IL",-5,-9,92,599
+2017,2017/1/13,AA,NO,"Charlotte, NC","Chicago, IL",-6,4,96,599
+2017,2017/1/14,AA,NO,"Charlotte, NC","Chicago, IL",0,-14,90,599
+2017,2017/1/15,AA,NO,"Charlotte, NC","Chicago, IL",18,-1,93,599
+2017,2017/1/18,AA,NO,"Charlotte, NC","Chicago, IL",-5,-15,87,599
+2017,2017/1/19,AA,NO,"Charlotte, NC","Chicago, IL",-8,-23,84,599
+2017,2017/1/20,AA,NO,"Charlotte, NC","Chicago, IL",19,-1,85,599
+2017,2017/1/21,AA,NO,"Charlotte, NC","Chicago, IL",-2,-22,81,599
+2017,2017/1/22,AA,NO,"Charlotte, NC","Chicago, IL",27,-1,84,599
+2017,2017/1/25,AA,NO,"Charlotte, NC","Chicago, IL",-9,-19,89,599
+2017,2017/1/26,AA,NO,"Charlotte, NC","Chicago, IL",-1,3,91,599
+2017,2017/1/27,AA,NO,"Charlotte, NC","Chicago, IL",-6,-5,90,599
+2017,2017/1/28,AA,NO,"Charlotte, NC","Chicago, IL",-5,-17,87,599
+2017,2017/1/29,AA,NO,"Charlotte, NC","Chicago, IL",-5,-9,88,599
+2017,2017/1/7,AA,NO,"Chicago, IL","Charlotte, NC",94,71,75,599
+2017,2017/1/9,AA,NO,"Charlotte, NC","Chicago, IL",3,19,107,599
+2017,2017/1/10,AA,NO,"Charlotte, NC","Chicago, IL",33,35,94,599
+2017,2017/1/1,AS,NO,"Seattle, WA","Chicago, IL",-5,13,204,1721
+2017,2017/1/1,AS,NO,"Chicago, IL","Seattle, WA",-2,57,237,1721
+2017,2017/1/1,AS,NO,"Chicago, IL","Seattle, WA",108,81,228,1721
+2017,2017/1/1,AS,NO,"Anchorage, AK","Chicago, IL",4,18,356,2846
+2017,2017/1/1,AS,NO,"Chicago, IL","Anchorage, AK",-1,-49,367,2846
+2017,2017/1/27,AS,NO,"Seattle, WA","Chicago, IL",-5,0,216,1721
+2017,2017/1/27,AS,NO,"Portland, OR","Chicago, IL",-8,-15,213,1739
+2017,2017/1/27,AS,NO,"Chicago, IL","Portland, OR",-8,-34,231,1739
+2017,2017/1/28,AS,NO,"Seattle, WA","Chicago, IL",-14,-26,208,1721
+2017,2017/1/28,AS,NO,"Chicago, IL","Seattle, WA",-8,-10,246,1721
+2017,2017/1/28,AS,NO,"Seattle, WA","Chicago, IL",9,1,205,1721
+2017,2017/1/28,AS,NO,"Chicago, IL","Seattle, WA",-13,-44,232,1721
+2017,2017/1/28,AS,NO,"Seattle, WA","Chicago, IL",-4,-14,212,1721
+2017,2017/1/28,AS,NO,"Chicago, IL","Seattle, WA",-12,-45,231,1721
+2017,2017/1/28,AS,NO,"Chicago, IL","Seattle, WA",-12,-11,249,1721
+2017,2017/1/2,B6,NO,"New York, NY","Chicago, IL",176,183,137,740
+2017,2017/1/3,B6,NO,"New York, NY","Chicago, IL",-10,-18,116,740
+2017,2017/1/4,B6,NO,"New York, NY","Chicago, IL",-5,-22,124,740
+2017,2017/1/5,B6,NO,"New York, NY","Chicago, IL",-9,-31,126,740
+2017,2017/1/6,B6,NO,"New York, NY","Chicago, IL",27,15,129,740
+2017,2017/1/7,B6,YES,"New York, NY","Chicago, IL",685,,,740
+2017,2017/1/8,B6,NO,"New York, NY","Chicago, IL",122,119,123,740
+2017,2017/1/9,B6,NO,"New York, NY","Chicago, IL",158,156,140,740
+2017,2017/1/10,B6,NO,"New York, NY","Chicago, IL",154,144,130,740
+2017,2017/1/11,B6,NO,"New York, NY","Chicago, IL",-1,3,136,740
+2017,2017/1/12,B6,NO,"New York, NY","Chicago, IL",0,-2,141,740
+2017,2017/1/13,B6,NO,"New York, NY","Chicago, IL",-3,23,152,740
+2017,2017/1/14,B6,NO,"New York, NY","Chicago, IL",-3,13,137,740
+2017,2017/1/15,B6,NO,"New York, NY","Chicago, IL",76,104,132,740
+2017,2017/1/16,B6,NO,"New York, NY","Chicago, IL",-4,15,134,740
+2017,2017/1/17,B6,NO,"New York, NY","Chicago, IL",28,16,130,740
+2017,2017/1/18,B6,NO,"New York, NY","Chicago, IL",52,18,116,740
+2017,2017/1/19,B6,NO,"New York, NY","Chicago, IL",-3,21,137,740
+2017,2017/1/20,B6,NO,"New York, NY","Chicago, IL",-6,-36,110,740
+2017,2017/1/21,B6,NO,"New York, NY","Chicago, IL",34,7,124,740
+2017,2017/1/22,B6,NO,"New York, NY","Chicago, IL",-4,-6,117,740
+2017,2017/1/23,B6,NO,"New York, NY","Chicago, IL",96,108,113,740
+2017,2017/1/5,DL,NO,"Chicago, IL","Atlanta, GA",-4,-13,84,591
+2017,2017/1/5,DL,NO,"Atlanta, GA","Chicago, IL",-2,-14,98,606
+2017,2017/1/5,DL,NO,"Chicago, IL","Salt Lake City, UT",16,14,194,1250
+2017,2017/1/5,DL,NO,"Salt Lake City, UT","Chicago, IL",11,1,145,1250
+2017,2017/1/5,DL,NO,"Atlanta, GA","Chicago, IL",17,20,95,606
+2017,2017/1/22,DL,NO,"Chicago, IL","Detroit, MI",-1,-1,53,235
+2017,2017/1/22,DL,NO,"Detroit, MI","Chicago, IL",3,4,47,235
+2017,2017/1/22,DL,NO,"Chicago, IL","Detroit, MI",-9,-11,50,235
+2017,2017/1/22,DL,NO,"Atlanta, GA","Chicago, IL",-1,11,91,606
+2017,2017/1/22,DL,NO,"Chicago, IL","Atlanta, GA",68,62,96,606
+2017,2017/1/31,DL,NO,"Atlanta, GA","Chicago, IL",-5,-15,99,606
+2017,2017/1/31,DL,NO,"Chicago, IL","Atlanta, GA",-11,-36,82,606
+2017,2017/1/31,DL,NO,"Chicago, IL","Minneapolis, MN",-6,-29,59,334
+2017,2017/1/31,DL,NO,"Atlanta, GA","Chicago, IL",-3,-7,101,606
+2017,2017/1/31,DL,NO,"Chicago, IL","Atlanta, GA",-1,-26,83,606
+2017,2017/1/31,DL,NO,"Atlanta, GA","Chicago, IL",0,-6,99,591
+2017,2017/1/31,DL,NO,"Chicago, IL","Atlanta, GA",-3,-21,82,591
+2017,2017/1/31,DL,NO,"Detroit, MI","Chicago, IL",-6,9,48,235
+2017,2017/1/1,EV,NO,"Chicago, IL","Charleston, SC",281,281,102,760
+2017,2017/1/4,EV,NO,"Syracuse, NY","Chicago, IL",-6,-26,103,607
+2017,2017/1/5,EV,NO,"Syracuse, NY","Chicago, IL",-7,-22,107,607
+2017,2017/1/6,EV,NO,"Syracuse, NY","Chicago, IL",14,12,110,607
+2017,2017/1/7,EV,NO,"Syracuse, NY","Chicago, IL",0,-21,102,607
+2017,2017/1/8,EV,NO,"Syracuse, NY","Chicago, IL",-2,-30,96,607
+2017,2017/1/9,EV,NO,"Syracuse, NY","Chicago, IL",-7,43,105,607
+2017,2017/1/10,EV,NO,"Syracuse, NY","Chicago, IL",-3,-15,109,607
+2017,2017/1/11,EV,NO,"Syracuse, NY","Chicago, IL",450,428,108,607
+2017,2017/1/12,EV,NO,"Syracuse, NY","Chicago, IL",-3,2,130,607
+2017,2017/1/13,EV,NO,"Syracuse, NY","Chicago, IL",-7,-11,121,607
+2017,2017/1/14,EV,NO,"Syracuse, NY","Chicago, IL",0,15,119,607
+2017,2017/1/15,EV,NO,"Syracuse, NY","Chicago, IL",-4,-35,99,607
+2017,2017/1/16,EV,NO,"Syracuse, NY","Chicago, IL",80,81,115,607
+2017,2017/1/17,EV,NO,"Syracuse, NY","Chicago, IL",-9,-6,101,607
+2017,2017/1/18,EV,NO,"Syracuse, NY","Chicago, IL",-7,-45,94,607
+2017,2017/1/19,EV,NO,"Syracuse, NY","Chicago, IL",-3,-36,95,607
+2017,2017/1/20,EV,NO,"Syracuse, NY","Chicago, IL",-1,-20,102,607
+2017,2017/1/21,EV,NO,"Syracuse, NY","Chicago, IL",-6,-36,102,607
+2017,2017/1/22,EV,NO,"Syracuse, NY","Chicago, IL",-5,-36,97,607
+2017,2017/1/23,EV,NO,"Syracuse, NY","Chicago, IL",-11,-36,93,607
+2017,2017/1/24,EV,NO,"Syracuse, NY","Chicago, IL",-9,4,90,607
+2017,2017/1/25,EV,NO,"Syracuse, NY","Chicago, IL",32,25,118,607
+2017,2017/1/26,EV,NO,"Syracuse, NY","Chicago, IL",-10,-38,105,607
+2017,2017/1/27,EV,NO,"Syracuse, NY","Chicago, IL",-10,-23,98,607
+2017,2017/1/28,EV,NO,"Syracuse, NY","Chicago, IL",-8,-34,98,607
+2017,2017/1/29,EV,NO,"Syracuse, NY","Chicago, IL",-8,-21,104,607
+2017,2017/1/30,EV,NO,"Syracuse, NY","Chicago, IL",-4,-25,93,607
+2017,2017/1/31,EV,NO,"Syracuse, NY","Chicago, IL",-7,-30,98,607
+2017,2017/1/28,OO,NO,"Peoria, IL","Detroit, MI",-5,-23,65,346
+2017,2017/1/28,OO,NO,"Peoria, IL","Detroit, MI",-8,-9,62,346
+2017,2017/1/28,OO,NO,"Salt Lake City, UT","Chicago, IL",-6,-15,161,1250
+2017,2017/1/28,OO,NO,"Chicago, IL","Salt Lake City, UT",-4,-24,168,1250
+2017,2017/1/28,OO,NO,"Salt Lake City, UT","Chicago, IL",-4,3,169,1250
+2017,2017/1/28,OO,NO,"Detroit, MI","Chicago, IL",-1,29,43,228
+2017,2017/1/28,OO,NO,"Chicago, IL","Salt Lake City, UT",-8,-34,168,1250
+2017,2017/1/28,OO,NO,"Detroit, MI","Peoria, IL",14,16,58,346
+2017,2017/1/28,OO,NO,"Moline, IL","Minneapolis, MN",-2,-7,55,274
+2017,2017/1/28,OO,NO,"Detroit, MI","Chicago, IL",5,19,49,235
+2017,2017/1/28,OO,NO,"Chicago, IL","Detroit, MI",150,133,46,235
+2017,2017/1/31,OO,NO,"Cleveland, OH","Chicago, IL",-1,1,65,316
+2017,2017/1/31,OO,NO,"Milwaukee, WI","Chicago, IL",-10,-15,31,67
+2017,2017/1/31,OO,NO,"San Antonio, TX","Chicago, IL",-3,11,148,1041
+2017,2017/1/18,UA,NO,"Austin, TX","Chicago, IL",-6,-32,121,977
+2017,2017/1/18,UA,NO,"Chicago, IL","Boston, MA",-3,4,116,867
+2017,2017/1/18,UA,NO,"Chicago, IL","Los Angeles, CA",8,-6,218,1744
+2017,2017/1/18,UA,NO,"Chicago, IL","Pittsburgh, PA",-2,-8,56,413
+2017,2017/1/18,UA,NO,"Columbus, OH","Chicago, IL",-8,-35,51,296
+2017,2017/1/18,UA,NO,"Austin, TX","Chicago, IL",-11,-31,122,977
+2017,2017/1/18,UA,NO,"Chicago, IL","Denver, CO",-6,-30,114,888
+2017,2017/1/18,UA,NO,"Washington, DC","Chicago, IL",-13,-18,97,612
+2017,2017/1/18,UA,NO,"San Juan, PR","Chicago, IL",11,3,275,2072
+2017,2017/1/18,UA,NO,"Fort Lauderdale, FL","Chicago, IL",-3,-13,169,1182
+2017,2017/1/18,UA,NO,"Chicago, IL","Columbus, OH",-2,-3,51,296
+2017,2017/1/18,UA,NO,"Albany, NY","Chicago, IL",10,-6,107,723
+2017,2017/1/18,UA,NO,"Chicago, IL","Las Vegas, NV",-4,-35,181,1514
+2017,2017/1/18,UA,NO,"Chicago, IL","Minneapolis, MN",-3,-23,56,334
+2017,2017/1/18,UA,NO,"Los Angeles, CA","Chicago, IL",1,3,224,1744
+2017,2017/1/18,UA,NO,"Chicago, IL","Houston, TX",-2,6,145,925
+2017,2017/1/18,UA,NO,"Cleveland, OH","Chicago, IL",-8,-32,52,316
+2017,2017/1/18,UA,NO,"Newark, NJ","Chicago, IL",-5,-31,102,719
+2017,2017/1/18,UA,NO,"Chicago, IL","Boston, MA",2,9,118,867
+2017,2017/1/18,UA,NO,"San Francisco, CA","Chicago, IL",0,10,210,1846
+2017,2017/1/18,UA,NO,"Charlotte, NC","Chicago, IL",-12,-29,97,599
+2017,2017/1/18,UA,NO,"Detroit, MI","Chicago, IL",-9,-37,43,235
+2017,2017/1/18,UA,NO,"Chicago, IL","San Francisco, CA",162,171,247,1846
+2017,2017/1/18,UA,NO,"New Orleans, LA","Chicago, IL",-9,-25,120,837
+2017,2017/1/18,UA,NO,"Chicago, IL","New York, NY",-5,-13,107,733
+2017,2017/1/18,UA,NO,"Chicago, IL","Omaha, NE",-1,-10,62,416
+2017,2017/1/18,UA,NO,"Chicago, IL","Newark, NJ",4,0,97,719
+2017,2017/1/18,UA,NO,"Chicago, IL","Pittsburgh, PA",-3,-6,61,413
+2017,2017/1/13,UA,NO,"San Francisco, CA","Chicago, IL",14,-8,202,1846
+2017,2017/1/13,UA,NO,"Baltimore, MD","Chicago, IL",-6,-10,108,622
+2017,2017/1/13,UA,NO,"Chicago, IL","Washington, DC",-3,-19,74,612
+2017,2017/1/13,UA,NO,"Denver, CO","Chicago, IL",17,0,101,888
+2017,2017/1/13,UA,NO,"Chicago, IL","Phoenix, AZ",6,7,204,1440
+2017,2017/1/13,UA,NO,"Chicago, IL","Newark, NJ",33,16,86,719
+2017,2017/1/13,UA,NO,"Chicago, IL","Denver, CO",-5,-1,138,888
+2017,2017/1/13,UA,NO,"Chicago, IL","Boston, MA",-5,-13,96,867
+2017,2017/1/13,UA,NO,"Chicago, IL","Washington, DC",-6,-15,73,588
+2017,2017/1/13,UA,NO,"Chicago, IL","San Francisco, CA",0,-13,260,1846
+2017,2017/1/13,UA,NO,"Los Angeles, CA","Chicago, IL",-4,-17,197,1744
+2017,2017/1/13,UA,NO,"Chicago, IL","New York, NY",63,33,87,733
+2017,2017/1/13,UA,NO,"Washington, DC","Chicago, IL",0,7,102,588
+2017,2017/1/13,UA,NO,"Chicago, IL","Austin, TX",0,-2,142,977
+2017,2017/1/13,UA,NO,"Columbus, OH","Chicago, IL",-7,-2,63,296
+2017,2017/1/13,UA,NO,"Chicago, IL","Portland, OR",16,7,241,1739
+2017,2017/1/13,UA,NO,"New York, NY","Chicago, IL",-6,34,134,733
+2017,2017/1/13,UA,NO,"Chicago, IL","Las Vegas, NV",-12,22,235,1514
+2017,2017/1/13,UA,NO,"Minneapolis, MN","Chicago, IL",-4,-21,49,334
+2017,2017/1/13,UA,NO,"Chicago, IL","New Orleans, LA",-2,-17,118,837
+2017,2017/1/13,UA,NO,"Chicago, IL","Salt Lake City, UT",18,4,191,1250
+2017,2017/1/11,VX,NO,"San Francisco, CA","Chicago, IL",8,-1,198,1846
+2017,2017/1/11,VX,NO,"Chicago, IL","San Francisco, CA",2,15,280,1846
+2017,2017/1/11,VX,NO,"Chicago, IL","Los Angeles, CA",-3,0,261,1744
+2017,2017/1/11,VX,NO,"Los Angeles, CA","Chicago, IL",18,-12,191,1744
+2017,2017/1/11,VX,NO,"Los Angeles, CA","Chicago, IL",-7,-28,181,1744
+2017,2017/1/11,VX,NO,"Chicago, IL","Los Angeles, CA",-7,29,278,1744
+2017,2017/1/12,VX,NO,"San Francisco, CA","Chicago, IL",-2,-11,206,1846
+2017,2017/1/12,VX,NO,"Chicago, IL","San Francisco, CA",2,38,291,1846
+2017,2017/1/12,VX,NO,"Chicago, IL","Los Angeles, CA",42,95,283,1744
+2017,2017/1/12,VX,NO,"Los Angeles, CA","Chicago, IL",61,35,180,1744
+2017,2017/1/12,VX,NO,"Los Angeles, CA","Chicago, IL",-3,-19,187,1744
+2017,2017/1/12,VX,NO,"Chicago, IL","Los Angeles, CA",34,32,253,1744
+2017,2017/1/13,VX,NO,"San Francisco, CA","Chicago, IL",-5,-15,211,1846
+2017,2017/1/13,VX,NO,"Chicago, IL","San Francisco, CA",-8,-7,266,1846
+2017,2017/1/13,VX,NO,"Chicago, IL","Los Angeles, CA",1,19,257,1744
+2017,2017/1/13,VX,NO,"Los Angeles, CA","Chicago, IL",-5,-13,203,1744
+2017,2017/1/13,VX,NO,"Los Angeles, CA","Chicago, IL",-4,-15,198,1744
+2017,2017/1/13,VX,NO,"Chicago, IL","Los Angeles, CA",-7,-12,252,1744
+2017,2017/1/14,VX,NO,"San Francisco, CA","Chicago, IL",1,-6,212,1846
+2017,2017/1/14,VX,NO,"Chicago, IL","San Francisco, CA",-9,-18,259,1846
+2017,2017/1/14,VX,NO,"Chicago, IL","Los Angeles, CA",6,-1,251,1744
+2017,2017/1/14,VX,NO,"Los Angeles, CA","Chicago, IL",11,-8,199,1744
+2017,2017/1/15,VX,NO,"San Francisco, CA","Chicago, IL",-6,-2,216,1846
+2017,2017/1/15,VX,NO,"Chicago, IL","San Francisco, CA",-4,-21,245,1846
+2017,2017/1/15,VX,NO,"Chicago, IL","Los Angeles, CA",-8,-9,245,1744
+2017,2017/1/15,VX,NO,"Los Angeles, CA","Chicago, IL",-4,-10,209,1744
+2017,2017/1/15,VX,NO,"Los Angeles, CA","Chicago, IL",-7,-2,210,1744
+2017,2017/1/15,VX,NO,"Chicago, IL","Los Angeles, CA",-6,-34,227,1744
+2017,2017/1/16,VX,NO,"San Francisco, CA","Chicago, IL",0,17,233,1846
+2017,2017/1/16,VX,NO,"Chicago, IL","San Francisco, CA",16,-12,231,1846
+2017,2017/1/16,VX,NO,"Chicago, IL","Los Angeles, CA",-5,-43,219,1744
+2017,2017/1/16,VX,NO,"Los Angeles, CA","Chicago, IL",5,4,211,1744
+2017,2017/1/16,VX,NO,"Los Angeles, CA","Chicago, IL",-4,-4,209,1744
+2017,2017/1/16,VX,NO,"Chicago, IL","Los Angeles, CA",-6,-30,218,1744
+2017,2017/1/17,VX,NO,"San Francisco, CA","Chicago, IL",-1,17,238,1846
+2017,2017/1/17,VX,NO,"Chicago, IL","San Francisco, CA",15,-28,218,1846
+2017,2017/1/17,VX,NO,"Chicago, IL","Los Angeles, CA",-4,-36,215,1744
+2017,2017/1/17,VX,NO,"Los Angeles, CA","Chicago, IL",-1,11,220,1744
+2017,2017/1/17,VX,NO,"Los Angeles, CA","Chicago, IL",-4,7,215,1744
+2017,2017/1/17,VX,NO,"Chicago, IL","Los Angeles, CA",-4,-49,208,1744
+2017,2017/1/18,VX,NO,"San Francisco, CA","Chicago, IL",46,74,234,1846
+2017,2017/1/18,VX,NO,"Chicago, IL","San Francisco, CA",75,87,257,1846
+2017,2017/1/18,VX,NO,"Chicago, IL","Los Angeles, CA",-4,-43,212,1744
+2017,2017/1/18,VX,NO,"Los Angeles, CA","Chicago, IL",19,43,222,1744
+2017,2017/1/18,VX,NO,"Los Angeles, CA","Chicago, IL",-6,3,212,1744
+2017,2017/1/18,VX,NO,"Chicago, IL","Los Angeles, CA",34,24,219,1744
+2017,2017/1/19,VX,NO,"San Francisco, CA","Chicago, IL",2,11,227,1846
+2017,2017/1/19,VX,NO,"Chicago, IL","San Francisco, CA",30,14,232,1846
+2017,2017/1/19,VX,NO,"Chicago, IL","Los Angeles, CA",-5,-15,232,1744
+2017,2017/1/19,VX,NO,"Los Angeles, CA","Chicago, IL",0,-3,209,1744
+2017,2017/1/19,VX,NO,"Los Angeles, CA","Chicago, IL",-3,4,210,1744
+2017,2017/1/19,VX,NO,"Chicago, IL","Los Angeles, CA",-5,-24,222,1744
+2017,2017/1/2,VX,NO,"Chicago, IL","San Francisco, CA",-2,21,281,1846
+2017,2017/1/2,VX,NO,"San Francisco, CA","Chicago, IL",3,-16,202,1846
+2017,2017/1/2,VX,NO,"San Francisco, CA","Chicago, IL",0,-9,202,1846
+2017,2017/1/2,VX,NO,"Chicago, IL","San Francisco, CA",-5,24,277,1846
+2017,2017/1/2,VX,NO,"San Francisco, CA","Chicago, IL",44,11,192,1846
+2017,2017/1/2,VX,NO,"Chicago, IL","San Francisco, CA",38,81,288,1846
+2017,2017/1/2,VX,NO,"Chicago, IL","Los Angeles, CA",-8,29,266,1744
+2017,2017/1/2,VX,NO,"Los Angeles, CA","Chicago, IL",12,-2,194,1744
+2017,2017/1/2,VX,NO,"Los Angeles, CA","Chicago, IL",14,-6,184,1744
+2017,2017/1/2,VX,NO,"Chicago, IL","Los Angeles, CA",-6,-2,265,1744
+2017,2017/1/20,VX,NO,"San Francisco, CA","Chicago, IL",8,21,221,1846
+2017,2017/1/20,VX,NO,"Chicago, IL","San Francisco, CA",15,29,235,1846
+2017,2017/1/1,WN,NO,"Nashville, TN","Chicago, IL",13,2,63,395
+2017,2017/1/1,WN,NO,"Boston, MA","Chicago, IL",-5,-20,142,861
+2017,2017/1/1,WN,NO,"Boston, MA","Chicago, IL",-4,-18,141,861
+2017,2017/1/1,WN,NO,"Boston, MA","Chicago, IL",-1,-1,146,861
+2017,2017/1/1,WN,NO,"Boston, MA","Chicago, IL",13,5,141,861
+2017,2017/1/1,WN,NO,"Buffalo, NY","Chicago, IL",-2,-22,78,468
+2017,2017/1/1,WN,NO,"Buffalo, NY","Chicago, IL",0,-7,83,468
+2017,2017/1/1,WN,NO,"Buffalo, NY","Chicago, IL",3,-15,85,468
+2017,2017/1/1,WN,NO,"Baltimore, MD","Chicago, IL",-7,-25,100,611
+2017,2017/1/1,WN,NO,"Baltimore, MD","Chicago, IL",21,20,99,611
+2017,2017/1/1,WN,NO,"Baltimore, MD","Chicago, IL",-4,-14,107,611
+2017,2017/1/1,WN,NO,"Baltimore, MD","Chicago, IL",-3,-13,101,611
+2017,2017/1/1,WN,NO,"Baltimore, MD","Chicago, IL",29,23,101,611
+2017,2017/1/1,WN,NO,"Charleston, SC","Chicago, IL",-2,0,111,745
+2017,2017/1/1,WN,NO,"Cleveland, OH","Chicago, IL",-5,-13,54,307
+2017,2017/1/1,WN,NO,"Cleveland, OH","Chicago, IL",0,-19,48,307
+2017,2017/1/2,WN,NO,"San Antonio, TX","Chicago, IL",-2,-13,124,1036
+2017,2017/1/2,WN,YES,"San Antonio, TX","Chicago, IL",,,,1036
+2017,2017/1/2,WN,NO,"Louisville, KY","Chicago, IL",-3,-7,48,271
+2017,2017/1/2,WN,NO,"Louisville, KY","Chicago, IL",-4,-5,51,271
+2017,2017/1/10,WN,NO,"Orlando, FL","Chicago, IL",-1,-16,140,990
+2017,2017/1/10,WN,NO,"Chicago, IL","Albuquerque, NM",11,14,167,1121
+2017,2017/1/10,WN,NO,"Chicago, IL","Albany, NY",24,42,83,717
+2017,2017/1/10,WN,NO,"Chicago, IL","Albany, NY",0,-1,87,717
+2017,2017/1/10,WN,NO,"Chicago, IL","Atlanta, GA",97,90,81,591
+2017,2017/1/10,WN,NO,"Chicago, IL","Atlanta, GA",5,-4,87,591
+2017,2017/1/10,WN,NO,"Chicago, IL","Atlanta, GA",4,5,88,591
+2017,2017/1/10,WN,NO,"Chicago, IL","Atlanta, GA",-5,-20,86,591
+2017,2017/1/10,WN,NO,"Chicago, IL","Atlanta, GA",-1,4,89,591
+2017,2017/1/10,WN,NO,"Chicago, IL","Atlanta, GA",5,0,80,591
+2017,2017/1/2,AA,NO,"Santa Ana, CA","Chicago, IL",8,30,190,1726
+2017,2017/1/3,AA,NO,"Santa Ana, CA","Chicago, IL",-3,-31,187,1726
+2017,2017/1/4,AA,NO,"Santa Ana, CA","Chicago, IL",0,-20,196,1726
+2017,2017/1/7,AA,NO,"Santa Ana, CA","Chicago, IL",-6,-21,198,1726
+2017,2017/1/8,AA,NO,"Santa Ana, CA","Chicago, IL",-4,-23,200,1726
+2017,2017/1/9,AA,NO,"Santa Ana, CA","Chicago, IL",-5,-27,189,1726
+2017,2017/1/10,AA,NO,"Santa Ana, CA","Chicago, IL",-8,7,233,1726
+2017,2017/1/11,AA,NO,"Santa Ana, CA","Chicago, IL",-5,-37,186,1726
+2017,2017/1/12,AA,NO,"Santa Ana, CA","Chicago, IL",-8,-35,190,1726
+2017,2017/1/13,AA,NO,"Santa Ana, CA","Chicago, IL",-2,-33,187,1726
+2017,2017/1/14,AA,NO,"Santa Ana, CA","Chicago, IL",-12,-26,206,1726
+2017,2017/1/16,AA,NO,"Santa Ana, CA","Chicago, IL",-1,-14,213,1726
+2017,2017/1/17,AA,NO,"Santa Ana, CA","Chicago, IL",0,-1,213,1726
+2017,2017/1/18,AA,NO,"Santa Ana, CA","Chicago, IL",1,14,222,1726
+2017,2017/1/19,AA,NO,"Santa Ana, CA","Chicago, IL",-6,-8,211,1726
+2017,2017/1/20,AA,NO,"Santa Ana, CA","Chicago, IL",-1,,,1726
+2017,2017/1/21,AA,NO,"Santa Ana, CA","Chicago, IL",0,-25,197,1726
+2017,2017/1/23,AA,NO,"Santa Ana, CA","Chicago, IL",-9,-51,182,1726
+2017,2017/1/24,AA,NO,"Santa Ana, CA","Chicago, IL",-3,-33,184,1726
+2017,2017/1/25,AA,NO,"Santa Ana, CA","Chicago, IL",0,-15,200,1726
+2017,2017/1/26,AA,NO,"Santa Ana, CA","Chicago, IL",-2,-22,199,1726
+2017,2017/1/27,AA,NO,"Santa Ana, CA","Chicago, IL",-4,-3,214,1726
+2017,2017/1/12,DL,NO,"Atlanta, GA","Chicago, IL",79,80,93,606
+2017,2017/1/12,DL,NO,"Atlanta, GA","Chicago, IL",-2,-16,87,591
+2017,2017/1/12,DL,NO,"Chicago, IL","Atlanta, GA",33,41,85,606
+2017,2017/1/12,DL,NO,"Atlanta, GA","Bloomington/Normal, IL",-11,-13,80,533
+2017,2017/1/12,DL,NO,"Atlanta, GA","Chicago, IL",110,101,89,606
+2017,2017/1/12,DL,NO,"Chicago, IL","Atlanta, GA",98,77,84,606
+2017,2017/1/12,DL,NO,"Atlanta, GA","Chicago, IL",-2,-1,93,606
+2017,2017/1/12,DL,NO,"Chicago, IL","Atlanta, GA",11,-13,83,606
+2017,2017/1/12,DL,NO,"Chicago, IL","Minneapolis, MN",-4,1,58,334
+2017,2017/1/12,DL,NO,"Atlanta, GA","Chicago, IL",-1,-10,94,606
+2017,2017/1/12,DL,NO,"Chicago, IL","Atlanta, GA",1,-13,87,606
+2017,2017/1/12,DL,NO,"Atlanta, GA","Chicago, IL",-2,-15,88,591
+2017,2017/1/12,DL,NO,"Chicago, IL","Atlanta, GA",0,-9,91,591
+2017,2017/1/12,DL,NO,"Detroit, MI","Chicago, IL",15,33,51,235
+2017,2017/1/13,DL,NO,"Atlanta, GA","Chicago, IL",4,9,99,606
+2017,2017/1/13,DL,NO,"Chicago, IL","Atlanta, GA",1,-21,85,606
+2017,2017/1/13,DL,NO,"Bloomington/Normal, IL","Atlanta, GA",-5,-29,77,533
+2017,2017/1/13,DL,NO,"Atlanta, GA","Chicago, IL",-4,-7,91,591
+2017,2017/1/6,EV,NO,"Chicago, IL","Syracuse, NY",-2,-20,77,607
+2017,2017/1/7,EV,NO,"Chicago, IL","Syracuse, NY",59,46,84,607
+2017,2017/1/8,EV,NO,"Chicago, IL","Syracuse, NY",-5,-14,87,607
+2017,2017/1/9,EV,NO,"Chicago, IL","Syracuse, NY",6,-2,76,607
+2017,2017/1/10,EV,YES,"Chicago, IL","Syracuse, NY",,,,607
+2017,2017/1/11,EV,NO,"Chicago, IL","Syracuse, NY",0,4,73,607
+2017,2017/1/12,EV,NO,"Chicago, IL","Syracuse, NY",68,56,78,607
+2017,2017/1/13,EV,NO,"Chicago, IL","Syracuse, NY",-3,-15,75,607
+2017,2017/1/14,EV,NO,"Chicago, IL","Syracuse, NY",-10,-25,74,607
+2017,2017/1/15,EV,NO,"Chicago, IL","Syracuse, NY",1,-1,77,607
+2017,2017/1/16,EV,NO,"Chicago, IL","Syracuse, NY",-5,5,81,607
+2017,2017/1/17,EV,NO,"Chicago, IL","Syracuse, NY",-4,-16,78,607
+2017,2017/1/18,EV,NO,"Chicago, IL","Syracuse, NY",-1,4,87,607
+2017,2017/1/19,EV,NO,"Chicago, IL","Syracuse, NY",-6,-14,82,607
+2017,2017/1/20,EV,NO,"Chicago, IL","Syracuse, NY",-2,-13,83,607
+2017,2017/1/21,EV,NO,"Chicago, IL","Syracuse, NY",-1,-21,75,607
+2017,2017/1/22,EV,NO,"Chicago, IL","Syracuse, NY",6,19,81,607
+2017,2017/1/23,EV,NO,"Chicago, IL","Syracuse, NY",-2,-11,86,607
+2017,2017/1/14,NK,NO,"Dallas/Fort Worth, TX","Chicago, IL",-1,-23,99,802
+2017,2017/1/15,NK,NO,"Dallas/Fort Worth, TX","Chicago, IL",-1,9,108,802
+2017,2017/1/16,NK,NO,"Dallas/Fort Worth, TX","Chicago, IL",-6,-12,98,802
+2017,2017/1/17,NK,NO,"Dallas/Fort Worth, TX","Chicago, IL",-5,-22,101,802
+2017,2017/1/18,NK,NO,"Dallas/Fort Worth, TX","Chicago, IL",-7,-18,96,802
+2017,2017/1/19,NK,NO,"Dallas/Fort Worth, TX","Chicago, IL",-4,-4,102,802
+2017,2017/1/20,NK,NO,"Dallas/Fort Worth, TX","Chicago, IL",-9,-18,105,802
+2017,2017/1/21,NK,NO,"Dallas/Fort Worth, TX","Chicago, IL",-3,9,101,802
+2017,2017/1/22,NK,NO,"Dallas/Fort Worth, TX","Chicago, IL",-2,14,110,802
+2017,2017/1/23,NK,NO,"Dallas/Fort Worth, TX","Chicago, IL",32,11,99,802
+2017,2017/1/24,NK,NO,"Dallas/Fort Worth, TX","Chicago, IL",-7,-17,97,802
+2017,2017/1/25,NK,NO,"Dallas/Fort Worth, TX","Chicago, IL",-10,-15,103,802
+2017,2017/1/26,NK,NO,"Dallas/Fort Worth, TX","Chicago, IL",-3,-14,101,802
+2017,2017/1/27,NK,NO,"Dallas/Fort Worth, TX","Chicago, IL",-7,-17,107,802
+2017,2017/1/28,NK,NO,"Dallas/Fort Worth, TX","Chicago, IL",-8,-10,108,802
+2017,2017/1/29,NK,NO,"Dallas/Fort Worth, TX","Chicago, IL",-5,-6,118,802
+2017,2017/1/30,NK,NO,"Dallas/Fort Worth, TX","Chicago, IL",-6,7,120,802
+2017,2017/1/31,NK,NO,"Dallas/Fort Worth, TX","Chicago, IL",-9,-5,113,802
+2017,2017/1/1,NK,NO,"New Orleans, LA","Chicago, IL",-16,-26,116,837
+2017,2017/1/2,NK,NO,"New Orleans, LA","Chicago, IL",209,193,115,837
+2017,2017/1/3,NK,NO,"New Orleans, LA","Chicago, IL",-9,-2,132,837
+2017,2017/1/4,NK,NO,"New Orleans, LA","Chicago, IL",-19,-23,120,837
+2017,2017/1/5,NK,NO,"New Orleans, LA","Chicago, IL",-7,1,123,837
+2017,2017/1/6,NK,NO,"New Orleans, LA","Chicago, IL",26,21,118,837
+2017,2017/1/7,NK,YES,"New Orleans, LA","Chicago, IL",,,,837
+2017,2017/1/8,NK,NO,"New Orleans, LA","Chicago, IL",-7,2,134,837
+2017,2017/1/9,UA,NO,"Chicago, IL","San Francisco, CA",24,47,288,1846
+2017,2017/1/9,UA,NO,"New Orleans, LA","Chicago, IL",-2,-15,123,837
+2017,2017/1/9,UA,NO,"Chicago, IL","New York, NY",96,65,88,733
+2017,2017/1/9,UA,NO,"Chicago, IL","Omaha, NE",258,244,64,416
+2017,2017/1/9,UA,NO,"Chicago, IL","Pittsburgh, PA",-3,-11,56,413
+2017,2017/1/9,UA,NO,"Atlanta, GA","Chicago, IL",-7,-6,110,606
+2017,2017/1/9,UA,NO,"Chicago, IL","Newark, NJ",0,-6,87,719
+2017,2017/1/9,UA,NO,"Houston, TX","Chicago, IL",72,51,116,925
+2017,2017/1/9,UA,NO,"Phoenix, AZ","Chicago, IL",6,1,175,1440
+2017,2017/1/9,UA,NO,"Cincinnati, OH","Chicago, IL",108,94,58,264
+2017,2017/1/9,UA,NO,"Detroit, MI","Chicago, IL",-6,-29,45,235
+2017,2017/1/9,UA,NO,"Chicago, IL","Houston, TX",-2,-10,130,925
+2017,2017/1/9,UA,NO,"Omaha, NE","Chicago, IL",-2,-17,60,416
+2017,2017/1/9,UA,NO,"Cleveland, OH","Chicago, IL",-5,-9,59,316
+2017,2017/1/9,UA,NO,"Chicago, IL","Houston, TX",9,7,133,925
+2017,2017/1/9,UA,NO,"St. Louis, MO","Chicago, IL",-15,-35,47,258
+2017,2017/1/8,WN,NO,"Baltimore, MD","Chicago, IL",-1,-7,99,611
+2017,2017/1/8,WN,NO,"Baltimore, MD","Chicago, IL",31,24,96,611
+2017,2017/1/8,WN,NO,"Baltimore, MD","Chicago, IL",9,6,103,611
+2017,2017/1/8,WN,NO,"Baltimore, MD","Chicago, IL",-3,-7,101,611
+2017,2017/1/8,WN,NO,"Baltimore, MD","Chicago, IL",12,1,101,611
+2017,2017/1/8,WN,NO,"Charleston, SC","Chicago, IL",-3,-8,116,745
+2017,2017/1/8,WN,NO,"Cleveland, OH","Chicago, IL",-6,4,55,307
+2017,2017/1/8,WN,NO,"Cleveland, OH","Chicago, IL",14,12,55,307
+2017,2017/1/8,WN,NO,"Cleveland, OH","Chicago, IL",19,13,55,307
+2017,2017/1/8,WN,NO,"Cleveland, OH","Chicago, IL",-2,5,52,307
+2017,2017/1/8,WN,NO,"Charlotte, NC","Chicago, IL",-2,-11,93,584
+2017,2017/1/8,WN,NO,"Charlotte, NC","Chicago, IL",0,3,91,584
+2017,2017/1/8,WN,NO,"Columbus, OH","Chicago, IL",-2,-7,54,283
+2017,2017/1/8,WN,NO,"Columbus, OH","Chicago, IL",7,-5,59,283
+2017,2017/1/8,WN,NO,"Columbus, OH","Chicago, IL",14,7,54,283
+2017,2017/1/8,WN,NO,"Dallas, TX","Chicago, IL",15,14,114,793
+2017,2017/1/8,WN,NO,"Dallas, TX","Chicago, IL",6,9,113,793
+2018,2018/1/1,AA,NO,"Charlotte, NC","Chicago, IL",-6,-19,89,599
+2018,2018/1/2,AA,NO,"Charlotte, NC","Chicago, IL",-3,-19,84,599
+2018,2018/1/3,AA,NO,"Charlotte, NC","Chicago, IL",-6,-13,94,599
+2018,2018/1/4,AA,NO,"Charlotte, NC","Chicago, IL",24,14,90,599
+2018,2018/1/5,AA,NO,"Charlotte, NC","Chicago, IL",-8,-19,91,599
+2018,2018/1/6,AA,YES,"Charlotte, NC","Chicago, IL",,,,599
+2018,2018/1/7,AA,NO,"Charlotte, NC","Chicago, IL",116,106,92,599
+2018,2018/1/8,AA,NO,"Charlotte, NC","Chicago, IL",142,125,88,599
+2018,2018/1/11,AA,NO,"Charlotte, NC","Chicago, IL",-12,-1,105,599
+2018,2018/1/12,AA,NO,"Charlotte, NC","Chicago, IL",-5,-9,92,599
+2018,2018/1/13,AA,NO,"Charlotte, NC","Chicago, IL",-6,4,96,599
+2018,2018/1/14,AA,NO,"Charlotte, NC","Chicago, IL",0,-14,90,599
+2018,2018/1/15,AA,NO,"Charlotte, NC","Chicago, IL",18,-1,93,599
+2018,2018/1/18,AA,NO,"Charlotte, NC","Chicago, IL",-5,-15,87,599
+2018,2018/1/19,AA,NO,"Charlotte, NC","Chicago, IL",-8,-23,84,599
+2018,2018/1/20,AA,NO,"Charlotte, NC","Chicago, IL",19,-1,85,599
+2018,2018/1/21,AA,NO,"Charlotte, NC","Chicago, IL",-2,-22,81,599
+2018,2018/1/22,AA,NO,"Charlotte, NC","Chicago, IL",27,-1,84,599
+2018,2018/1/25,AA,NO,"Charlotte, NC","Chicago, IL",-9,-19,89,599
+2018,2018/1/26,AA,NO,"Charlotte, NC","Chicago, IL",-1,3,91,599
+2018,2018/1/27,AA,NO,"Charlotte, NC","Chicago, IL",-6,-5,90,599
+2018,2018/1/28,AA,NO,"Charlotte, NC","Chicago, IL",-5,-17,87,599
+2018,2018/1/29,AA,NO,"Charlotte, NC","Chicago, IL",-5,-9,88,599
+2018,2018/1/7,AA,NO,"Chicago, IL","Charlotte, NC",94,71,75,599
+2018,2018/1/9,AA,NO,"Charlotte, NC","Chicago, IL",3,19,107,599
+2018,2018/1/10,AA,NO,"Charlotte, NC","Chicago, IL",33,35,94,599
+2018,2018/1/1,AS,NO,"Seattle, WA","Chicago, IL",-5,13,204,1721
+2018,2018/1/1,AS,NO,"Chicago, IL","Seattle, WA",-2,57,237,1721
+2018,2018/1/1,AS,NO,"Chicago, IL","Seattle, WA",108,81,228,1721
+2018,2018/1/1,AS,NO,"Anchorage, AK","Chicago, IL",4,18,356,2846
+2018,2018/1/1,AS,NO,"Chicago, IL","Anchorage, AK",-1,-49,367,2846
+2018,2018/1/27,AS,NO,"Seattle, WA","Chicago, IL",-5,0,216,1721
+2018,2018/1/27,AS,NO,"Portland, OR","Chicago, IL",-8,-15,213,1739
+2018,2018/1/27,AS,NO,"Chicago, IL","Portland, OR",-8,-34,231,1739
+2018,2018/1/28,AS,NO,"Seattle, WA","Chicago, IL",-14,-26,208,1721
+2018,2018/1/28,AS,NO,"Chicago, IL","Seattle, WA",-8,-10,246,1721
+2018,2018/1/28,AS,NO,"Seattle, WA","Chicago, IL",9,1,205,1721
+2018,2018/1/28,AS,NO,"Chicago, IL","Seattle, WA",-13,-44,232,1721
+2018,2018/1/28,AS,NO,"Seattle, WA","Chicago, IL",-4,-14,212,1721
+2018,2018/1/28,AS,NO,"Chicago, IL","Seattle, WA",-12,-45,231,1721
+2018,2018/1/28,AS,NO,"Chicago, IL","Seattle, WA",-12,-11,249,1721
+2018,2018/1/2,B6,NO,"New York, NY","Chicago, IL",176,183,137,740
+2018,2018/1/3,B6,NO,"New York, NY","Chicago, IL",-10,-18,116,740
+2018,2018/1/4,B6,NO,"New York, NY","Chicago, IL",-5,-22,124,740
+2018,2018/1/5,B6,NO,"New York, NY","Chicago, IL",-9,-31,126,740
+2018,2018/1/6,B6,NO,"New York, NY","Chicago, IL",27,15,129,740
+2018,2018/1/7,B6,YES,"New York, NY","Chicago, IL",685,,,740
+2018,2018/1/8,B6,NO,"New York, NY","Chicago, IL",122,119,123,740
+2018,2018/1/9,B6,NO,"New York, NY","Chicago, IL",158,156,140,740
+2018,2018/1/10,B6,NO,"New York, NY","Chicago, IL",154,144,130,740
+2018,2018/1/11,B6,NO,"New York, NY","Chicago, IL",-1,3,136,740
+2018,2018/1/12,B6,NO,"New York, NY","Chicago, IL",0,-2,141,740
+2018,2018/1/13,B6,NO,"New York, NY","Chicago, IL",-3,23,152,740
+2018,2018/1/14,B6,NO,"New York, NY","Chicago, IL",-3,13,137,740
+2018,2018/1/15,B6,NO,"New York, NY","Chicago, IL",76,104,132,740
+2018,2018/1/16,B6,NO,"New York, NY","Chicago, IL",-4,15,134,740
+2018,2018/1/17,B6,NO,"New York, NY","Chicago, IL",28,16,130,740
+2018,2018/1/18,B6,NO,"New York, NY","Chicago, IL",52,18,116,740
+2018,2018/1/19,B6,NO,"New York, NY","Chicago, IL",-3,21,137,740
+2018,2018/1/20,B6,NO,"New York, NY","Chicago, IL",-6,-36,110,740
+2018,2018/1/21,B6,NO,"New York, NY","Chicago, IL",34,7,124,740
+2018,2018/1/22,B6,NO,"New York, NY","Chicago, IL",-4,-6,117,740
+2018,2018/1/23,B6,NO,"New York, NY","Chicago, IL",96,108,113,740
+2018,2018/1/5,DL,NO,"Chicago, IL","Atlanta, GA",-4,-13,84,591
+2018,2018/1/5,DL,NO,"Atlanta, GA","Chicago, IL",-2,-14,98,606
+2018,2018/1/5,DL,NO,"Chicago, IL","Salt Lake City, UT",16,14,194,1250
+2018,2018/1/5,DL,NO,"Salt Lake City, UT","Chicago, IL",11,1,145,1250
+2018,2018/1/5,DL,NO,"Atlanta, GA","Chicago, IL",17,20,95,606
+2018,2018/1/22,DL,NO,"Chicago, IL","Detroit, MI",-1,-1,53,235
+2018,2018/1/22,DL,NO,"Detroit, MI","Chicago, IL",3,4,47,235
+2018,2018/1/22,DL,NO,"Chicago, IL","Detroit, MI",-9,-11,50,235
+2018,2018/1/22,DL,NO,"Atlanta, GA","Chicago, IL",-1,11,91,606
+2018,2018/1/22,DL,NO,"Chicago, IL","Atlanta, GA",68,62,96,606
+2018,2018/1/31,DL,NO,"Atlanta, GA","Chicago, IL",-5,-15,99,606
+2018,2018/1/31,DL,NO,"Chicago, IL","Atlanta, GA",-11,-36,82,606
+2018,2018/1/31,DL,NO,"Chicago, IL","Minneapolis, MN",-6,-29,59,334
+2018,2018/1/31,DL,NO,"Atlanta, GA","Chicago, IL",-3,-7,101,606
+2018,2018/1/31,DL,NO,"Chicago, IL","Atlanta, GA",-1,-26,83,606
+2018,2018/1/31,DL,NO,"Atlanta, GA","Chicago, IL",0,-6,99,591
+2018,2018/1/31,DL,NO,"Chicago, IL","Atlanta, GA",-3,-21,82,591
+2018,2018/1/31,DL,NO,"Detroit, MI","Chicago, IL",-6,9,48,235
+2018,2018/1/1,EV,NO,"Chicago, IL","Charleston, SC",281,281,102,760
+2018,2018/1/4,EV,NO,"Syracuse, NY","Chicago, IL",-6,-26,103,607
+2018,2018/1/5,EV,NO,"Syracuse, NY","Chicago, IL",-7,-22,107,607
+2018,2018/1/6,EV,NO,"Syracuse, NY","Chicago, IL",14,12,110,607
+2018,2018/1/7,EV,NO,"Syracuse, NY","Chicago, IL",0,-21,102,607
+2018,2018/1/8,EV,NO,"Syracuse, NY","Chicago, IL",-2,-30,96,607
+2018,2018/1/9,EV,NO,"Syracuse, NY","Chicago, IL",-7,43,105,607
+2018,2018/1/10,EV,NO,"Syracuse, NY","Chicago, IL",-3,-15,109,607
+2018,2018/1/11,EV,NO,"Syracuse, NY","Chicago, IL",450,428,108,607
+2018,2018/1/12,EV,NO,"Syracuse, NY","Chicago, IL",-3,2,130,607
+2018,2018/1/13,EV,NO,"Syracuse, NY","Chicago, IL",-7,-11,121,607
+2018,2018/1/14,EV,NO,"Syracuse, NY","Chicago, IL",0,15,119,607
+2018,2018/1/15,EV,NO,"Syracuse, NY","Chicago, IL",-4,-35,99,607
+2018,2018/1/16,EV,NO,"Syracuse, NY","Chicago, IL",80,81,115,607
+2018,2018/1/17,EV,NO,"Syracuse, NY","Chicago, IL",-9,-6,101,607
+2018,2018/1/18,EV,NO,"Syracuse, NY","Chicago, IL",-7,-45,94,607
+2018,2018/1/19,EV,NO,"Syracuse, NY","Chicago, IL",-3,-36,95,607
+2018,2018/1/20,EV,NO,"Syracuse, NY","Chicago, IL",-1,-20,102,607
+2018,2018/1/21,EV,NO,"Syracuse, NY","Chicago, IL",-6,-36,102,607
+2018,2018/1/22,EV,NO,"Syracuse, NY","Chicago, IL",-5,-36,97,607
+2018,2018/1/23,EV,NO,"Syracuse, NY","Chicago, IL",-11,-36,93,607
+2018,2018/1/24,EV,NO,"Syracuse, NY","Chicago, IL",-9,4,90,607
+2018,2018/1/25,EV,NO,"Syracuse, NY","Chicago, IL",32,25,118,607
+2018,2018/1/26,EV,NO,"Syracuse, NY","Chicago, IL",-10,-38,105,607
+2018,2018/1/27,EV,NO,"Syracuse, NY","Chicago, IL",-10,-23,98,607
+2018,2018/1/28,EV,NO,"Syracuse, NY","Chicago, IL",-8,-34,98,607
+2018,2018/1/29,EV,NO,"Syracuse, NY","Chicago, IL",-8,-21,104,607
+2018,2018/1/30,EV,NO,"Syracuse, NY","Chicago, IL",-4,-25,93,607
+2018,2018/1/31,EV,NO,"Syracuse, NY","Chicago, IL",-7,-30,98,607
+2018,2018/1/28,OO,NO,"Peoria, IL","Detroit, MI",-5,-23,65,346
+2018,2018/1/28,OO,NO,"Peoria, IL","Detroit, MI",-8,-9,62,346
+2018,2018/1/28,OO,NO,"Salt Lake City, UT","Chicago, IL",-6,-15,161,1250
+2018,2018/1/28,OO,NO,"Chicago, IL","Salt Lake City, UT",-4,-24,168,1250
+2018,2018/1/28,OO,NO,"Salt Lake City, UT","Chicago, IL",-4,3,169,1250
+2018,2018/1/28,OO,NO,"Detroit, MI","Chicago, IL",-1,29,43,228
+2018,2018/1/28,OO,NO,"Chicago, IL","Salt Lake City, UT",-8,-34,168,1250
+2018,2018/1/28,OO,NO,"Detroit, MI","Peoria, IL",14,16,58,346
+2018,2018/1/28,OO,NO,"Moline, IL","Minneapolis, MN",-2,-7,55,274
+2018,2018/1/28,OO,NO,"Detroit, MI","Chicago, IL",5,19,49,235
+2018,2018/1/28,OO,NO,"Chicago, IL","Detroit, MI",150,133,46,235
+2018,2018/1/31,OO,NO,"Cleveland, OH","Chicago, IL",-1,1,65,316
+2018,2018/1/31,OO,NO,"Milwaukee, WI","Chicago, IL",-10,-15,31,67
+2018,2018/1/31,OO,NO,"San Antonio, TX","Chicago, IL",-3,11,148,1041
+2018,2018/1/18,UA,NO,"Austin, TX","Chicago, IL",-6,-32,121,977
+2018,2018/1/18,UA,NO,"Chicago, IL","Boston, MA",-3,4,116,867
+2018,2018/1/18,UA,NO,"Chicago, IL","Los Angeles, CA",8,-6,218,1744
+2018,2018/1/18,UA,NO,"Chicago, IL","Pittsburgh, PA",-2,-8,56,413
+2018,2018/1/18,UA,NO,"Columbus, OH","Chicago, IL",-8,-35,51,296
+2018,2018/1/18,UA,NO,"Austin, TX","Chicago, IL",-11,-31,122,977
+2018,2018/1/18,UA,NO,"Chicago, IL","Denver, CO",-6,-30,114,888
+2018,2018/1/18,UA,NO,"Washington, DC","Chicago, IL",-13,-18,97,612
+2018,2018/1/18,UA,NO,"San Juan, PR","Chicago, IL",11,3,275,2072
+2018,2018/1/18,UA,NO,"Fort Lauderdale, FL","Chicago, IL",-3,-13,169,1182
+2018,2018/1/18,UA,NO,"Chicago, IL","Columbus, OH",-2,-3,51,296
+2018,2018/1/18,UA,NO,"Albany, NY","Chicago, IL",10,-6,107,723
+2018,2018/1/18,UA,NO,"Chicago, IL","Las Vegas, NV",-4,-35,181,1514
+2018,2018/1/18,UA,NO,"Chicago, IL","Minneapolis, MN",-3,-23,56,334
+2018,2018/1/18,UA,NO,"Los Angeles, CA","Chicago, IL",1,3,224,1744
+2018,2018/1/18,UA,NO,"Chicago, IL","Houston, TX",-2,6,145,925
+2018,2018/1/18,UA,NO,"Cleveland, OH","Chicago, IL",-8,-32,52,316
+2018,2018/1/18,UA,NO,"Newark, NJ","Chicago, IL",-5,-31,102,719
+2018,2018/1/18,UA,NO,"Chicago, IL","Boston, MA",2,9,118,867
+2018,2018/1/18,UA,NO,"San Francisco, CA","Chicago, IL",0,10,210,1846
+2018,2018/1/18,UA,NO,"Charlotte, NC","Chicago, IL",-12,-29,97,599
+2018,2018/1/18,UA,NO,"Detroit, MI","Chicago, IL",-9,-37,43,235
+2018,2018/1/18,UA,NO,"Chicago, IL","San Francisco, CA",162,171,247,1846
+2018,2018/1/18,UA,NO,"New Orleans, LA","Chicago, IL",-9,-25,120,837
+2018,2018/1/18,UA,NO,"Chicago, IL","New York, NY",-5,-13,107,733
+2018,2018/1/18,UA,NO,"Chicago, IL","Omaha, NE",-1,-10,62,416
+2018,2018/1/18,UA,NO,"Chicago, IL","Newark, NJ",4,0,97,719
+2018,2018/1/18,UA,NO,"Chicago, IL","Pittsburgh, PA",-3,-6,61,413
+2018,2018/1/13,UA,NO,"San Francisco, CA","Chicago, IL",14,-8,202,1846
+2018,2018/1/13,UA,NO,"Baltimore, MD","Chicago, IL",-6,-10,108,622
+2018,2018/1/13,UA,NO,"Chicago, IL","Washington, DC",-3,-19,74,612
+2018,2018/1/13,UA,NO,"Denver, CO","Chicago, IL",17,0,101,888
+2018,2018/1/13,UA,NO,"Chicago, IL","Phoenix, AZ",6,7,204,1440
+2018,2018/1/13,UA,NO,"Chicago, IL","Newark, NJ",33,16,86,719
+2018,2018/1/13,UA,NO,"Chicago, IL","Denver, CO",-5,-1,138,888
+2018,2018/1/13,UA,NO,"Chicago, IL","Boston, MA",-5,-13,96,867
+2018,2018/1/13,UA,NO,"Chicago, IL","Washington, DC",-6,-15,73,588
+2018,2018/1/13,UA,NO,"Chicago, IL","San Francisco, CA",0,-13,260,1846
+2018,2018/1/13,UA,NO,"Los Angeles, CA","Chicago, IL",-4,-17,197,1744
+2018,2018/1/13,UA,NO,"Chicago, IL","New York, NY",63,33,87,733
+2018,2018/1/13,UA,NO,"Washington, DC","Chicago, IL",0,7,102,588
+2018,2018/1/13,UA,NO,"Chicago, IL","Austin, TX",0,-2,142,977
+2018,2018/1/13,UA,NO,"Columbus, OH","Chicago, IL",-7,-2,63,296
+2018,2018/1/13,UA,NO,"Chicago, IL","Portland, OR",16,7,241,1739
+2018,2018/1/13,UA,NO,"New York, NY","Chicago, IL",-6,34,134,733
+2018,2018/1/13,UA,NO,"Chicago, IL","Las Vegas, NV",-12,22,235,1514
+2018,2018/1/13,UA,NO,"Minneapolis, MN","Chicago, IL",-4,-21,49,334
+2018,2018/1/13,UA,NO,"Chicago, IL","New Orleans, LA",-2,-17,118,837
+2018,2018/1/13,UA,NO,"Chicago, IL","Salt Lake City, UT",18,4,191,1250
+2018,2018/1/11,VX,NO,"San Francisco, CA","Chicago, IL",8,-1,198,1846
+2018,2018/1/11,VX,NO,"Chicago, IL","San Francisco, CA",2,15,280,1846
+2018,2018/1/11,VX,NO,"Chicago, IL","Los Angeles, CA",-3,0,261,1744
+2018,2018/1/11,VX,NO,"Los Angeles, CA","Chicago, IL",18,-12,191,1744
+2018,2018/1/11,VX,NO,"Los Angeles, CA","Chicago, IL",-7,-28,181,1744
+2018,2018/1/11,VX,NO,"Chicago, IL","Los Angeles, CA",-7,29,278,1744
+2018,2018/1/12,VX,NO,"San Francisco, CA","Chicago, IL",-2,-11,206,1846
+2018,2018/1/12,VX,NO,"Chicago, IL","San Francisco, CA",2,38,291,1846
+2018,2018/1/12,VX,NO,"Chicago, IL","Los Angeles, CA",42,95,283,1744
+2018,2018/1/12,VX,NO,"Los Angeles, CA","Chicago, IL",61,35,180,1744
+2018,2018/1/12,VX,NO,"Los Angeles, CA","Chicago, IL",-3,-19,187,1744
+2018,2018/1/12,VX,NO,"Chicago, IL","Los Angeles, CA",34,32,253,1744
+2018,2018/1/13,VX,NO,"San Francisco, CA","Chicago, IL",-5,-15,211,1846
+2018,2018/1/13,VX,NO,"Chicago, IL","San Francisco, CA",-8,-7,266,1846
+2018,2018/1/13,VX,NO,"Chicago, IL","Los Angeles, CA",1,19,257,1744
+2018,2018/1/13,VX,NO,"Los Angeles, CA","Chicago, IL",-5,-13,203,1744
+2018,2018/1/13,VX,NO,"Los Angeles, CA","Chicago, IL",-4,-15,198,1744
+2018,2018/1/13,VX,NO,"Chicago, IL","Los Angeles, CA",-7,-12,252,1744
+2018,2018/1/14,VX,NO,"San Francisco, CA","Chicago, IL",1,-6,212,1846
+2018,2018/1/14,VX,NO,"Chicago, IL","San Francisco, CA",-9,-18,259,1846
+2018,2018/1/14,VX,NO,"Chicago, IL","Los Angeles, CA",6,-1,251,1744
+2018,2018/1/14,VX,NO,"Los Angeles, CA","Chicago, IL",11,-8,199,1744
+2018,2018/1/15,VX,NO,"San Francisco, CA","Chicago, IL",-6,-2,216,1846
+2018,2018/1/15,VX,NO,"Chicago, IL","San Francisco, CA",-4,-21,245,1846
+2018,2018/1/15,VX,NO,"Chicago, IL","Los Angeles, CA",-8,-9,245,1744
+2018,2018/1/15,VX,NO,"Los Angeles, CA","Chicago, IL",-4,-10,209,1744
+2018,2018/1/15,VX,NO,"Los Angeles, CA","Chicago, IL",-7,-2,210,1744
+2018,2018/1/15,VX,NO,"Chicago, IL","Los Angeles, CA",-6,-34,227,1744
+2018,2018/1/16,VX,NO,"San Francisco, CA","Chicago, IL",0,17,233,1846
+2018,2018/1/16,VX,NO,"Chicago, IL","San Francisco, CA",16,-12,231,1846
+2018,2018/1/16,VX,NO,"Chicago, IL","Los Angeles, CA",-5,-43,219,1744
+2018,2018/1/16,VX,NO,"Los Angeles, CA","Chicago, IL",5,4,211,1744
+2018,2018/1/16,VX,NO,"Los Angeles, CA","Chicago, IL",-4,-4,209,1744
+2018,2018/1/16,VX,NO,"Chicago, IL","Los Angeles, CA",-6,-30,218,1744
+2018,2018/1/17,VX,NO,"San Francisco, CA","Chicago, IL",-1,17,238,1846
+2018,2018/1/17,VX,NO,"Chicago, IL","San Francisco, CA",15,-28,218,1846
+2018,2018/1/17,VX,NO,"Chicago, IL","Los Angeles, CA",-4,-36,215,1744
+2018,2018/1/17,VX,NO,"Los Angeles, CA","Chicago, IL",-1,11,220,1744
+2018,2018/1/17,VX,NO,"Los Angeles, CA","Chicago, IL",-4,7,215,1744
+2018,2018/1/17,VX,NO,"Chicago, IL","Los Angeles, CA",-4,-49,208,1744
+2018,2018/1/18,VX,NO,"San Francisco, CA","Chicago, IL",46,74,234,1846
+2018,2018/1/18,VX,NO,"Chicago, IL","San Francisco, CA",75,87,257,1846
+2018,2018/1/18,VX,NO,"Chicago, IL","Los Angeles, CA",-4,-43,212,1744
+2018,2018/1/18,VX,NO,"Los Angeles, CA","Chicago, IL",19,43,222,1744
+2018,2018/1/18,VX,NO,"Los Angeles, CA","Chicago, IL",-6,3,212,1744
+2018,2018/1/18,VX,NO,"Chicago, IL","Los Angeles, CA",34,24,219,1744
+2018,2018/1/19,VX,NO,"San Francisco, CA","Chicago, IL",2,11,227,1846
+2018,2018/1/19,VX,NO,"Chicago, IL","San Francisco, CA",30,14,232,1846
+2018,2018/1/19,VX,NO,"Chicago, IL","Los Angeles, CA",-5,-15,232,1744
+2018,2018/1/19,VX,NO,"Los Angeles, CA","Chicago, IL",0,-3,209,1744
+2018,2018/1/19,VX,NO,"Los Angeles, CA","Chicago, IL",-3,4,210,1744
+2018,2018/1/19,VX,NO,"Chicago, IL","Los Angeles, CA",-5,-24,222,1744
+2018,2018/1/2,VX,NO,"Chicago, IL","San Francisco, CA",-2,21,281,1846
+2018,2018/1/2,VX,NO,"San Francisco, CA","Chicago, IL",3,-16,202,1846
+2018,2018/1/2,VX,NO,"San Francisco, CA","Chicago, IL",0,-9,202,1846
+2018,2018/1/2,VX,NO,"Chicago, IL","San Francisco, CA",-5,24,277,1846
+2018,2018/1/2,VX,NO,"San Francisco, CA","Chicago, IL",44,11,192,1846
+2018,2018/1/2,VX,NO,"Chicago, IL","San Francisco, CA",38,81,288,1846
+2018,2018/1/2,VX,NO,"Chicago, IL","Los Angeles, CA",-8,29,266,1744
+2018,2018/1/2,VX,NO,"Los Angeles, CA","Chicago, IL",12,-2,194,1744
+2018,2018/1/2,VX,NO,"Los Angeles, CA","Chicago, IL",14,-6,184,1744
+2018,2018/1/2,VX,NO,"Chicago, IL","Los Angeles, CA",-6,-2,265,1744
+2018,2018/1/20,VX,NO,"San Francisco, CA","Chicago, IL",8,21,221,1846
+2018,2018/1/20,VX,NO,"Chicago, IL","San Francisco, CA",15,29,235,1846
+2018,2018/1/1,WN,NO,"Nashville, TN","Chicago, IL",13,2,63,395
+2018,2018/1/1,WN,NO,"Boston, MA","Chicago, IL",-5,-20,142,861
+2018,2018/1/1,WN,NO,"Boston, MA","Chicago, IL",-4,-18,141,861
+2018,2018/1/1,WN,NO,"Boston, MA","Chicago, IL",-1,-1,146,861
+2018,2018/1/1,WN,NO,"Boston, MA","Chicago, IL",13,5,141,861
+2018,2018/1/1,WN,NO,"Buffalo, NY","Chicago, IL",-2,-22,78,468
+2018,2018/1/1,WN,NO,"Buffalo, NY","Chicago, IL",0,-7,83,468
+2018,2018/1/1,WN,NO,"Buffalo, NY","Chicago, IL",3,-15,85,468
+2018,2018/1/1,WN,NO,"Baltimore, MD","Chicago, IL",-7,-25,100,611
+2018,2018/1/1,WN,NO,"Baltimore, MD","Chicago, IL",21,20,99,611
+2018,2018/1/1,WN,NO,"Baltimore, MD","Chicago, IL",-4,-14,107,611
+2018,2018/1/1,WN,NO,"Baltimore, MD","Chicago, IL",-3,-13,101,611
+2018,2018/1/1,WN,NO,"Baltimore, MD","Chicago, IL",29,23,101,611
+2018,2018/1/1,WN,NO,"Charleston, SC","Chicago, IL",-2,0,111,745
+2018,2018/1/1,WN,NO,"Cleveland, OH","Chicago, IL",-5,-13,54,307
+2018,2018/1/1,WN,NO,"Cleveland, OH","Chicago, IL",0,-19,48,307
+2018,2018/1/2,WN,NO,"San Antonio, TX","Chicago, IL",-2,-13,124,1036
+2018,2018/1/2,WN,YES,"San Antonio, TX","Chicago, IL",,,,1036
+2018,2018/1/2,WN,NO,"Louisville, KY","Chicago, IL",-3,-7,48,271
+2018,2018/1/2,WN,NO,"Louisville, KY","Chicago, IL",-4,-5,51,271
+2018,2018/1/10,WN,NO,"Orlando, FL","Chicago, IL",-1,-16,140,990
+2018,2018/1/10,WN,NO,"Chicago, IL","Albuquerque, NM",11,14,167,1121
+2018,2018/1/10,WN,NO,"Chicago, IL","Albany, NY",24,42,83,717
+2018,2018/1/10,WN,NO,"Chicago, IL","Albany, NY",0,-1,87,717
+2018,2018/1/10,WN,NO,"Chicago, IL","Atlanta, GA",97,90,81,591
+2018,2018/1/10,WN,NO,"Chicago, IL","Atlanta, GA",5,-4,87,591
+2018,2018/1/10,WN,NO,"Chicago, IL","Atlanta, GA",4,5,88,591
+2018,2018/1/10,WN,NO,"Chicago, IL","Atlanta, GA",-5,-20,86,591
+2018,2018/1/10,WN,NO,"Chicago, IL","Atlanta, GA",-1,4,89,591
+2018,2018/1/10,WN,NO,"Chicago, IL","Atlanta, GA",5,0,80,591
+2018,2018/1/2,AA,NO,"Santa Ana, CA","Chicago, IL",8,30,190,1726
+2018,2018/1/3,AA,NO,"Santa Ana, CA","Chicago, IL",-3,-31,187,1726
+2018,2018/1/4,AA,NO,"Santa Ana, CA","Chicago, IL",0,-20,196,1726
+2018,2018/1/7,AA,NO,"Santa Ana, CA","Chicago, IL",-6,-21,198,1726
+2018,2018/1/8,AA,NO,"Santa Ana, CA","Chicago, IL",-4,-23,200,1726
+2018,2018/1/9,AA,NO,"Santa Ana, CA","Chicago, IL",-5,-27,189,1726
+2018,2018/1/10,AA,NO,"Santa Ana, CA","Chicago, IL",-8,7,233,1726
+2018,2018/1/11,AA,NO,"Santa Ana, CA","Chicago, IL",-5,-37,186,1726
+2018,2018/1/12,AA,NO,"Santa Ana, CA","Chicago, IL",-8,-35,190,1726
+2018,2018/1/13,AA,NO,"Santa Ana, CA","Chicago, IL",-2,-33,187,1726
+2018,2018/1/14,AA,NO,"Santa Ana, CA","Chicago, IL",-12,-26,206,1726
+2018,2018/1/16,AA,NO,"Santa Ana, CA","Chicago, IL",-1,-14,213,1726
+2018,2018/1/17,AA,NO,"Santa Ana, CA","Chicago, IL",0,-1,213,1726
+2018,2018/1/18,AA,NO,"Santa Ana, CA","Chicago, IL",1,14,222,1726
+2018,2018/1/19,AA,NO,"Santa Ana, CA","Chicago, IL",-6,-8,211,1726
+2018,2018/1/20,AA,NO,"Santa Ana, CA","Chicago, IL",-1,,,1726
+2018,2018/1/21,AA,NO,"Santa Ana, CA","Chicago, IL",0,-25,197,1726
+2018,2018/1/23,AA,NO,"Santa Ana, CA","Chicago, IL",-9,-51,182,1726
+2018,2018/1/24,AA,NO,"Santa Ana, CA","Chicago, IL",-3,-33,184,1726
+2018,2018/1/25,AA,NO,"Santa Ana, CA","Chicago, IL",0,-15,200,1726
+2018,2018/1/26,AA,NO,"Santa Ana, CA","Chicago, IL",-2,-22,199,1726
+2018,2018/1/27,AA,NO,"Santa Ana, CA","Chicago, IL",-4,-3,214,1726
+2018,2018/1/12,DL,NO,"Atlanta, GA","Chicago, IL",79,80,93,606
+2018,2018/1/12,DL,NO,"Atlanta, GA","Chicago, IL",-2,-16,87,591
+2018,2018/1/12,DL,NO,"Chicago, IL","Atlanta, GA",33,41,85,606
+2018,2018/1/12,DL,NO,"Atlanta, GA","Bloomington/Normal, IL",-11,-13,80,533
+2018,2018/1/12,DL,NO,"Atlanta, GA","Chicago, IL",110,101,89,606
+2018,2018/1/12,DL,NO,"Chicago, IL","Atlanta, GA",98,77,84,606
+2018,2018/1/12,DL,NO,"Atlanta, GA","Chicago, IL",-2,-1,93,606
+2018,2018/1/12,DL,NO,"Chicago, IL","Atlanta, GA",11,-13,83,606
+2018,2018/1/12,DL,NO,"Chicago, IL","Minneapolis, MN",-4,1,58,334
+2018,2018/1/12,DL,NO,"Atlanta, GA","Chicago, IL",-1,-10,94,606
+2018,2018/1/12,DL,NO,"Chicago, IL","Atlanta, GA",1,-13,87,606
+2018,2018/1/12,DL,NO,"Atlanta, GA","Chicago, IL",-2,-15,88,591
+2018,2018/1/12,DL,NO,"Chicago, IL","Atlanta, GA",0,-9,91,591
+2018,2018/1/12,DL,NO,"Detroit, MI","Chicago, IL",15,33,51,235
+2018,2018/1/13,DL,NO,"Atlanta, GA","Chicago, IL",4,9,99,606
+2018,2018/1/13,DL,NO,"Chicago, IL","Atlanta, GA",1,-21,85,606
+2018,2018/1/13,DL,NO,"Bloomington/Normal, IL","Atlanta, GA",-5,-29,77,533
+2018,2018/1/13,DL,NO,"Atlanta, GA","Chicago, IL",-4,-7,91,591
+2018,2018/1/6,EV,NO,"Chicago, IL","Syracuse, NY",-2,-20,77,607
+2018,2018/1/7,EV,NO,"Chicago, IL","Syracuse, NY",59,46,84,607
+2018,2018/1/8,EV,NO,"Chicago, IL","Syracuse, NY",-5,-14,87,607
+2018,2018/1/9,EV,NO,"Chicago, IL","Syracuse, NY",6,-2,76,607
+2018,2018/1/10,EV,YES,"Chicago, IL","Syracuse, NY",,,,607
+2018,2018/1/11,EV,NO,"Chicago, IL","Syracuse, NY",0,4,73,607
+2018,2018/1/12,EV,NO,"Chicago, IL","Syracuse, NY",68,56,78,607
+2018,2018/1/13,EV,NO,"Chicago, IL","Syracuse, NY",-3,-15,75,607
+2018,2018/1/14,EV,NO,"Chicago, IL","Syracuse, NY",-10,-25,74,607
+2018,2018/1/15,EV,NO,"Chicago, IL","Syracuse, NY",1,-1,77,607
+2018,2018/1/16,EV,NO,"Chicago, IL","Syracuse, NY",-5,5,81,607
+2018,2018/1/17,EV,NO,"Chicago, IL","Syracuse, NY",-4,-16,78,607
+2018,2018/1/18,EV,NO,"Chicago, IL","Syracuse, NY",-1,4,87,607
+2018,2018/1/19,EV,NO,"Chicago, IL","Syracuse, NY",-6,-14,82,607
+2018,2018/1/20,EV,NO,"Chicago, IL","Syracuse, NY",-2,-13,83,607
+2018,2018/1/21,EV,NO,"Chicago, IL","Syracuse, NY",-1,-21,75,607
+2018,2018/1/22,EV,NO,"Chicago, IL","Syracuse, NY",6,19,81,607
+2018,2018/1/23,EV,NO,"Chicago, IL","Syracuse, NY",-2,-11,86,607
+2018,2018/1/14,NK,NO,"Dallas/Fort Worth, TX","Chicago, IL",-1,-23,99,802
+2018,2018/1/15,NK,NO,"Dallas/Fort Worth, TX","Chicago, IL",-1,9,108,802
+2018,2018/1/16,NK,NO,"Dallas/Fort Worth, TX","Chicago, IL",-6,-12,98,802
+2018,2018/1/17,NK,NO,"Dallas/Fort Worth, TX","Chicago, IL",-5,-22,101,802
+2018,2018/1/18,NK,NO,"Dallas/Fort Worth, TX","Chicago, IL",-7,-18,96,802
+2018,2018/1/19,NK,NO,"Dallas/Fort Worth, TX","Chicago, IL",-4,-4,102,802
+2018,2018/1/20,NK,NO,"Dallas/Fort Worth, TX","Chicago, IL",-9,-18,105,802
+2018,2018/1/21,NK,NO,"Dallas/Fort Worth, TX","Chicago, IL",-3,9,101,802
+2018,2018/1/22,NK,NO,"Dallas/Fort Worth, TX","Chicago, IL",-2,14,110,802
+2018,2018/1/23,NK,NO,"Dallas/Fort Worth, TX","Chicago, IL",32,11,99,802
+2018,2018/1/24,NK,NO,"Dallas/Fort Worth, TX","Chicago, IL",-7,-17,97,802
+2018,2018/1/25,NK,NO,"Dallas/Fort Worth, TX","Chicago, IL",-10,-15,103,802
+2018,2018/1/26,NK,NO,"Dallas/Fort Worth, TX","Chicago, IL",-3,-14,101,802
+2018,2018/1/27,NK,NO,"Dallas/Fort Worth, TX","Chicago, IL",-7,-17,107,802
+2018,2018/1/28,NK,NO,"Dallas/Fort Worth, TX","Chicago, IL",-8,-10,108,802
+2018,2018/1/29,NK,NO,"Dallas/Fort Worth, TX","Chicago, IL",-5,-6,118,802
+2018,2018/1/30,NK,NO,"Dallas/Fort Worth, TX","Chicago, IL",-6,7,120,802
+2018,2018/1/31,NK,NO,"Dallas/Fort Worth, TX","Chicago, IL",-9,-5,113,802
+2018,2018/1/1,NK,NO,"New Orleans, LA","Chicago, IL",-16,-26,116,837
+2018,2018/1/2,NK,NO,"New Orleans, LA","Chicago, IL",209,193,115,837
+2018,2018/1/3,NK,NO,"New Orleans, LA","Chicago, IL",-9,-2,132,837
+2018,2018/1/4,NK,NO,"New Orleans, LA","Chicago, IL",-19,-23,120,837
+2018,2018/1/5,NK,NO,"New Orleans, LA","Chicago, IL",-7,1,123,837
+2018,2018/1/6,NK,NO,"New Orleans, LA","Chicago, IL",26,21,118,837
+2018,2018/1/7,NK,YES,"New Orleans, LA","Chicago, IL",,,,837
+2018,2018/1/8,NK,NO,"New Orleans, LA","Chicago, IL",-7,2,134,837
+2018,2018/1/9,UA,NO,"Chicago, IL","San Francisco, CA",24,47,288,1846
+2018,2018/1/9,UA,NO,"New Orleans, LA","Chicago, IL",-2,-15,123,837
+2018,2018/1/9,UA,NO,"Chicago, IL","New York, NY",96,65,88,733
+2018,2018/1/9,UA,NO,"Chicago, IL","Omaha, NE",258,244,64,416
+2018,2018/1/9,UA,NO,"Chicago, IL","Pittsburgh, PA",-3,-11,56,413
+2018,2018/1/9,UA,NO,"Atlanta, GA","Chicago, IL",-7,-6,110,606
+2018,2018/1/9,UA,NO,"Chicago, IL","Newark, NJ",0,-6,87,719
+2018,2018/1/9,UA,NO,"Houston, TX","Chicago, IL",72,51,116,925
+2018,2018/1/9,UA,NO,"Phoenix, AZ","Chicago, IL",6,1,175,1440
+2018,2018/1/9,UA,NO,"Cincinnati, OH","Chicago, IL",108,94,58,264
+2018,2018/1/9,UA,NO,"Detroit, MI","Chicago, IL",-6,-29,45,235
+2018,2018/1/9,UA,NO,"Chicago, IL","Houston, TX",-2,-10,130,925
+2018,2018/1/9,UA,NO,"Omaha, NE","Chicago, IL",-2,-17,60,416
+2018,2018/1/9,UA,NO,"Cleveland, OH","Chicago, IL",-5,-9,59,316
+2018,2018/1/9,UA,NO,"Chicago, IL","Houston, TX",9,7,133,925
+2018,2018/1/9,UA,NO,"St. Louis, MO","Chicago, IL",-15,-35,47,258
+2018,2018/1/8,WN,NO,"Baltimore, MD","Chicago, IL",-1,-7,99,611
+2018,2018/1/8,WN,NO,"Baltimore, MD","Chicago, IL",31,24,96,611
+2018,2018/1/8,WN,NO,"Baltimore, MD","Chicago, IL",9,6,103,611
+2018,2018/1/8,WN,NO,"Baltimore, MD","Chicago, IL",-3,-7,101,611
+2018,2018/1/8,WN,NO,"Baltimore, MD","Chicago, IL",12,1,101,611
+2018,2018/1/8,WN,NO,"Charleston, SC","Chicago, IL",-3,-8,116,745
+2018,2018/1/8,WN,NO,"Cleveland, OH","Chicago, IL",-6,4,55,307
+2018,2018/1/8,WN,NO,"Cleveland, OH","Chicago, IL",14,12,55,307
+2018,2018/1/8,WN,NO,"Cleveland, OH","Chicago, IL",19,13,55,307
+2018,2018/1/8,WN,NO,"Cleveland, OH","Chicago, IL",-2,5,52,307
+2018,2018/1/8,WN,NO,"Charlotte, NC","Chicago, IL",-2,-11,93,584
+2018,2018/1/8,WN,NO,"Charlotte, NC","Chicago, IL",0,3,91,584
+2018,2018/1/8,WN,NO,"Columbus, OH","Chicago, IL",-2,-7,54,283
+2018,2018/1/8,WN,NO,"Columbus, OH","Chicago, IL",7,-5,59,283
+2018,2018/1/8,WN,NO,"Columbus, OH","Chicago, IL",14,7,54,283
+2018,2018/1/8,WN,NO,"Dallas, TX","Chicago, IL",15,14,114,793
+2018,2018/1/8,WN,NO,"Dallas, TX","Chicago, IL",6,9,113,793

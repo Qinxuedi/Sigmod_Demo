@@ -1,7 +1,8 @@
 import math
+# import numpy as ns
 from numpy import corrcoef
 from features import Type
-
+# ns.seterr(divide='ignore', invalid='ignore')
 
 class Chart(object):
     bar=0
